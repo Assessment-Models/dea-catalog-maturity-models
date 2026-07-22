@@ -1,0 +1,118 @@
+id:                  dea:maturity-technology
+name:                Technology Maturity Model
+domain:              technology
+version:             "1.0.0-alpha"
+metamodel_version:   "^0.1.0"
+description: >
+  Technology stack fitness, technical debt management, lifecycle management,
+  and skill coverage.
+owner:               CTO / Platform Engineering
+
+levels:
+  - id:               level-1-ad-hoc
+    name:             Ad Hoc
+    score_range:      [0, 25]
+    summary: Technology choices made without central visibility
+    characteristics:
+      - Teams choose technologies independently
+      - No central inventory of technologies in use
+      - End-of-life software runs in production
+      - Skill coverage is opaque — single points of failure
+    exit_criteria:
+      - Technology inventory published (even if informal)
+      - End-of-life software tracked
+      - Single points of failure identified
+    evidence:
+      - Shadow IT — teams using unapproved tools
+      - Production incidents due to skill gaps
+      - No CVE management process
+
+  - id:               level-2-defined
+    name:             Defined
+    score_range:      [26, 50]
+    summary: Inventory exists but not enforced
+    characteristics:
+      - Approved technology list published
+      - SBOM generated for major systems
+      - CVE scanning in CI but not on all repos
+      - Skill matrix exists but is stale
+    exit_criteria:
+      - SBOM on every production release
+      - CVE scanning covers ≥ 90% of repos
+      - Skill matrix refreshed quarterly
+    evidence:
+      - Approved technology list referenced in PRs
+      - Deprecation policy published
+      - New technology adoption process documented
+
+  - id:               level-3-managed
+    name:             Managed
+    score_range:      [51, 75]
+    summary: Technology is actively managed
+    characteristics:
+      - Deprecation roadmap enforced
+      - Skill coverage has redundancy (no SPoF)
+      - Cost-per-workload tracked
+      - Technology refresh is planned, not reactive
+    exit_criteria:
+      - Zero end-of-life software in production
+      - Technology refresh budget line item
+      - Cost transparency — every workload has cost owner
+    evidence:
+      - Quarterly tech radar published
+      - Skill coverage matrix with backups per critical skill
+      - Cost-per-workload dashboard
+
+  - id:               level-4-quantitatively-managed
+    name:             Quantitatively Managed
+    score_range:      [76, 90]
+    summary: Technology decisions are data-driven
+    characteristics:
+      - Technology churn measured
+      - Technology ROI evaluated
+      - Innovation budget tracked vs. value delivered
+      - Skill market trends monitored
+    exit_criteria:
+      - Technology churn trend decreasing
+      - Innovation ROI > 3x measured
+      - Skill gap analysis automated
+    evidence:
+      - Predictive models for technology obsolescence
+      - Vendor cost optimisation programmes
+      - Skill forecast model
+
+  - id:               level-5-optimising
+    name:             Optimising
+    score_range:      [91, 100]
+    summary: Technology is a strategic asset
+    characteristics:
+      - Technology choices are differentiators
+      - Open-source contributions back into technology stack
+      - Industry partnerships with key vendors
+      - Experimental sandboxes for emerging tech evaluation
+    exit_criteria:
+      - None — continuous improvement is the practice
+    evidence:
+      - Conference talks on technology strategy
+      - Open-source maintainer roles
+      - Vendor advisory boards
+
+relationships:
+  - source_id: dea:maturity-technology
+    target_id: dea:catalog-maturity-models
+    relationship_type: instance-of
+    description: Technology model is one of the five canonical maturity models
+  - source_id: dea:maturity-technology
+    target_id: dea:catalog-assessment-tools
+    relationship_type: scored-by
+    description: Assessed via the Technology assessment instrument
+  - source_id: dea:maturity-technology
+    target_id: dea:catalog-standards
+    relationship_type: references
+    description: Approved technology list draws from standards catalog
+
+tags:
+  - technology
+  - technical-debt
+  - lifecycle
+  - skill-coverage

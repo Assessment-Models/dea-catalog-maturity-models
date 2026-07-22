@@ -1,0 +1,118 @@
+id:                  dea:maturity-services-delivery
+name:                Services Delivery Maturity Model
+domain:              services-delivery
+version:             "1.0.0-alpha"
+metamodel_version:   "^0.1.0"
+description: >
+  Services delivery capability maturity — time-to-market, quality, customer
+  outcomes, and delivery predictability.
+owner:               Head of Delivery / VP Engineering
+
+levels:
+  - id:               level-1-ad-hoc
+    name:             Ad Hoc
+    score_range:      [0, 25]
+    summary: Delivery is unpredictable
+    characteristics:
+      - Release dates slip frequently
+      - Quality measured by bug count, not customer impact
+      - Customer satisfaction not systematically tracked
+      - Scope, time, quality trade-offs made ad-hoc
+    exit_criteria:
+      - Release predictability tracked
+      - Customer satisfaction baseline measured
+      - Delivery retrospectives held
+    evidence:
+      - Quarterly commitments missed > 50% of time
+      - Quality measured only as defect count
+      - Customer satisfaction surveys absent
+
+  - id:               level-2-defined
+    name:             Defined
+    score_range:      [26, 50]
+    summary: Core delivery practices established
+    characteristics:
+      - Sprint/iteration cadence in place
+      - Definition of Done documented
+      - Customer impact metrics tracked
+      - Delivery retrospectives feed into planning
+    exit_criteria:
+      - 80% of releases hit planned dates
+      - Customer satisfaction ≥ neutral baseline
+      - Retrospective actions tracked to completion
+    evidence:
+      - Burndown/burnup charts in use
+      - Customer NPS or CSAT trend tracked
+      - Action register from retrospectives
+
+  - id:               level-3-managed
+    name:             Managed
+    score_range:      [51, 75]
+    summary: Delivery is data-informed
+    characteristics:
+      - Flow metrics tracked (lead time, cycle time, WIP)
+      - Customer outcomes linked to releases
+      - Quality measured by escaped defects
+      - Predictive release date forecasting
+    exit_criteria:
+      - Lead time for changes < 1 week
+      - Change failure rate < 15%
+      - Customer outcome improvements > 5% YoY
+    evidence:
+      - Flow metrics dashboard published
+      - Release forecasting accuracy > 80%
+      - Outcome-tracking per feature
+
+  - id:               level-4-quantitatively-managed
+    name:             Quantitatively Managed
+    score_range:      [76, 90]
+    summary: Delivery is optimised
+    characteristics:
+      - Delivery ROI measured per initiative
+      - Customer LTV/CAC improvement linked to delivery
+      - Time-to-market is competitive advantage
+      - A/B testing infrastructure mature
+    exit_criteria:
+      - Delivery ROI > 5x measured
+      - Time-to-market improving quarterly
+      - A/B testing informs > 50% of major decisions
+    evidence:
+      - Delivery ROI dashboards
+      - Time-to-market competitive benchmarks
+      - Experimentation velocity tracked
+
+  - id:               level-5-optimising
+    name:             Optimising
+    score_range:      [91, 100]
+    summary: Delivery is market-leading
+    characteristics:
+      - Industry-leading time-to-market
+      - Continuous delivery with zero-downtime deployments
+      - Customer outcome focus drives everything
+      - External recognition as delivery leader
+    exit_criteria:
+      - None — continuous improvement is the practice
+    evidence:
+      - Industry awards or analyst recognition
+      - Conference talks on delivery practice
+      - Open-source delivery tooling contributions
+
+relationships:
+  - source_id: dea:maturity-services-delivery
+    target_id: dea:catalog-maturity-models
+    relationship_type: instance-of
+    description: Services Delivery model is one of the five canonical maturity models
+  - source_id: dea:maturity-services-delivery
+    target_id: dea:catalog-assessment-tools
+    relationship_type: scored-by
+    description: Assessed via the Services Delivery assessment instrument
+  - source_id: dea:maturity-services-delivery
+    target_id: dea:catalog-metrics
+    relationship_type: measured-by
+    description: Outcomes tracked via metrics catalog entries
+
+tags:
+  - services-delivery
+  - time-to-market
+  - customer-outcomes
+  - flow-metrics

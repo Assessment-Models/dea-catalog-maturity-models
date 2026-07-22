@@ -1,0 +1,119 @@
+id:                  dea:maturity-operations
+name:                Operations Maturity Model
+domain:              operations
+version:             "1.0.0-alpha"
+metamodel_version:   "^0.1.0"
+description: >
+  Operations practice maturity — incident response, observability, deployment,
+  SLOs, SRE practices.
+owner:               Head of Operations / SRE Lead
+
+levels:
+  - id:               level-1-ad-hoc
+    name:             Ad Hoc
+    score_range:      [0, 25]
+    summary: Operations is reactive
+    characteristics:
+      - Production issues detected by user complaints
+      - Manual deployments, often after-hours
+      - No incident response process
+      - Logs exist but not centralised
+    exit_criteria:
+      - Centralised logging deployed
+      - Incident response runbook exists
+      - Deployment automation ≥ 50% of services
+    evidence:
+      - Frequent customer-reported incidents
+      - Frequent rollbacks after deployment
+      - Mean time to recovery measured in days
+
+  - id:               level-2-defined
+    name:             Defined
+    score_range:      [26, 50]
+    summary: Core practices in place
+    characteristics:
+      - Incident command system documented
+      - Observability stack deployed (logs, metrics, traces)
+      - Post-mortem culture started
+      - Deployment automation > 80%
+    exit_criteria:
+      - SLOs defined for top services
+      - Error budgets enforced
+      - Post-mortems within 7 days of incident for sev-1/sev-2
+    evidence:
+      - SLO dashboards published
+      - Incident review board meets regularly
+      - Deployment frequency tracked
+
+  - id:               level-3-managed
+    name:             Managed
+    score_range:      [51, 75]
+    summary: Operations is metrics-driven
+    characteristics:
+      - SLOs defined for all customer-facing services
+      - Error budgets influence release decisions
+      - Chaos engineering experiments run
+      - On-call rotations are sustainable
+    exit_criteria:
+      - MTTR < 30 minutes for sev-1
+      - Deployment frequency > 10/day
+      - Change failure rate < 15%
+    evidence:
+      - Quarterly ops health report
+      - Chaos engineering results tracked
+      - On-call satisfaction score > 7/10
+
+  - id:               level-4-quantitatively-managed
+    name:             Quantitatively Managed
+    score_range:      [76, 90]
+    summary: Operations is optimised
+    characteristics:
+      - Predictive incident detection
+      - Auto-remediation for known failure modes
+      - Capacity planning is data-driven
+      - Cost of operations tracked per workload
+    exit_criteria:
+      - Auto-remediation > 30% of incidents
+      - Predictive alerts > 50% of sev-1
+      - Cost per workload tracked weekly
+    evidence:
+      - ML-based anomaly detection deployed
+      - Auto-remediation playbook library
+      - Capacity headroom dashboards
+
+  - id:               level-5-optimising
+    name:             Optimising
+    score_range:      [91, 100]
+    summary: Operations as competitive advantage
+    characteristics:
+      - Reliability is a product feature
+      - Operations practice contributes to industry
+      - Cross-team operational excellence programs
+      - Internal SRE training academy
+    exit_criteria:
+      - None — continuous improvement is the practice
+    evidence:
+      - External conference talks on ops
+      - Open-source observability contributions
+      - Internal SRE certification programme
+
+relationships:
+  - source_id: dea:maturity-operations
+    target_id: dea:catalog-maturity-models
+    relationship_type: instance-of
+    description: Operations model is one of the five canonical maturity models
+  - source_id: dea:maturity-operations
+    target_id: dea:catalog-assessment-tools
+    relationship_type: scored-by
+    description: Assessed via the Operations assessment instrument
+  - source_id: dea:maturity-operations
+    target_id: dea:pattern-circuit-breaker
+    relationship_type: references
+    description: Level 2+ requires circuit breaker adoption
+
+tags:
+  - operations
+  - sre
+  - incident-response
+  - observability
+  - slo

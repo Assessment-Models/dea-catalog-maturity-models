@@ -1,0 +1,43 @@
+name: Validate Maturity Models
+
+on:
+  pull_request:
+    paths: ['maturity-models/**', 'index.yaml']
+  push:
+    branches: [main]
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Validate maturity model YAMLs
+        run: |
+          python -c "
+          import yaml, sys, glob, os
+          errors = []
+          files = glob.glob('maturity-models/v1-alpha/*.yaml')
+          for f in files:
+              with open(f) as fh:
+                  doc = yaml.safe_load(fh)
+              required = ['id','name','domain','version','levels']
+              for r in required:
+                  if r not in doc:
+                      errors.append(f'{f}: missing required field {r}')
+              if 'levels' in doc and len(doc['levels']) != 5:
+                  errors.append(f'{f}: must have exactly 5 levels, has {len(doc[\"levels\"])}')
+              # Each level must have score_range, summary, characteristics, exit_criteria, evidence
+              if 'levels' in doc:
+                  for i, lvl in enumerate(doc['levels']):
+                      for f2 in ['id','name','score_range','summary','characteristics','exit_criteria','evidence']:
+                          if f2 not in lvl:
+                              errors.append(f'{f}: level {i} missing {f2}')
+          if errors:
+              for e in errors: print(e)
+              sys.exit(1)
+          print(f'OK — {len(files)} maturity models validated')
+          "

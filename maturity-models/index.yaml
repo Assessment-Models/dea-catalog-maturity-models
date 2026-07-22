@@ -1,0 +1,83 @@
+# Maturity Models — Catalog Registry
+# Source of truth for all maturity models and their versions
+
+catalog:
+  name: Enterprise Architecture Maturity Models
+  abbreviation: ModAS-MM
+  id: dea:catalog-maturity-models
+  version: "1.0.0-alpha"
+  status: draft
+  metamodel_version: "^0.1.0"
+
+  description: >
+    Five-level maturity framework for EA capability, modernisation, technology,
+    operations, and services delivery. Each model defines characteristics and
+    exit criteria per level.
+
+  repository: https://github.com/Assessment-Models/dea-catalog-maturity-models
+
+  owner: TechNeHub Labs / Assessment Models
+  license: MIT
+
+  # Uniform scoring rubric — same 0–100 scale, same 5 bands, all domains
+  bands:
+    - id: band-1
+      name: Ad Hoc
+      range: [0, 25]
+      colour: "#f85149"
+    - id: band-2
+      name: Defined
+      range: [26, 50]
+      colour: "#f0883e"
+    - id: band-3
+      name: Managed
+      range: [51, 75]
+      colour: "#d29922"
+    - id: band-4
+      name: Quantitatively Managed
+      range: [76, 90]
+      colour: "#2dd4bf"
+    - id: band-5
+      name: Optimising
+      range: [91, 100]
+      colour: "#3fb950"
+
+  relationships:
+    - source_id: dea:catalog-maturity-models
+      target_id: dea:catalog-maturity-models
+      relationship_type: self-references
+      description: Top-level registry of all maturity models
+
+    # Assessments produce scores that map to these maturity levels
+    - source_id: dea:catalog-maturity-models
+      target_id: dea:catalog-assessment-tools
+      relationship_type: scored-by
+      description: Assessment instruments produce scores mapped to maturity levels
+
+    # Maturity scores feed into DERA Phase 4 governance health
+    - source_id: dea:catalog-maturity-models
+      target_id: dea:reference-dera
+      relationship_type: measured-by
+      description: Phase 4 governance health measured by maturity scores across domains
+
+  content:
+    - path: maturity-models/v1-alpha/ea-capability.yaml
+      type: MaturityModel
+      description: Overall EA capability — strategy, governance, methods, people
+    - path: maturity-models/v1-alpha/modernization.yaml
+      type: MaturityModel
+      description: Architecture modernisation programme maturity
+    - path: maturity-models/v1-alpha/technology.yaml
+      type: MaturityModel
+      description: Technology stack fitness, debt, lifecycle management
+    - path: maturity-models/v1-alpha/operations.yaml
+      type: MaturityModel
+      description: Operations, incident response, observability, SRE practices
+    - path: maturity-models/v1-alpha/services-delivery.yaml
+      type: MaturityModel
+      description: Services delivery — time-to-market, quality, customer outcomes
+
+  tags:
+    - maturity-model
+    - capability-assessment
+    - five-level-progression

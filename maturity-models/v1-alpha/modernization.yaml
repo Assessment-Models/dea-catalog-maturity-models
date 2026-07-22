@@ -1,0 +1,118 @@
+id:                  dea:maturity-modernization
+name:                Architecture Modernization Maturity Model
+domain:              modernization
+version:             "1.0.0-alpha"
+metamodel_version:   "^0.1.0"
+description: >
+  Maturity of the organization's approach to architecture modernisation —
+  legacy migration, strangler-fig adoption, decomposition strategy.
+owner:               Modernisation Lead
+
+levels:
+  - id:               level-1-ad-hoc
+    name:             Ad Hoc
+    score_range:      [0, 25]
+    summary: Modernisation happens opportunistically
+    characteristics:
+      - Legacy systems replaced in big-bang rewrites
+      - No assessment of modernisation readiness
+      - Business stakeholders surprised by project outcomes
+      - No consistent migration pattern across initiatives
+    exit_criteria:
+      - Modernisation strategy documented and approved by leadership
+      - Migration patterns (e.g., strangler-fig) documented and shared
+      - Readiness assessment performed before each major modernisation
+    evidence:
+      - Multiple failed big-bang rewrite attempts
+      - No documented migration playbook
+      - Modernisation cost overruns are common
+
+  - id:               level-2-defined
+    name:             Defined
+    score_range:      [26, 50]
+    summary: Strategy exists but execution is inconsistent
+    characteristics:
+      - Modernisation roadmap published but not enforced
+      - Some strangler-fig applications in progress
+      - Decomposition patterns documented but not standardised
+      - Coexistence strategy between old and new unclear
+    exit_criteria:
+      - Modernisation backlogs tracked in shared register
+      - Decomposition pattern library has ≥ 3 entries
+      - Coexistence strategy documented per migration wave
+    evidence:
+      - Strangler-fig pattern used in at least one production migration
+      - Migration waves have explicit exit criteria
+      - Dual-running period is planned, not reactive
+
+  - id:               level-3-managed
+    name:             Managed
+    score_range:      [51, 75]
+    summary: Modernisation is managed as a portfolio
+    characteristics:
+      - All modernisations use documented patterns
+      - Wave planning with risk-adjusted roadmap
+      - Metrics tracked — time-to-replace, business continuity
+      - Anti-corruption layer pattern is standard
+    exit_criteria:
+      - Modernisation metrics on leadership dashboard
+      - All legacy systems have modernisation roadmap entry
+      - Anti-corruption layer reuse ≥ 80% of migrations
+    evidence:
+      - Quarterly modernisation progress report
+      - Pattern reuse tracked in dea-cli
+      - Lessons learned captured per wave
+
+  - id:               level-4-quantitatively-managed
+    name:             Quantitatively Managed
+    score_range:      [76, 90]
+    summary: Outcomes predicted and measured
+    characteristics:
+      - Modernisation ROI calculated per project
+      - Velocity of modernisation measured and improved
+      - Failure modes catalogued and mitigated
+      - Cost of legacy technical debt quantified
+    exit_criteria:
+      - Modernisation ROI > 2x within 24 months
+      - Technical debt trend decreasing year-over-year
+      - Modernisation velocity improving each wave
+    evidence:
+      - ROI dashboard per modernisation
+      - Predictive models for modernisation duration
+      - Cost-of-delay calculated for legacy systems
+
+  - id:               level-5-optimising
+    name:             Optimising
+    score_range:      [91, 100]
+    summary: Continuous modernisation as a discipline
+    characteristics:
+      - Modernisation is part of ongoing architecture practice
+      - New patterns evaluated in modernisation context first
+      - Industry leadership in modernisation practice
+      - Open-source contributions of modernisation tooling
+    exit_criteria:
+      - None — continuous improvement is the practice
+    evidence:
+      - Internal modernisation conferences or community-of-practice
+      - Contributions to upstream modernisation tooling
+      - Patterns published externally
+
+relationships:
+  - source_id: dea:maturity-modernization
+    target_id: dea:catalog-maturity-models
+    relationship_type: instance-of
+    description: Modernisation model is one of the five canonical maturity models
+  - source_id: dea:maturity-modernization
+    target_id: dea:catalog-assessment-tools
+    relationship_type: scored-by
+    description: Assessed via the Architecture Modernization assessment instrument
+  - source_id: dea:maturity-modernization
+    target_id: dea:pattern-strangler-fig
+    relationship_type: references
+    description: Level 2+ requires strangler-fig pattern adoption
+
+tags:
+  - modernization
+  - legacy-migration
+  - strangler-fig
+  - decomposition
