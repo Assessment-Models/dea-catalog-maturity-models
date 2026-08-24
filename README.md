@@ -24,7 +24,7 @@ The catalog is part of the [DEA framework](https://github.com/technehub-labs/dea
 | **Level 2 — Defined** | 26–50 | Core entities and patterns are documented but not consistently enforced. |
 | **Level 3 — Managed** | 51–75 | Architecture framework is formal, tooling-enabled, governance active. |
 | **Level 4 — Quantitatively Managed** | 76–90 | Metrics-driven decision-making, predictable delivery, mature review. |
-| **Level 5 — Optimising** | 91–100 | Framework is self-sustaining, continuously improving, mentoring others. |
+| **Level 5 — Self-Optimized** | 91–100 | Framework is self-sustaining, continuously improving, mentoring others. |
 
 > **Band names are subject to an open proposal** ([PR #1](https://github.com/Assessment-Models/dea-catalog-maturity-models/pull/1) — `docs/maturity-scoring-v2-proposal`): renames to *Emergent / Structured / Systematic / Adaptive / Self-Optimising*, non-linear bands (20/25/25/18/12), and per-level `effort_multiplier` coefficients. **That PR stays open** until [CR-AM-01](change-requests/CR-AM-01-xref.md) Release 1 begins. The two converge at that point; this PR does not pre-empt that decision.
 
