@@ -17,8 +17,17 @@ The canonical migration plan lives at:
 
 That document captures both Plan A (fold v2 in — port each model to
 v2-canonical) and Plan B (freeze as legacy — register with `superseded_by`
-in the assessment-registry). The decision itself is deferred to
-**CR-AM-01 Release 1**.
+in the assessment-registry).
+
+> **Decision made — CR-AM-01 Release 1 (D-1): Plan B, freeze as legacy.**
+> The decision record is
+> [`dea-catalog-assessment-tools/change-requests/CR-AM-01-release-1-decision.md`](https://github.com/Assessment-Models/dea-catalog-assessment-tools/blob/main/change-requests/CR-AM-01-release-1-decision.md).
+> This catalog stays frozen as legacy reference content, superseded by the
+> v2 canonical maturity architecture (CR-AM-09) in technehub-labs/dea-metamodel.
+> v2-canonical domain maturity models land as independent `maturity-model-*`
+> repositories (per-org taxonomy); instruments migrate one at a time as each
+> v2 replacement lands. The scoring-v2 proposal (PR #1, merged 2026-08-21) is
+> superseded by the canonical CR-AM-09 scheme with credit (D-2).
 
 ## What consumers should do
 
