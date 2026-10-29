@@ -1,4 +1,4 @@
-# dea-catalog-maturity-models
+# OpenDEA Maturity Model (dea-catalog-maturity-models)
 
 Enterprise Architecture Maturity Models — five-level progression framework for assessing and advancing EA capability across domains.
 
@@ -6,7 +6,7 @@ Enterprise Architecture Maturity Models — five-level progression framework for
 
 ## Overview
 
-This catalog defines **maturity models** for Enterprise Architecture practice. Each model describes five levels of capability progression, from *Ad Hoc* through *Optimising*, with defined exit criteria per level.
+This catalog defines **maturity models** for Enterprise Architecture practice with a bias for OpenDEA. Each model describes five levels of capability progression, from *Ad Hoc* through *Optimising*, with defined exit criteria per level.
 
 The catalog is part of the [DEA framework](https://github.com/technehub-labs/dea-metamodel). It is consumed by:
 
