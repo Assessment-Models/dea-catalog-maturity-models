@@ -8,9 +8,11 @@
 2. **Model-per-repo extraction** — this bundle (`maturity-models/autonomous-operations/`)
    is lifted verbatim into a dedicated repo `maturity-model-autonomous-operations`
    (created via org governance, per the CR-AM-11 §26/§31 pattern exemplified by
-   `maturity-model-digital-transformation`). On extraction: keep `id:
-   dea:maturity-autonomous-operations` stable; add the repo to
-   `assessment-registry` (`registry/maturity-models/`) per the registration schema;
+   `maturity-model-digital-transformation`). The step-by-step migration is
+   [EXTRACTION-CHECKLIST.md](EXTRACTION-CHECKLIST.md) (IDENTIFY → CLASSIFY → EXTRACT →
+   NORMALIZE → VALIDATE → REGISTER → RELEASE). On extraction: keep `id:
+   dea:maturity-autonomous-operations` stable; repoint the `assessment-registry`
+   record `maturity-model-autonomous-operations` to the new repo's immutable reference;
    enable the reusable conformance workflows from `Assessment-Models/assessment-ci`.
 3. **CI** — while in the catalog, `.github/workflows/ci.yml` (`Validate Maturity Models`)
    validates the entry (schema + exactly 5 levels + per-level fields). The bundle is
