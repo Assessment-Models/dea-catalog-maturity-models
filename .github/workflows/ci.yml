@@ -2,7 +2,7 @@ name: Validate Maturity Models
 
 on:
   pull_request:
-    paths: ['maturity-models/**', 'index.yaml']
+    paths: ['maturity-models/**', '.github/workflows/ci.yml']
   push:
     branches: [main]
 
