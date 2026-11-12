@@ -19,8 +19,9 @@ lineage: 'Derived from TM Forum Digital Maturity Model v5.0.2 (GB997A) via a ful
   / 72 criteria, with evidence-anchored 5-level progression, transversal levers for current industry concepts (agentic AI,
   autonomy ladder, digital twins/DTO, human-agent teaming, network APIs), and an explicit scoring/advancement mechanism.'
 levels:
-- id: level-1-emergent
-  name: Emergent
+- id: level-1-unrealized
+  name: Unrealized
+  v2_name: Emergent
   legacy_id: level-1-ad-hoc
   legacy_name: Ad Hoc
   canonical:
@@ -35,7 +36,7 @@ levels:
   score_range: &id001
   - 0
   - 25
-  summary: Digital activity is informal and person-dependent; transformation value is at risk
+  summary: 'Value unrealized: digital activity is informal and person-dependent; transformation value is at risk'
   definition: No coherent digital-business ambition yet. Initiatives are ad hoc pilots driven by individuals; no shared
     strategy, vocabulary, or governance for AI, data, or platforms.
   characteristics:
@@ -56,8 +57,9 @@ levels:
   - No strategy/charter; initiatives tracked in personal spreadsheets
   - No architecture review board; decisions in chat threads
   - No AI inventory or data catalog
-- id: level-2-structured
-  name: Structured
+- id: level-2-proven
+  name: Proven
+  v2_name: Structured
   legacy_id: level-2-defined
   legacy_name: Defined
   canonical:
@@ -72,7 +74,7 @@ levels:
   score_range: &id003
   - 26
   - 50
-  summary: Strategy, playbooks, and reference architecture are documented; adoption is real but uneven
+  summary: 'Value proven in governed pilots: strategy and playbooks documented, adoption still uneven'
   definition: The organization has a documented digital strategy, target operating model, and playbooks, but enforcement
     is inconsistent and value is not yet systematically measured.
   characteristics:
@@ -94,8 +96,9 @@ levels:
   - Strategy doc signed off; architecture decision records (ADRs) in use
   - CI/CD pipelines for most teams; security scans in pipeline for key apps
   - Data catalog live with owners assigned for critical data
-- id: level-3-systematic
-  name: Systematic
+- id: level-3-standardized
+  name: Standardized
+  v2_name: Systematic
   legacy_id: level-3-managed
   legacy_name: Managed
   canonical:
@@ -110,7 +113,7 @@ levels:
   score_range: &id005
   - 51
   - 75
-  summary: Digital practice is standardized, governed, and tooling-enforced across the organization
+  summary: 'Value standardized: digital practice is governed and tooling-enforced org-wide, so value is repeatable'
   definition: 'Digital-business capabilities are the default way of working: standards are enforced by CI/conformance tooling,
     journeys are real-time and orchestrated, and AI agents operate in supervised workflows with AI TRiSM controls.'
   characteristics:
@@ -138,8 +141,9 @@ levels:
   - SLO dashboards per service; error budgets gate releases
   - AI inventory with risk scores; runtime guardrails and audit logs
   - DTO/process-mining pipeline live for top value streams
-- id: level-4-adaptive
-  name: Adaptive
+- id: level-4-compounding
+  name: Compounding
+  v2_name: Adaptive
   legacy_id: level-4-quantitatively-managed
   legacy_name: Quantitatively Managed
   canonical:
@@ -154,7 +158,7 @@ levels:
   score_range: &id007
   - 76
   - 90
-  summary: The digital business is metrics-driven, predictive, and self-adapting
+  summary: 'Value compounding: the digital business is metrics-driven, predictive and self-adapting, so value scales'
   definition: 'The organization senses and responds: predictive closed-loop operations across domains (AN L4+), customer
     and ecosystem outcomes optimized in real time, twins/simulation drive decisions, and agents act with graded autonomy
     under human-on-the-loop oversight.'
@@ -182,8 +186,9 @@ levels:
   - Predictive alerts >50% of sev-1; auto-remediation >30% of incidents
   - Agent actions logged, explainable, and reversible; kill-switch tested
   - Cost and carbon per workload tracked weekly
-- id: level-5-self-optimising
-  name: Self-Optimising
+- id: level-5-leading
+  name: Leading
+  v2_name: Self-Optimising
   legacy_id: level-5-optimising
   legacy_name: Optimising
   canonical:
@@ -198,7 +203,7 @@ levels:
   score_range: &id009
   - 91
   - 100
-  summary: The digital business is self-optimizing and intent-driven end to end - and sets benchmarks for others
+  summary: 'Value leading: the digital business is self-optimizing and intent-driven end to end, setting benchmarks'
   definition: Humans set outcomes, intent, and policy; agents and closed loops execute. Telemetry, twins, and benchmarks
     continuously feed strategy, architecture, and roadmaps. The organization is an active ecosystem citizen (standards,
     open source, benchmarks, mentoring).
@@ -221,7 +226,8 @@ levels:
 level_correlation:
   note: 'This model''s five levels correlate 1:1 with the org''s canonical L-0..L-4 scale (dea:scale-digital-transformation-v1
     in maturity-model-digital-transformation; CR-AM-09 v2 bands): model level N maps to canonical ordinal N-1 (L-0..L-4).
-    Primary names use the v2 state-names (Emergent/Structured/Systematic/Adaptive/Self-Optimising, proposal 0001); legacy_id/legacy_name
+    Primary names use the v2 state-names (Emergent/Structured/Systematic/Adaptive/Self-Optimising, kept as v2_name aliases,
+    proposal 0001); primary names denote the value state (Unrealized/Proven/Standardized/Compounding/Leading); legacy_id/legacy_name
     keep v1-alpha catalog names resolvable; score_range keeps the uniform catalog v1-alpha bands; canonical.v2_score_range
     + effort_multiplier carry the non-linear v2 bands (0-20/21-45/46-70/71-88/89-100, multipliers 1.0/1.5/2.5/4.0/6.0) as
     the correlation to the canonical scale. Known semantic offset: catalog v1 level-1 ''Ad Hoc'' spans canonical L-0+L-1;
@@ -229,8 +235,10 @@ level_correlation:
     scale: linear topology, exponential effort, forward-only with no skipping, exit-criteria + evidence gates, highest-conformant-level
     resolution.'
   mapping:
-  - model_level: level-1-emergent
-    model_name: Emergent
+  - model_level: level-1-unrealized
+    model_name: Unrealized
+    value_name: Unrealized
+    state_name: Emergent
     score_range: *id001
     legacy_id: level-1-ad-hoc
     legacy_name: Ad Hoc
@@ -240,8 +248,10 @@ level_correlation:
     v2_band: dea:maturity-band-emergent
     v2_score_range: *id002
     effort_multiplier: 1.0
-  - model_level: level-2-structured
-    model_name: Structured
+  - model_level: level-2-proven
+    model_name: Proven
+    value_name: Proven
+    state_name: Structured
     score_range: *id003
     legacy_id: level-2-defined
     legacy_name: Defined
@@ -251,8 +261,10 @@ level_correlation:
     v2_band: dea:maturity-band-structured
     v2_score_range: *id004
     effort_multiplier: 1.5
-  - model_level: level-3-systematic
-    model_name: Systematic
+  - model_level: level-3-standardized
+    model_name: Standardized
+    value_name: Standardized
+    state_name: Systematic
     score_range: *id005
     legacy_id: level-3-managed
     legacy_name: Managed
@@ -262,8 +274,10 @@ level_correlation:
     v2_band: dea:maturity-band-systematic
     v2_score_range: *id006
     effort_multiplier: 2.5
-  - model_level: level-4-adaptive
-    model_name: Adaptive
+  - model_level: level-4-compounding
+    model_name: Compounding
+    value_name: Compounding
+    state_name: Adaptive
     score_range: *id007
     legacy_id: level-4-quantitatively-managed
     legacy_name: Quantitatively Managed
@@ -273,8 +287,10 @@ level_correlation:
     v2_band: dea:maturity-band-adaptive
     v2_score_range: *id008
     effort_multiplier: 4.0
-  - model_level: level-5-self-optimising
-    model_name: Self-Optimising
+  - model_level: level-5-leading
+    model_name: Leading
+    value_name: Leading
+    state_name: Self-Optimising
     score_range: *id009
     legacy_id: level-5-optimising
     legacy_name: Optimising

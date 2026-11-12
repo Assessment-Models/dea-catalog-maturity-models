@@ -75,10 +75,14 @@ are kept — they map cleanly onto CMMI's cumulative rule, the TM Forum AN L0–
 exit-criteria convention. What changed after review is **how the levels are named and sold**, because the
 names are what an organization sees in a radar chart or board pack:
 
-- **Primary names are the org's canonical v2 state-names** (CR-AM-09 v2 bands / proposal 0001 /
-  `dea:scale-digital-transformation-v1`): **Emergent → Structured → Systematic → Adaptive →
-  Self-Optimising**. Per proposal 0001's design rule these are single-word adjectives describing the
-  *organization's state* (ambition-driving), not CMMI-era process-regime names ("Quantitatively Managed").
+- **Names now denote value, not just state**: primary level names describe the *value state* an
+  organization has reached — **Unrealized → Proven → Standardized → Compounding → Leading**
+  (value identified but not captured → proven in governed pilots → repeatable org-wide →
+  scaled/measured/predictive → self-optimizing and benchmark-setting). The v2 state-names
+  (Emergent/Structured/Systematic/Adaptive/Self-Optimising) are kept as `v2_name` aliases, so
+  proposal 0001 tooling and the canonical correlation are unaffected. Every level also carries
+  `unlocks` (business value unlocked) — names + unlocks together make the ambition explicit in
+  a radar chart or board pack.
 - **Explicit correlation to the canonical scale**: model level N ↔ canonical ordinal N−1 (**L-0..L-4**),
   carried per level as `canonical: {scale_level, ordinal, canonical_name, v2_band, v2_score_range,
   effort_multiplier}` plus a model-level `level_correlation.mapping` table. `score_range` keeps the uniform
@@ -93,13 +97,13 @@ names are what an organization sees in a radar chart or board pack:
   linear topology, exponential effort, forward-only with no skipping, exit-criteria + evidence gates,
   highest-conformant-level resolution.
 
-| Model level (primary name) | Catalog v1 (legacy) | Canonical scale | Ordinal | v1 band | v2 band | Effort mult |
-|---|---|---|---|---|---|---|
-| level-1 Emergent | level-1-ad-hoc Ad Hoc | L-0 Absent | 0 | 0–25 | 0–20 | 1.0 |
-| level-2 Structured | level-2-defined Defined | L-1 Piloting | 1 | 26–50 | 21–45 | 1.5 |
-| level-3 Systematic | level-3-managed Managed | L-2 Defined | 2 | 51–75 | 46–70 | 2.5 |
-| level-4 Adaptive | level-4-quantitatively-managed | L-3 Scaled | 3 | 76–90 | 71–88 | 4.0 |
-| level-5 Self-Optimising | level-5-optimising Optimising | L-4 Self-Optimising | 4 | 91–100 | 89–100 | 6.0 |
+| Model level (value name) | v2 state-name alias | Catalog v1 (legacy) | Canonical scale | Ordinal | v1 band | v2 band | Effort mult |
+|---|---|---|---|---|---|---|---|
+| level-1 Unrealized | Emergent | level-1-ad-hoc Ad Hoc | L-0 Absent | 0 | 0–25 | 0–20 | 1.0 |
+| level-2 Proven | Structured | level-2-defined Defined | L-1 Piloting | 1 | 26–50 | 21–45 | 1.5 |
+| level-3 Standardized | Systematic | level-3-managed Managed | L-2 Defined | 2 | 51–75 | 46–70 | 2.5 |
+| level-4 Compounding | Adaptive | level-4-quantitatively-managed | L-3 Scaled | 3 | 76–90 | 71–88 | 4.0 |
+| level-5 Leading | Self-Optimising | level-5-optimising Optimising | L-4 Self-Optimising | 4 | 91–100 | 89–100 | 6.0 |
 
 ### 5.2 Structure and mechanism
 
