@@ -1,0 +1,76 @@
+# model.yaml — core registration of dea:maturity-autonomous-operations
+# Slices: scale.yaml (levels), evaluation.yaml (scoring+assessment), dimensions.yaml (6/32/157 criteria)
+
+id: dea:maturity-autonomous-operations
+name: Autonomous Operations Maturity Model
+domain: autonomous-operations
+version: 1.0.0-alpha
+metamodel_version: ^0.1.0
+description: Autonomous Operations (AO) maturity and assessment model — the enterprise operating model in which value streams
+  are instrumented with AI, data and closed-loop control so that agents and autonomous systems learn, self-govern and self-adapt,
+  with intent/goals driving the closed loops (Observe-Orient-Decide-Act) and the decision/execution burden shifting progressively
+  from humans to machines. Harvested and cleaned from an industry AO maturity workbook v1.8.0, gap-filled against 2025-26
+  industry sources (see proposals/0002).
+owner: Assessment Models — Autonomous Operations working group
+provenance:
+  harvested_from: Industry Autonomous Operations maturity workbook, v1.8.0 (XLSX, 12 sheets)
+  source_md5: 61ce82cba20cd8c87ce4e079b8a2e966
+  source_counts: 6 dimensions / 32 sub-dimensions / 151 criteria x 5 levels
+  this_model_counts: 6 dimensions / 32 sub-dimensions / 157 criteria
+  gap_analysis: proposals/0002-autonomous-operations-maturity-model.md
+  asset_bundle: maturity-models/autonomous-operations/ (repo-ready package for a dedicated maturity-model-autonomous-operations
+    repository)
+  cleaning_applied:
+  - IDs normalized to text (6 float-formatted IDs fixed)
+  - criterion 6.2.5 reassigned to sub-dimension 6.3 as 6.3.5 (source prefix mismatch)
+  - 2 cross-dimension duplicate criterion names merged (3.4.2→4.6.1, 3.4.3→4.6.2); 4.5.3, 1.7.1, 3.1.5 renamed for scope clarity
+    and vocabulary hygiene
+  - 8 gap criteria added from 2025-26 industry sources (marked added_in_revamp)
+  - one explicit OODA/closed-loop progression ladder replaces 755 ad-hoc level-text cells
+  dropped_duplicates:
+  - id: 3.4.2
+    name: Catalog Driven Service Realization
+    reason: merged into 4.6.1
+  - id: 3.4.3
+    name: Intelligent Productization
+    reason: merged into 4.6.2
+  renamed:
+  - id: 1.7.1
+    name: Autonomous Onboarding (Smart Things)
+  - id: 3.1.5
+    name: Autonomous Integration & Interoperability
+  - id: 4.5.3
+    name: Formulate and decide energy & carbon solution
+relationships:
+- source_id: dea:maturity-autonomous-operations
+  target_id: dea:catalog-maturity-models
+  relationship_type: instance-of
+  description: One of the catalog's maturity models
+- source_id: dea:maturity-autonomous-operations
+  target_id: dea:catalog-assessment-tools
+  relationship_type: scored-by
+  description: Assessed via assessment instruments; results map to the AO Autonomy Index and levels
+- source_id: dea:maturity-autonomous-operations
+  target_id: dea:maturity-operations
+  relationship_type: extends
+  description: Generalizes the operations model to the full AO operating model (adds strategy, party, culture, data, technology
+    dimensions)
+- source_id: dea:maturity-autonomous-operations
+  target_id: ext:ao-maturity-workbook-v1.8.0
+  relationship_type: harvested-from
+  description: Structure harvested and cleaned from an industry AO maturity workbook v1.8.0; see provenance and proposals/0002
+    mapping
+- source_id: dea:maturity-autonomous-operations
+  target_id: ext:ooda-closed-loop
+  relationship_type: references
+  description: Level progression axis is the OODA loop (Observe-Orient-Decide-Act); intent/goals drive the closed loops
+tags:
+- autonomous-operations
+- ao
+- agentic-ai
+- closed-loop
+- ooda
+- maturity-model
+- assessment
+- intent-driven
+- human-machine

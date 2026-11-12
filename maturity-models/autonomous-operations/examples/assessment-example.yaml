@@ -1,0 +1,50 @@
+# Worked example — AO Autonomy Index and weakest-link gate
+# Illustrates evaluation.yaml aggregation_rule on a small org.
+id: example-org-2026
+assessment_date: "2026-11-12"
+scope: "Two customer-facing value streams: order-to-activate, trouble-to-resolve"
+
+criterion_scores:   # level achieved per criterion (L1..L5; L0 = absent/not assessed)
+  "4.1.1": 3        # Observe (detect anomaly)
+  "4.1.2": 2        # Orient (root-cause)  <- gating spine
+  "4.1.3": 3        # Decide
+  "4.1.4": 3        # Act
+  "4.2.5": 3        # SLO & error budgets
+  "3.3.8": 3        # Observability & event intelligence
+  "2.4.7": 2        # Guardrails & audit
+  "3.1.8": 2        # AgentOps lifecycle
+  # ... remaining 149 criteria scored similarly in a real assessment
+
+dimension_weights:   # from evaluation.yaml scoring.dimension_weights
+  strategy: 0.20
+  operations: 0.20
+  technology: 0.20
+  data: 0.15
+  party: 0.15
+  culture: 0.10
+
+level_points: {L0: 0, L1: 20, L2: 40, L3: 60, L4: 80, L5: 100}
+
+computation:
+  # 1) criterion points = level_points[level]
+  # 2) dimension score = mean of criterion points in that dimension
+  # 3) AO Autonomy Index = sum(dimension_score * weight)
+  #    e.g. all criteria at L3 -> index 60 -> band-3 (Managed / Closed-Loop Automated)
+  # 4) weakest-link gate: min gating level among 4.1.1-4.1.4 = min(3,2,3,3) = 2
+  #    -> org level = min(band(index), band(gate)) = level-2 (Defined / Instrumented & Assisted)
+  example_result:
+    ao_autonomy_index: 60
+    band_from_index: band-3          # Managed — "Closed-Loop Automated"
+    gating_min_level: 2               # 4.1.2 root-cause still human-led
+    org_level: level-2-defined        # weakest-link gate caps the level
+    ao_stage: "Instrumented & Assisted"
+    effort_adjusted_value: "points up to L2 earned at 1.0x/1.5x, remainder at 2.5x -> value = 20/1.0 + 25/1.5 + 15/2.5 = 42.7 value units for 60 raw points (proposal 0001 formula)"
+  interpretation: "The org has automated, measured loops (index in band-3) but cannot claim closed-loop autonomy until the root-cause (Orient) stage is system-owned — the gate makes the real blocker visible."
+
+evidence_confidence: Medium   # 50-79% of criteria independently verified
+evidence_pack:
+  - SLO dashboards export
+  - agent action logs (sampled, with decision provenance)
+  - guardrail policy catalogue
+  - deployment metrics from CI/CD
+assessor: "independent assessor (not the ops team) verified 60% of sampled evidence"
