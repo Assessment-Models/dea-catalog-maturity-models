@@ -1,4 +1,10 @@
 [Unreleased]
+├── proposal 0002: Digital Transformation Operationalized maturity & assessment model
+│   ├── maturity-models/v1-alpha/digital-transformation-operationalized.yaml (new model: 6 dimensions / 23 sub-dimensions / 70 criteria, 5 evidence-anchored levels each, 12 transversal levers, weighted 0-100 scoring with cumulative advancement gates)
+│   ├── proposals/0002-digital-transformation-operationalized.md (gap review of TM Forum DMM v5.0.2, grounded definitions, design rationale)
+│   ├── maturity-models/index.yaml: content + relationship entries
+│   ├── README.md: catalog table row
+│   └── NOTE: no changes to existing models, bands, or score ranges
 └── pending
     └── CR-AM-01-xref: cross-reference to CR-AM-01 (assessment-tools). Documents the Maturity-Decoupling roadmap for this catalog.
         ├── change-requests/CR-AM-01-xref.md (cross-reference, lists every CR-AM-01 section affecting this repo)
