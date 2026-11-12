@@ -19,8 +19,9 @@ lives here and is registered in the catalog at
 | `scale.yaml` | The 5-level scale: canonical org bands (`band-1..band-5` from the catalog `index.yaml`) + ambitious AO stages + OODA closed-loop progression per level + scoring metadata (level points, effort multipliers) |
 | `evaluation.yaml` | Evaluation contract: AO Autonomy Index aggregation, weakest-link gate, effort-adjusted value, and the assessment method (inputs, steps, assessor independence, confidence, cadence) |
 | `dimensions.yaml` | The harvested, cleaned, gap-filled structure: 6 dimensions / 32 sub-dimensions / 157 criteria |
-| `examples/` | Worked assessment example |
-| `scripts/local_validate.py` | Local validation (schema, 5 levels, unique IDs/names, bands, weights) — run before any PR |
+| `assessment-questionnaire.yaml` | Assessment instrument: one entry per criterion (157), evidence-to-request per dimension, level anchors, gating flags |
+| `examples/` | Worked assessment example (`assessment-example.yaml`) + weight-profile benchmark (`benchmark-weight-profiles.yaml`) |
+| `scripts/local_validate.py` | Local validation (schema, 5 levels, unique IDs/names, bands, weights + profile sums, questionnaire coverage) — run before any PR |
 | `GOVERNANCE.md` | How this model stays governed inside the org (catalog, registry, CI, change requests) |
 
 ## Level stages (canonical band → AO stage)

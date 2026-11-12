@@ -1,0 +1,33 @@
+# examples/benchmark-weight-profiles.yaml — effect of weight profiles on the index
+
+id: example-benchmark-weight-profiles
+description: Same dimension scores under both weight profiles — shows the profile's effect on the AO Autonomy Index (org level/band
+  unchanged here; only the index moves).
+dimension_scores:
+  strategy: 55
+  operations: 70
+  technology: 62
+  data: 58
+  party: 50
+  culture: 45
+profiles:
+  default:
+    weights:
+      strategy: 0.2
+      operations: 0.2
+      technology: 0.2
+      data: 0.15
+      party: 0.15
+      culture: 0.1
+    ao_autonomy_index: 58.1
+  comms-provider:
+    weights:
+      strategy: 0.15
+      operations: 0.25
+      technology: 0.2
+      data: 0.15
+      party: 0.15
+      culture: 0.1
+    ao_autonomy_index: 58.9
+note: comms-provider weights the stronger operations score (70) higher, so its index is higher for the same org — profiles
+  are for portfolio comparison, not level inflation; band/level resolution and the gate are unchanged.

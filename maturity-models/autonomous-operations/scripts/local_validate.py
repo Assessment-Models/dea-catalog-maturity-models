@@ -111,6 +111,16 @@ for l in doc["levels"]:
     if not p.get("loop_driver"):
         errors.append("level %s: missing loop_driver" % l["id"])
 
+# --- questionnaire covers every criterion exactly once ---
+qp = os.path.join(BUNDLE, "assessment-questionnaire.yaml")
+if os.path.exists(qp):
+    qdoc = yaml.safe_load(open(qp))
+    qids = [c["id"] for sec in qdoc.get("sections", []) for c in sec.get("criteria", [])]
+    if sorted(qids) != sorted(ids):
+        errors.append("assessment-questionnaire.yaml criteria do not match model criteria exactly")
+else:
+    errors.append("assessment-questionnaire.yaml missing from bundle")
+
 # --- hygiene scan over every text file in the bundle and the catalog entry ---
 for path in [CATALOG_ENTRY] + glob.glob(os.path.join(BUNDLE, "**", "*"), recursive=True):
     if os.path.isfile(path) and path.endswith((".yaml", ".md", ".py")):
