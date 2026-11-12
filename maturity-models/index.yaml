@@ -54,6 +54,12 @@ catalog:
       relationship_type: scored-by
       description: Assessment instruments produce scores mapped to maturity levels
 
+    # Digital Transformation Operationalized model entry (proposal 0003)
+    - source_id: dea:maturity-digital-transformation-operationalized
+      target_id: dea:catalog-maturity-models
+      relationship_type: instance-of
+      description: Digital Transformation Operationalized model is a catalog member (proposal 0003)
+
     # Maturity scores feed into DERA Phase 4 governance health
     - source_id: dea:catalog-maturity-models
       target_id: dea:reference-dera
@@ -86,9 +92,9 @@ catalog:
     - path: maturity-models/v1-alpha/services-delivery.yaml
       type: MaturityModel
       description: Services delivery — time-to-market, quality, customer outcomes
-    - path: maturity-models/v1-alpha/autonomous-operations.yaml
+    - path: maturity-models/v1-alpha/digital-transformation-operationalized.yaml
       type: MaturityModel
-      description: Autonomous Operations — goal-driven, closed-loop (OODA) operating model; harvested from an industry AO workbook v1.8.0, gap-filled per proposals/0002; repo-ready bundle in maturity-models/autonomous-operations/
+      description: Digital Transformation Operationalized — digital-business maturity & assessment model (6 dimensions, 23 sub-dimensions, 70 evidence-anchored criteria; agentic AI, autonomy ladder, digital twins, human-agent teaming, network APIs); see proposals/0003
 
   tags:
     - maturity-model

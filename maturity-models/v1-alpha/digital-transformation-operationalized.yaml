@@ -1,0 +1,2234 @@
+# Digital Transformation Operationalized Maturity & Assessment Model
+# New model lodged via proposal 0002 (see proposals/0002-digital-transformation-operationalized.md).
+# CI contract: id/name/domain/version + exactly 5 levels, each with id/name/score_range/summary/characteristics/exit_criteria/evidence.
+
+id: dea:maturity-digital-transformation-operationalized
+name: Digital Transformation Operationalized Maturity & Assessment Model
+domain: digital-transformation
+version: 1.0.0-alpha
+metamodel_version: ^0.1.0
+owner: Digital Transformation Office / Enterprise Architecture Lead
+description: 'Digital-business maturity and assessment model. Positions digital transformation as the reimagining of the
+  organization''s business and operating model as a digital business: grounded in advanced digital technology adoption (AI,
+  agentic AI, autonomous systems, composable cloud-native platforms, digital twins), expressed through novel operating models
+  across all operating concerns, steered by customer- and ecosystem-centric digital strategy, and run as a deliberate working
+  model between humans and software agents. Technology is an enabler, not the subject. Every criterion is MECE-placed, carries
+  five evidence-anchored progression levels correlated to the org''s canonical L-0..L-4 scale, and is independently assessable.'
+lineage: 'Derived from TM Forum Digital Maturity Model v5.0.2 (GB997A) via a full structural and gap review (see proposals/0002-digital-transformation-operationalized.md):
+  6 dimensions / 31 sub-dimensions / 129 criteria re-harvested into a MECE digital-business model of 6 dimensions / 24 sub-dimensions
+  / 72 criteria, with evidence-anchored 5-level progression, transversal levers for current industry concepts (agentic AI,
+  autonomy ladder, digital twins/DTO, human-agent teaming, network APIs), and an explicit scoring/advancement mechanism.'
+levels:
+- id: level-1-unrealized
+  name: Unrealized
+  v2_name: Emergent
+  legacy_id: level-1-ad-hoc
+  legacy_name: Ad Hoc
+  canonical:
+    scale_level: L-0
+    ordinal: 0
+    canonical_name: Absent
+    v2_band: dea:maturity-band-emergent
+    v2_score_range: &id002
+    - 0
+    - 20
+    effort_multiplier: 1.0
+  score_range: &id001
+  - 0
+  - 25
+  summary: 'Value unrealized: digital activity is informal and person-dependent; transformation value is at risk'
+  definition: No coherent digital-business ambition yet. Initiatives are ad hoc pilots driven by individuals; no shared
+    strategy, vocabulary, or governance for AI, data, or platforms.
+  characteristics:
+  - Digital initiatives are ad hoc pilots driven by individuals; no shared strategy or vocabulary
+  - Technology and process choices are reactive; no reference architecture or standards
+  - No measurable digital KPIs; customer journeys fragmented across channels
+  - AI used informally (e.g., personal copilots) with no governance, inventory, or oversight
+  - Data trapped in silos; no governance, quality, or sharing practices
+  unlocks:
+  - Executive attention and a signed digital strategy with named sponsor
+  - First governed pilots with documented results
+  - Baseline inventory of systems, AI use cases, and critical data
+  exit_criteria:
+  - Digital strategy document with executive sponsor approved
+  - Inventory of digital initiatives, systems, and AI use cases exists
+  - At least one governed pilot with documented results and lessons
+  evidence:
+  - No strategy/charter; initiatives tracked in personal spreadsheets
+  - No architecture review board; decisions in chat threads
+  - No AI inventory or data catalog
+- id: level-2-proven
+  name: Proven
+  v2_name: Structured
+  legacy_id: level-2-defined
+  legacy_name: Defined
+  canonical:
+    scale_level: L-1
+    ordinal: 1
+    canonical_name: Piloting
+    v2_band: dea:maturity-band-structured
+    v2_score_range: &id004
+    - 21
+    - 45
+    effort_multiplier: 1.5
+  score_range: &id003
+  - 26
+  - 50
+  summary: 'Value proven in governed pilots: strategy and playbooks documented, adoption still uneven'
+  definition: The organization has a documented digital strategy, target operating model, and playbooks, but enforcement
+    is inconsistent and value is not yet systematically measured.
+  characteristics:
+  - Documented digital strategy, target operating model, and reference architecture
+  - Standard playbooks (CI/CD, security, data) exist but adoption is partial
+  - Customer journeys mapped; some channels integrated; CX metrics collected manually
+  - AI use cases inventoried; pilots in selected functions with basic guardrails
+  - Data governance framework defined; central catalog started
+  unlocks:
+  - Repeatable delivery in key domains; golden paths available to teams
+  - CX metrics trusted enough to steer; AI pilots governed; data catalog live
+  - First ecosystem/API products with paying partners
+  exit_criteria:
+  - Playbooks enforced via tooling (golden paths) in key domains
+  - CX metrics tracked systematically across all channels
+  - AI governance policy approved; agents confined to supervised sandboxes
+  - Data quality SLAs defined for critical data products
+  evidence:
+  - Strategy doc signed off; architecture decision records (ADRs) in use
+  - CI/CD pipelines for most teams; security scans in pipeline for key apps
+  - Data catalog live with owners assigned for critical data
+- id: level-3-standardized
+  name: Standardized
+  v2_name: Systematic
+  legacy_id: level-3-managed
+  legacy_name: Managed
+  canonical:
+    scale_level: L-2
+    ordinal: 2
+    canonical_name: Defined
+    v2_band: dea:maturity-band-systematic
+    v2_score_range: &id006
+    - 46
+    - 70
+    effort_multiplier: 2.5
+  score_range: &id005
+  - 51
+  - 75
+  summary: 'Value standardized: digital practice is governed and tooling-enforced org-wide, so value is repeatable'
+  definition: 'Digital-business capabilities are the default way of working: standards are enforced by CI/conformance tooling,
+    journeys are real-time and orchestrated, and AI agents operate in supervised workflows with AI TRiSM controls.'
+  characteristics:
+  - Strategy, architecture, and platform standards enforced via CI/conformance tooling
+  - Composable, API-first platforms are the default for new services; legacy de-layering underway
+  - Omni-channel journeys orchestrated in real time; personalization data-driven
+  - Ecosystem/partner onboarding via self-service portals; API products monetized
+  - Agentic AI deployed in defined, supervised workflows (human-in-the-loop); AI TRiSM controls active
+  - Autonomous operations (AN L3) in key domains; digital twins used for assurance
+  - Data products with contracts, quality SLAs, and lineage; self-service analytics widely adopted
+  unlocks:
+  - Conformance CI blocks non-standard change; teams ship faster safely
+  - Customers experience one coherent, real-time brand across channels and partners
+  - Agents handle defined workflows end to end under supervision; humans focus on exceptions
+  - Operations in key domains run closed-loop (AN L3); twins inform assurance and planning
+  - Regulatory posture (DORA/NIS2/EU AI Act) automated and evidenced
+  exit_criteria:
+  - 'Metrics-driven management: SLOs/error budgets, flow metrics, unit economics tracked per domain'
+  - Autonomy at AN L4 in at least one domain (closed-loop, intent-driven)
+  - Digital twin of operations used for what-if planning
+  - AI agents act with defined agency levels under continuous monitoring and kill-switch oversight
+  - Regulatory compliance (DORA/NIS2/EU AI Act) automated and evidenced
+  evidence:
+  - Conformance CI blocks non-standard changes; golden-path templates mandatory
+  - SLO dashboards per service; error budgets gate releases
+  - AI inventory with risk scores; runtime guardrails and audit logs
+  - DTO/process-mining pipeline live for top value streams
+- id: level-4-compounding
+  name: Compounding
+  v2_name: Adaptive
+  legacy_id: level-4-quantitatively-managed
+  legacy_name: Quantitatively Managed
+  canonical:
+    scale_level: L-3
+    ordinal: 3
+    canonical_name: Scaled
+    v2_band: dea:maturity-band-adaptive
+    v2_score_range: &id008
+    - 71
+    - 88
+    effort_multiplier: 4.0
+  score_range: &id007
+  - 76
+  - 90
+  summary: 'Value compounding: the digital business is metrics-driven, predictive and self-adapting, so value scales'
+  definition: 'The organization senses and responds: predictive closed-loop operations across domains (AN L4+), customer
+    and ecosystem outcomes optimized in real time, twins/simulation drive decisions, and agents act with graded autonomy
+    under human-on-the-loop oversight.'
+  characteristics:
+  - 'Predictive, closed-loop operations across domains (AN L4+): system owns awareness, analysis, decision, execution; intent
+    shared human-machine'
+  - Customer and ecosystem outcomes predicted and optimized in real time (churn, CLTV, partner value)
+  - Digital twins/simulation drive planning, what-if, and agent rehearsal sandboxes
+  - AI agents operate with graded autonomy per use-case risk; human-on-the-loop; continuous TRiSM monitoring
+  - Value streams and flow metrics (DORA) drive portfolio allocation; FinOps/GreenOps cost and carbon per workload
+  - Resilience tested (chaos, TLPT); third-party risk and exit strategies managed quantitatively
+  unlocks:
+  - Release and capacity decisions driven by SLOs/error budgets and flow metrics, not meetings
+  - Major strategy and operating-model changes simulated in the DTO before a dollar is committed
+  - Network capabilities monetized as programmable products (Open Gateway/CAMARA-class APIs, NaaS)
+  - Agents act autonomously in bounded, high-trust scopes; humans on the loop, not in it
+  - Risk, cost, and carbon per workload visible and quantitatively managed
+  exit_criteria:
+  - 'Full autonomy (AN L5) demonstrated in selected scenarios: system sets its own intents within policy'
+  - DTO used to simulate strategy and operating-model changes before execution
+  - Regulatory and AI-risk posture continuously evidenced (audit-ready)
+  - 'Self-improving platforms: telemetry feeds back into standards and golden paths'
+  evidence:
+  - MTTD/MTTR, change failure rate, deployment frequency tracked and improving
+  - Predictive alerts >50% of sev-1; auto-remediation >30% of incidents
+  - Agent actions logged, explainable, and reversible; kill-switch tested
+  - Cost and carbon per workload tracked weekly
+- id: level-5-leading
+  name: Leading
+  v2_name: Self-Optimising
+  legacy_id: level-5-optimising
+  legacy_name: Optimising
+  canonical:
+    scale_level: L-4
+    ordinal: 4
+    canonical_name: Self-Optimising
+    v2_band: dea:maturity-band-self-optimising
+    v2_score_range: &id010
+    - 89
+    - 100
+    effort_multiplier: 6.0
+  score_range: &id009
+  - 91
+  - 100
+  summary: 'Value leading: the digital business is self-optimizing and intent-driven end to end, setting benchmarks'
+  definition: Humans set outcomes, intent, and policy; agents and closed loops execute. Telemetry, twins, and benchmarks
+    continuously feed strategy, architecture, and roadmaps. The organization is an active ecosystem citizen (standards,
+    open source, benchmarks, mentoring).
+  characteristics:
+  - 'Intent-driven, autonomous operating model across domains: humans set outcomes and policy; agents and closed loops execute'
+  - 'Continuous self-optimization: telemetry, twins, and benchmarks feed strategy, architecture, and roadmaps automatically'
+  - Network/edge capabilities exposed as programmable products (Open Gateway/CAMARA-class APIs, NaaS) at scale
+  - 'Human-agent teaming is a designed operating model: roles, trust, oversight, and accountability engineered'
+  - Organization benchmarks, mentors peers, and contributes back to standards, open source, and the assessment ecosystem
+  unlocks:
+  - Board-level digital KPIs tied to customer and ecosystem outcomes; transformation is simply how the org works
+  - 'Industry recognition: benchmarks locked, standards authored, peers mentored'
+  - 'Marginal gains compound: every level-4 investment pays for the next'
+  exit_criteria:
+  - None - continuous improvement is the practice
+  evidence:
+  - Locked benchmark baselines; published contributions to standards/open source
+  - Board-level digital KPIs tied to customer and ecosystem outcomes
+  - Post-incident and experiment learnings automatically update playbooks
+level_correlation:
+  note: 'This model''s five levels correlate 1:1 with the org''s canonical L-0..L-4 scale (dea:scale-digital-transformation-v1
+    in maturity-model-digital-transformation; CR-AM-09 v2 bands): model level N maps to canonical ordinal N-1 (L-0..L-4).
+    Primary names use the v2 state-names (Emergent/Structured/Systematic/Adaptive/Self-Optimising, kept as v2_name aliases,
+    proposal 0001); primary names denote the value state (Unrealized/Proven/Standardized/Compounding/Leading); legacy_id/legacy_name
+    keep v1-alpha catalog names resolvable; score_range keeps the uniform catalog v1-alpha bands; canonical.v2_score_range
+    + effort_multiplier carry the non-linear v2 bands (0-20/21-45/46-70/71-88/89-100, multipliers 1.0/1.5/2.5/4.0/6.0) as
+    the correlation to the canonical scale. Known semantic offset: catalog v1 level-1 ''Ad Hoc'' spans canonical L-0+L-1;
+    this model splits that bottom range via Emergent(L-0) and Structured(L-1). Progression semantics match the canonical
+    scale: linear topology, exponential effort, forward-only with no skipping, exit-criteria + evidence gates, highest-conformant-level
+    resolution.'
+  mapping:
+  - model_level: level-1-unrealized
+    model_name: Unrealized
+    value_name: Unrealized
+    state_name: Emergent
+    score_range: *id001
+    legacy_id: level-1-ad-hoc
+    legacy_name: Ad Hoc
+    canonical_scale_level: L-0
+    canonical_ordinal: 0
+    canonical_name: Absent
+    v2_band: dea:maturity-band-emergent
+    v2_score_range: *id002
+    effort_multiplier: 1.0
+  - model_level: level-2-proven
+    model_name: Proven
+    value_name: Proven
+    state_name: Structured
+    score_range: *id003
+    legacy_id: level-2-defined
+    legacy_name: Defined
+    canonical_scale_level: L-1
+    canonical_ordinal: 1
+    canonical_name: Piloting
+    v2_band: dea:maturity-band-structured
+    v2_score_range: *id004
+    effort_multiplier: 1.5
+  - model_level: level-3-standardized
+    model_name: Standardized
+    value_name: Standardized
+    state_name: Systematic
+    score_range: *id005
+    legacy_id: level-3-managed
+    legacy_name: Managed
+    canonical_scale_level: L-2
+    canonical_ordinal: 2
+    canonical_name: Defined
+    v2_band: dea:maturity-band-systematic
+    v2_score_range: *id006
+    effort_multiplier: 2.5
+  - model_level: level-4-compounding
+    model_name: Compounding
+    value_name: Compounding
+    state_name: Adaptive
+    score_range: *id007
+    legacy_id: level-4-quantitatively-managed
+    legacy_name: Quantitatively Managed
+    canonical_scale_level: L-3
+    canonical_ordinal: 3
+    canonical_name: Scaled
+    v2_band: dea:maturity-band-adaptive
+    v2_score_range: *id008
+    effort_multiplier: 4.0
+  - model_level: level-5-leading
+    model_name: Leading
+    value_name: Leading
+    state_name: Self-Optimising
+    score_range: *id009
+    legacy_id: level-5-optimising
+    legacy_name: Optimising
+    canonical_scale_level: L-4
+    canonical_ordinal: 4
+    canonical_name: Self-Optimising
+    v2_band: dea:maturity-band-self-optimising
+    v2_score_range: *id010
+    effort_multiplier: 6.0
+scoring:
+  mechanism: weighted-mean-0-100
+  description: Each criterion is scored 1-5 against its level anchors by an assessor using the listed evidence. Criterion
+    score (0-100) = (level - 1) / 4 * 100. Sub-dimension score = mean of its criteria; dimension score = weighted mean of
+    its sub-dimensions (equal weights within a dimension); overall score = weighted mean of dimension scores using the declared
+    dimension weights (d1 0.20, d2 0.20, d3 0.20, d4 0.15, d5 0.10, d6 0.15). The overall score is banded into the five
+    catalog bands (0-25 / 26-50 / 51-75 / 76-90 / 91-100) to resolve the model level.
+  criterion_scale:
+    min: 1
+    max: 5
+    meaning: level anchor matched by evidence
+  aggregation: weighted-mean
+  band_resolution: catalog v1-alpha bands; level = band of overall score, capped by weakest-link rule below
+  dimension_weights:
+    d1: 0.2
+    d2: 0.2
+    d3: 0.2
+    d4: 0.15
+    d5: 0.1
+    d6: 0.15
+  lite_path: 'Rapid self-assessment: one 5-point Likert question per sub-dimension (lite_question), mapped (1..5) to criterion
+    levels for an indicative score; full assessment requires evidence per criterion.'
+advancement:
+  progression_semantics: linear topology, exponential effort, forward-only (no level skipping), exit-criteria + evidence
+    gates, highest-conformant-level resolution - identical to the canonical L-0..L-4 scale (see level_correlation)
+  rules:
+  - 'Cumulative ladder: claiming level L on any criterion requires evidence for all anchors below L (no skipping).'
+  - 'Weakest-link gate: a dimension''s resolved level cannot exceed its lowest mandatory criterion level; the overall level
+    cannot exceed the lowest dimension level among d1-d4 (customer, strategy, platforms, operations).'
+  - Exit criteria per model level (levels[].exit_criteria) must be met AND evidenced to advance the model level.
+  - 'Highest-conformant-level resolution: if any mandatory criterion is below the band of the overall score, the model resolves
+    to the highest level at which all mandatory criteria conform.'
+  headroom_metric: delta_to_next_level = distance in points to the next band boundary, reported per dimension to prioritize
+    investment.
+  effort_multiplier_advisory:
+    note: 'Aligned with proposals/0001-nonlinear-maturity-scoring.md (v2 bands, advisory until CR-AM-01 Release 1): effort
+      multipliers 1.0/1.5/2.5/4.0/6.0 make diminishing returns explicit; effort-adjusted value = sum of points earned per
+      band divided by its multiplier.'
+    by_level:
+      '1': 1.0
+      '2': 1.5
+      '3': 2.5
+      '4': 4.0
+      '5': 6.0
+transversal_levers:
+- id: agentic-ai
+  name: Agentic AI & Agents
+  description: Autonomous/semi-autonomous software entities that perceive, decide, act and achieve goals with minimal human
+    supervision; multi-agent systems orchestrated toward strategic objectives. Agency is graded (levels of agency) and governed
+    (Gartner Top Strategic Technology Trends 2025).
+- id: autonomy
+  name: Autonomy Ladder
+  description: 'TM Forum Autonomous Networks L0-L5: per domain, who owns awareness, analysis, decision, execution, and intent.
+    L4 = system owns awareness-to-execution with intent shared; L5 = system sets its own intents.'
+- id: digital-twins
+  name: Digital Twins & Simulation
+  description: Dynamic software models on operational/contextual data that understand, simulate and respond - from network/service
+    twins to the Digital Twin of an Organization (DTO) used to prioritize, plan, monitor, simulate and scale initiatives
+    (Gartner).
+- id: human-agent-teaming
+  name: Human-Agent Teaming
+  description: People and AI agents collaborating/coordinating toward shared goals as teammates, with trust calibration,
+    delegation protocols, adaptive autonomy, and human oversight (human-in/on-the-loop) (HMT/HAIT literature).
+- id: ecosystem-platforms
+  name: Ecosystems, Platforms & Network APIs
+  description: Platform and ecosystem business models incl. GSMA Open Gateway / CAMARA network APIs (number verification,
+    SIM swap, location, quality-on-demand, edge discovery, carrier billing), NaaS, slicing, B2B2X marketplaces.
+- id: trust-security-privacy
+  name: Security, Privacy, Trust & AI TRiSM
+  description: 'Zero trust, supply-chain security, privacy/PETs, sovereignty, and AI TRiSM (AI trust, risk and security
+    management): continuous monitoring, explainability, bias/fairness, guardrails, guardian agents, EU AI Act readiness
+    (Gartner).'
+- id: sustainability-esg
+  name: Sustainability & ESG
+  description: ESG strategy and reporting (CSRD/double materiality), carbon accounting (Scopes 1-3), GreenOps, circular
+    IT and e-waste.
+- id: composability
+  name: Composability & Open APIs
+  description: Composable, API-first, event-driven architecture aligned to open standards (e.g., TM Forum ODA) with governed
+    API catalogs and golden paths.
+- id: business-value
+  name: Business Value & Monetization
+  description: 'Customer/ecosystem-centric value: digital business models, pricing and charging, revenue assurance, unit
+    economics, measurable outcomes.'
+- id: innovation
+  name: Innovation & Experimentation
+  description: Experimentation culture, safe-to-fail, flow metrics, venturing, open-source and standards participation.
+- id: grc
+  name: Governance, Risk & Compliance
+  description: ERM, internal audit, regtech, DORA/NIS2 resilience testing, third-party/vendor risk, concentration and exit.
+- id: data-intelligence
+  name: Data & Decision Intelligence
+  description: Data products, quality, lineage, governance, sharing, AI data readiness, twins data, insights-to-action loops.
+dimensions:
+- id: d1
+  name: Customer & Ecosystem Value
+  weight: 0.2
+  description: How the digital business understands, serves, and grows with customers and the ecosystems it cultivates -
+    journeys, personalization, partnerships, and monetization.
+  sub_dimensions:
+  - id: d1s1
+    name: Customer Experience & Journey Orchestration
+    lite_question: We orchestrate seamless, real-time, personalized customer journeys across all channels.
+    criteria:
+    - id: d1c1
+      name: Omni-channel journey orchestration
+      statement: Customer journeys are orchestrated seamlessly across all digital and physical channels with unified context.
+      levers:
+      - business-value
+      anchors:
+      - level: 1
+        text: Channels fragmented; inconsistent experience; no shared customer view
+      - level: 2
+        text: Key channels (web/mobile) integrated; partial data synchronization
+      - level: 3
+        text: Unified omni-channel platform with real-time event-driven data flow
+      - level: 4
+        text: Journey orchestration engine drives context-aware interactions across channels
+      - level: 5
+        text: Predictive, intent-aware journeys anticipate needs across channels and partners
+      evidence:
+      - Channel inventory; CX journey maps
+      - CDP/journey analytics dashboards
+      - Real-time event bus; orchestration playbooks
+      - Journey orchestration platform metrics (conversion, drop-off)
+      - Predictive journey models with measured uplift
+    - id: d1c2
+      name: Real-time personalization & next-best-action
+      statement: Personalization and next-best-action are driven by real-time customer data (CDP/martech) on every touchpoint.
+      levers:
+      - business-value
+      - data-intelligence
+      anchors:
+      - level: 1
+        text: No personalization; generic content and offers
+      - level: 2
+        text: Rule-based personalization on web only
+      - level: 3
+        text: Segment-based personalization across main digital channels
+      - level: 4
+        text: AI-driven next-best-action with real-time CDP on all touchpoints
+      - level: 5
+        text: Autonomous, context-aware personalization optimizing CLTV in real time
+      evidence:
+      - Martech stack inventory
+      - Personalization rules catalog
+      - CDP unified profile coverage %
+      - NBA engine logs and A/B results
+      - CLTV/CSAT uplift attributed to personalization
+    - id: d1c3
+      name: Voice of customer & CX measurement
+      statement: Customer feedback (NPS/CSAT/journey analytics/VoC) is captured continuously and closes the loop into product
+        and operations.
+      levers:
+      - business-value
+      anchors:
+      - level: 1
+        text: Feedback ad hoc; complaints handled reactively
+      - level: 2
+        text: Periodic surveys; no closed loop
+      - level: 3
+        text: Continuous NPS/CSAT plus journey analytics on key journeys
+      - level: 4
+        text: VoC program with analytics driving roadmap and ops fixes
+      - level: 5
+        text: 'Predictive CX management: issues prevented before customers report them'
+      evidence:
+      - Survey tooling
+      - NPS/CSAT dashboards
+      - Journey analytics; feedback-to-action tracker
+      - VoC governance board minutes
+      - Churn reduction correlated with VoC actions
+  - id: d1s2
+    name: Ecosystem & Partner Orchestration
+    lite_question: We orchestrate trusted partners and marketplaces through self-service platforms.
+    criteria:
+    - id: d1c4
+      name: Partner lifecycle & marketplace operations
+      statement: Partners are onboarded, managed, and settled through governed, self-service platform/marketplace operations.
+      levers:
+      - ecosystem-platforms
+      anchors:
+      - level: 1
+        text: Partnerships ad hoc, bilateral, manual contracts
+      - level: 2
+        text: Basic partner portal; onboarding still manual
+      - level: 3
+        text: Self-service onboarding, standard agreements, governed marketplace
+      - level: 4
+        text: Partner performance and value metrics actively managed; co-creation programs
+      - level: 5
+        text: 'Autonomous partner ecosystem: AI-matched partners, dynamic revenue share, self-settling'
+      evidence:
+      - Partner contracts; onboarding checklist
+      - Partner portal analytics
+      - Marketplace GMV/partner NPS
+      - API adoption and partner value dashboards
+      - Settlement automation logs; partner SLAs
+    - id: d1c5
+      name: B2B2X value networks
+      statement: The organization builds and orchestrates B2B2X value networks, sharing risk, control, and revenue with
+        partners.
+      levers:
+      - ecosystem-platforms
+      - business-value
+      anchors:
+      - level: 1
+        text: No B2B2X activity; pure direct model
+      - level: 2
+        text: Occasional white-label deals, no shared platform
+      - level: 3
+        text: Structured B2B2X partnerships on a shared platform
+      - level: 4
+        text: Multi-partner value networks with shared catalogs and joint go-to-market
+      - level: 5
+        text: 'Ecosystem-led growth: network effects, co-innovation, shared outcomes as the default model'
+      evidence:
+      - Partner revenue share of total
+      - White-label/OTT case list
+      - Joint GTM plans
+      - Value-network architecture diagrams
+      - Ecosystem revenue and retention metrics
+    - id: d1c6
+      name: API products, developer ecosystem & network APIs
+      statement: 'APIs are managed as products for internal and external developers, including telecom network capabilities
+        (GSMA Open Gateway/CAMARA: number verification, SIM swap, location, quality-on-demand, edge discovery, carrier billing;
+        NaaS/slicing).'
+      levers:
+      - ecosystem-platforms
+      - composability
+      anchors:
+      - level: 1
+        text: APIs ad hoc, internal only, undocumented
+      - level: 2
+        text: Some documented APIs; no developer portal or monetization
+      - level: 3
+        text: API catalog/portal, standard contracts, basic analytics; network APIs piloted
+      - level: 4
+        text: API products monetized via marketplace/aggregators; QoD, location, anti-fraud APIs in production
+      - level: 5
+        text: 'Programmable network/platform at scale: NaaS, slicing, edge - federated across operators; developer ecosystem
+          self-sustaining'
+      evidence:
+      - API inventory
+      - Developer portal; API analytics
+      - Open API conformance (e.g., TMF Open APIs)
+      - Network API transaction volumes and revenue
+      - Open Gateway/CAMARA certification; federation agreements
+  - id: d1s3
+    name: Digital Products, Monetization & Growth
+    lite_question: We monetize digital products and network capabilities with modern pricing and growth practices.
+    criteria:
+    - id: d1c7
+      name: Composable digital product portfolio
+      statement: Digital products/services are composable, modular, and rapidly assembled from reusable components (composable
+        commerce/headless where relevant).
+      levers:
+      - business-value
+      - composability
+      anchors:
+      - level: 1
+        text: Monolithic product stack; slow releases
+      - level: 2
+        text: Some modular services; releases still coordinated manually
+      - level: 3
+        text: Composable product architecture with reusable components and catalog
+      - level: 4
+        text: Product teams assemble offerings via APIs/marketplace components; fast TTM
+      - level: 5
+        text: 'Self-assembling offerings: customers/partners compose solutions dynamically; continuous TTM under weeks'
+      evidence:
+      - Service/component catalog
+      - Release train records
+      - Component reuse metrics
+      - TTM dashboards
+      - Composable storefront/marketplace metrics
+    - id: d1c8
+      name: Pricing, billing & charging models
+      statement: Pricing and charging support dynamic, usage-based, and outcome-based models, incl. carrier billing and
+        partner settlement.
+      levers:
+      - business-value
+      anchors:
+      - level: 1
+        text: Static rate plans; manual billing
+      - level: 2
+        text: Some add-ons; billing batch-based
+      - level: 3
+        text: Usage-based pricing on main products; real-time charging
+      - level: 4
+        text: Dynamic/outcome-based pricing; carrier billing and partner settlement automated
+      - level: 5
+        text: 'Autonomous pricing: AI-adjusted offers per customer/segment with guardrails; revenue assured continuously'
+      evidence:
+      - Price book; billing system records
+      - Charging/rating configs
+      - Real-time charging latency metrics
+      - Dynamic pricing rules + guardrails
+      - Revenue assurance reports; settlement automation
+    - id: d1c9
+      name: Revenue assurance, fraud & growth experimentation
+      statement: Revenue assurance and fraud management protect monetization, and growth is driven by continuous experimentation
+        (A/B, OKRs).
+      levers:
+      - business-value
+      - innovation
+      anchors:
+      - level: 1
+        text: No RA/fraud controls; growth by anecdote
+      - level: 2
+        text: Manual RA checks; occasional campaigns
+      - level: 3
+        text: Automated RA/fraud detection on key flows; regular A/B tests
+      - level: 4
+        text: AI-driven fraud prevention (incl. scam/spam signals); experimentation platform org-wide
+      - level: 5
+        text: 'Autonomous growth loops: experiments, pricing, and fraud defenses self-optimize with measured uplift'
+      evidence:
+      - RA/leakage reports
+      - Fraud cases and recovery
+      - Experiment platform; A/B results
+      - Fraud ML models in production
+      - OKR-linked growth metrics; automated experiment loop
+- id: d2
+  name: Strategy, Business Model & Value
+  weight: 0.2
+  description: Customer- and ecosystem-centric digital strategy, novel digital business models, value and financial performance,
+    sustainability, and enterprise governance/risk/compliance.
+  sub_dimensions:
+  - id: d2s1
+    name: Digital Strategy & Business Models
+    lite_question: Our digital strategy is customer/ecosystem-centric and creates new digital business models.
+    criteria:
+    - id: d2c1
+      name: Customer/ecosystem-centric digital strategy
+      statement: Digital strategy is explicitly centered on customers and the ecosystems the organization cultivates, with
+        measurable outcomes.
+      levers:
+      - business-value
+      anchors:
+      - level: 1
+        text: No digital strategy; IT-led projects only
+      - level: 2
+        text: Strategy document exists but not customer/ecosystem-centric
+      - level: 3
+        text: Strategy names customer and ecosystem outcomes with KPIs
+      - level: 4
+        text: Strategy reviewed quarterly against customer/ecosystem metrics and market signals
+      - level: 5
+        text: 'Living strategy: real-time signals and twins continuously reshape priorities'
+      evidence:
+      - Strategy doc
+      - Board minutes
+      - Outcome KPIs (NPS, ARPU, ecosystem revenue)
+      - Quarterly strategy review records
+      - Signal-driven roadmap changes
+    - id: d2c2
+      name: New digital business models
+      statement: The organization actively designs and launches new digital business models (servitization, XaaS, outcome-based,
+        platform/ecosystem plays).
+      levers:
+      - business-value
+      - ecosystem-platforms
+      anchors:
+      - level: 1
+        text: No new business models; connectivity/product sales only
+      - level: 2
+        text: Ideas discussed; no funded pilots
+      - level: 3
+        text: Structured innovation funnel; first digital revenue streams live
+      - level: 4
+        text: Multiple digital business models in market with P&L ownership
+      - level: 5
+        text: Business-model portfolio self-optimizing; digital share of revenue dominant and growing
+      evidence:
+      - Business model canvas library
+      - Innovation funnel
+      - New-model P&Ls
+      - Revenue mix reports
+      - Portfolio review with kill/scale decisions
+    - id: d2c3
+      name: Portfolio & investment allocation
+      statement: Investment is allocated to value streams and portfolios with clear ROI, incl. FinOps-linked technology
+        economics.
+      levers:
+      - business-value
+      anchors:
+      - level: 1
+        text: Budgets by department; no ROI tracking
+      - level: 2
+        text: Some business cases; retrospective ROI only
+      - level: 3
+        text: Portfolio managed by value streams with forward-looking ROI
+      - level: 4
+        text: 'Data-driven reallocation: predictive analytics shift funding to highest-value opportunities'
+      - level: 5
+        text: Continuous capital reallocation via AI; investments self-optimize to outcomes
+      evidence:
+      - Budget process docs
+      - Business case templates
+      - Value-stream funding map
+      - Predictive allocation models
+      - Capital efficiency metrics (ROI per stream)
+  - id: d2s2
+    name: Value & Financial Performance
+    lite_question: Digital transformation delivers measurable financial and competitive value.
+    criteria:
+    - id: d2c4
+      name: Measurable digital value & unit economics
+      statement: Digital value is quantified (ARPU/CLTV, churn, margin per product/workload) and managed as unit economics.
+      levers:
+      - business-value
+      anchors:
+      - level: 1
+        text: No digital value metrics
+      - level: 2
+        text: Revenue tracked; no digital attribution
+      - level: 3
+        text: Digital revenue and margin tracked per product
+      - level: 4
+        text: Unit economics per customer/workload/partner drive decisions
+      - level: 5
+        text: Value continuously optimized by AI across portfolio and ecosystem
+      evidence:
+      - Financial reports
+      - Digital revenue attribution
+      - Product margin dashboards
+      - Unit-economics model
+      - Automated value-optimization actions
+    - id: d2c5
+      name: Brand & competitive position
+      statement: Brand and market position are actively built and measured (share of voice, sentiment, share of wallet).
+      levers:
+      - business-value
+      anchors:
+      - level: 1
+        text: Brand undefined; weak visibility
+      - level: 2
+        text: Brand guidelines exist; inconsistent execution
+      - level: 3
+        text: Defined brand strategy; sentiment and SOV tracked
+      - level: 4
+        text: Brand actively differentiated; sentiment strongly positive vs peers
+      - level: 5
+        text: Brand sets industry benchmarks; influences market direction
+      evidence:
+      - Brand guidelines
+      - Marketing plans
+      - SOV/sentiment reports
+      - Competitive win/loss analysis
+      - Industry awards/recognition
+    - id: d2c6
+      name: Financial management & reporting agility
+      statement: Finance processes (plan, close, report, revenue assurance) are digital, automated, and near-real-time.
+      levers:
+      - business-value
+      - grc
+      anchors:
+      - level: 1
+        text: Manual close; weeks-long reporting
+      - level: 2
+        text: ERP in place; partial automation
+      - level: 3
+        text: Automated close and continuous reporting; RA automated on key flows
+      - level: 4
+        text: 'Predictive finance: forecasts and RA driven by data/ML'
+      - level: 5
+        text: 'Self-adjusting finance: plans re-forecast continuously from operational data'
+      evidence:
+      - Close cycle time
+      - ERP/finops tooling
+      - RA automation coverage
+      - Forecast accuracy metrics
+      - Continuous reporting dashboards
+  - id: d2s3
+    name: Sustainability & ESG
+    lite_question: Sustainability and ESG are embedded in strategy, operations, and reporting.
+    criteria:
+    - id: d2c7
+      name: ESG strategy & reporting
+      statement: ESG strategy, double-materiality assessment, and reporting (e.g., CSRD) are systematic and audit-ready.
+      levers:
+      - sustainability-esg
+      anchors:
+      - level: 1
+        text: No ESG reporting; compliance-driven only
+      - level: 2
+        text: Voluntary reporting; manual data collection
+      - level: 3
+        text: CSRD-aligned reporting with defined controls and owners
+      - level: 4
+        text: Data-driven ESG reporting; targets tied to incentives
+      - level: 5
+        text: 'ESG a differentiator: benchmarks set, standards shaped, real-time accountability'
+      evidence:
+      - ESG policy
+      - Materiality assessment
+      - CSRD-ready report
+      - ESG KPI dashboards
+      - Assurance/audit opinions
+    - id: d2c8
+      name: Carbon accounting & green technology
+      statement: Carbon footprint (Scopes 1-3) is measured and reduced; technology choices are GreenOps-aware.
+      levers:
+      - sustainability-esg
+      anchors:
+      - level: 1
+        text: No carbon accounting
+      - level: 2
+        text: Scope 1-2 estimated manually; Scope 3 unknown
+      - level: 3
+        text: Full Scope 1-3 accounting with Net Zero roadmap and KPIs
+      - level: 4
+        text: Data-driven reduction; carbon-aware workload placement and scheduling
+      - level: 5
+        text: AI-optimized operations minimize emissions in real time; industry-leading footprint
+      evidence:
+      - Carbon inventory
+      - Emissions reports
+      - Net Zero roadmap
+      - GreenOps metrics (carbon per workload)
+      - Reduction vs baseline; certifications
+    - id: d2c9
+      name: Circular IT & e-waste
+      statement: 'IT asset lifecycle is circular: refurbish, reuse, responsibly recycle; e-waste minimized and tracked.'
+      levers:
+      - sustainability-esg
+      anchors:
+      - level: 1
+        text: Ad hoc disposal; no tracking
+      - level: 2
+        text: Basic asset inventory; some recycling
+      - level: 3
+        text: Standard lifecycle processes; certified disposal; lifespan extended
+      - level: 4
+        text: Measured circularity (refurbishment %, e-waste recycled %); green procurement criteria
+      - level: 5
+        text: Circular economy principles embedded; AI plans lifecycle; e-waste standards exceeded
+      evidence:
+      - Asset register
+      - Disposal certificates
+      - Lifecycle SOPs
+      - Circularity metrics
+      - AI lifecycle planning; zero-waste targets met
+  - id: d2s4
+    name: Governance, Risk & Compliance
+    lite_question: Enterprise risk, regulatory compliance, and third-party risk are governed and automated.
+    criteria:
+    - id: d2c10
+      name: Enterprise risk management & audit
+      statement: ERM with internal audit provides independent assurance over digital and transformation risks.
+      levers:
+      - grc
+      anchors:
+      - level: 1
+        text: No ERM; risks managed informally
+      - level: 2
+        text: Risk register exists; reviews irregular
+      - level: 3
+        text: ERM framework with quarterly risk reviews and audit plan
+      - level: 4
+        text: Quantified risk (e.g., FAIR); risk appetite enforced in digital investments
+      - level: 5
+        text: Continuous risk monitoring; audit automated; board-level risk posture real-time
+      evidence:
+      - Risk register
+      - Audit reports
+      - Risk committee minutes
+      - Quantified risk model
+      - Continuous monitoring dashboards
+    - id: d2c11
+      name: Regulatory compliance & regtech
+      statement: Compliance with applicable regulation (DORA/NIS2 digital resilience, EU AI Act, sector rules) is automated
+        via regtech and evidenced.
+      levers:
+      - grc
+      - trust-security-privacy
+      anchors:
+      - level: 1
+        text: Reactive compliance; case-by-case
+      - level: 2
+        text: Policies exist; manual checks
+      - level: 3
+        text: Compliance mapped to controls; automated evidence collection
+      - level: 4
+        text: Regtech monitors compliance continuously; DORA/NIS2 testing (TLPT) scheduled; EU AI Act obligations tracked
+          per system
+      - level: 5
+        text: Compliance by design and self-evidencing; regulator-ready posture; shapes standards
+      evidence:
+      - Compliance register
+      - Control mapping
+      - Regtech monitoring alerts
+      - TLPT/resilience test reports
+      - AI Act technical documentation per system
+    - id: d2c12
+      name: Third-party & vendor risk, concentration, exit
+      statement: Vendor/third-party risk, concentration (e.g., hyperscaler), and exit/multi-cloud strategies are managed.
+      levers:
+      - grc
+      - ecosystem-platforms
+      anchors:
+      - level: 1
+        text: No vendor risk process; single-vendor lock-in unmanaged
+      - level: 2
+        text: Basic vendor assessments at onboarding
+      - level: 3
+        text: Ongoing TPRM; contracts include audit/exit clauses
+      - level: 4
+        text: Concentration risk quantified; exit strategies tested for critical vendors
+      - level: 5
+        text: Resilient multi-vendor strategy; portable workloads; exits rehearsed; vendor ecosystem diversified
+      evidence:
+      - TPRM records
+      - Vendor contracts
+      - Concentration analysis
+      - Exit runbooks and test results
+      - Portability metrics (workload migration time)
+- id: d3
+  name: Digital Platforms & Technology Enablement
+  weight: 0.2
+  description: The composable, cloud-native, AI- and agent-ready platform and infrastructure estate, and security/privacy/resilience
+    by design. Technology is the enabler of the digital operating model - not the model's subject.
+  sub_dimensions:
+  - id: d3s1
+    name: Composable Architecture & Open APIs
+    lite_question: Our architecture is composable, API-first, and governed by open standards.
+    criteria:
+    - id: d3c1
+      name: Open, composable enterprise architecture
+      statement: 'Architecture follows open/composable principles (e.g., TM Forum ODA): modular, de-layered, standards-based.'
+      levers:
+      - composability
+      anchors:
+      - level: 1
+        text: Monolithic, tightly coupled, proprietary stacks
+      - level: 2
+        text: Open APIs/containers piloted in selected areas
+      - level: 3
+        text: Open architecture standards applied in key domains; reusable components
+      - level: 4
+        text: De-layered across domains; event-driven integration; conformance measured
+      - level: 5
+        text: Fully modular, open, interoperable architecture; portable services; continuous innovation enabled
+      evidence:
+      - Architecture diagrams; ADRs
+      - Pilot reports
+      - Standards conformance metrics
+      - API/component reuse %
+      - Architecture governance board records
+    - id: d3c2
+      name: API governance, catalogs & integration
+      statement: APIs and integrations are governed through catalogs, standards, and managed integration patterns.
+      levers:
+      - composability
+      - ecosystem-platforms
+      anchors:
+      - level: 1
+        text: Point-to-point, undocumented integrations
+      - level: 2
+        text: Some APIs documented; no central catalog
+      - level: 3
+        text: API catalog + gateway; standard integration patterns
+      - level: 4
+        text: API lifecycle governed (design, versioning, deprecation); event-driven at scale
+      - level: 5
+        text: API ecosystem self-service; internal marketplace; zero-friction integration for partners
+      evidence:
+      - Integration inventory
+      - API docs
+      - Catalog + gateway logs
+      - API governance policy; conformance scans
+      - Developer satisfaction; integration lead time
+    - id: d3c3
+      name: Legacy simplification & de-layering
+      statement: Legacy is actively de-layered and simplified, reducing cost, risk, and time-to-market.
+      levers:
+      - composability
+      anchors:
+      - level: 1
+        text: Legacy grows unchecked; no simplification plan
+      - level: 2
+        text: Awareness; isolated modernization projects
+      - level: 3
+        text: Structured de-layering program with roadmap and targets
+      - level: 4
+        text: Legacy reduction measured and funded; modular replacements standard
+      - level: 5
+        text: Simplification self-sustaining; architecture debt near zero; benchmarks set
+      evidence:
+      - Tech debt register
+      - Modernization backlog
+      - De-layering roadmap
+      - Legacy footprint metrics (apps, cost, incidents)
+      - Debt trend; TTM improvement
+  - id: d3s2
+    name: Cloud-Native Infrastructure & Platform Engineering
+    lite_question: Cloud-native infrastructure and internal platforms make teams fast and safe by default.
+    criteria:
+    - id: d3c4
+      name: Cloud & hybrid/multi-cloud strategy
+      statement: Workloads run on scalable cloud/hybrid/multi-cloud infrastructure with managed concentration risk and exit
+        optionality.
+      levers:
+      - composability
+      - grc
+      anchors:
+      - level: 1
+        text: On-prem legacy; limited cloud use
+      - level: 2
+        text: Initial hybrid cloud; manual provisioning
+      - level: 3
+        text: Standardized cloud deployments; automated workload distribution (K8s); exit clauses in contracts
+      - level: 4
+        text: Multi-cloud optimized; cost/performance per workload tracked; portability tested
+      - level: 5
+        text: Fully resilient, portable cloud fabric; predictive placement; zero-downtime migrations
+      evidence:
+      - Cloud inventory
+      - Provisioning automation
+      - K8s/multi-cloud architecture
+      - Cost/uptime dashboards; portability tests
+      - Migration rehearsal results
+    - id: d3c5
+      name: Platform engineering, IDP & developer experience
+      statement: Internal developer platforms (IDP) with golden paths make the safe way the easy way.
+      levers:
+      - composability
+      - innovation
+      anchors:
+      - level: 1
+        text: No platform team; teams reinvent tooling
+      - level: 2
+        text: Shared tooling exists but optional; high cognitive load
+      - level: 3
+        text: IDP with golden-path templates (CI/CD, envs, security) adopted by most teams
+      - level: 4
+        text: 'Platform as a product: DevEx metrics, self-service, paved roads enforced'
+      - level: 5
+        text: 'Self-optimizing platform: telemetry improves golden paths automatically; industry-leading DevEx'
+      evidence:
+      - Team tooling surveys
+      - IDP backlog
+      - Golden-path adoption %
+      - DevEx metrics (onboarding time, deploy freq)
+      - Platform NPS; automated improvements
+    - id: d3c6
+      name: DevOps, SRE & secure delivery
+      statement: 'Delivery is automated and reliable: CI/CD, GitOps/IaC, observability, SLOs/error budgets, DevSecOps (SBOM/SLSA).'
+      levers:
+      - composability
+      - trust-security-privacy
+      anchors:
+      - level: 1
+        text: Manual deployments; no observability; security bolted on
+      - level: 2
+        text: CI/CD for some teams; basic monitoring; security reviews manual
+      - level: 3
+        text: CI/CD + IaC standard; observability stack (logs/metrics/traces); SLOs for top services; SBOM generated
+      - level: 4
+        text: GitOps everywhere; SLO/error budgets gate releases; DevSecOps automated (scans, SBOM, SLSA provenance); AIOps
+          assists
+      - level: 5
+        text: 'Self-healing delivery: predictive detection, auto-remediation, auto-rollback; DORA elite metrics'
+      evidence:
+      - Deployment records
+      - Pipeline configs
+      - Observability + SLO dashboards
+      - SBOM/SLSA artifacts; scan results
+      - DORA metrics; MTTD/MTTR trends
+  - id: d3s3
+    name: AI, Agents & Intelligent Platforms
+    lite_question: We adopt AI and agentic AI responsibly, with graded autonomy and continuous trust/risk/security controls.
+    criteria:
+    - id: d3c7
+      name: AI/GenAI adoption & LLMOps
+      statement: 'AI/GenAI is adopted systematically with LLMOps/MLOps: versioned models, evals, monitoring, and safe rollout.'
+      levers:
+      - agentic-ai
+      - data-intelligence
+      anchors:
+      - level: 1
+        text: No AI adoption or untracked personal use only
+      - level: 2
+        text: GenAI pilots in a few teams; no MLOps
+      - level: 3
+        text: AI use-case inventory; LLMOps pipelines (evals, versioning, monitoring) for production models
+      - level: 4
+        text: AI embedded in key workflows; RAG/agent patterns standardized; drift and quality monitored
+      - level: 5
+        text: 'AI-native operations: models and agents self-monitor and retrain safely; industry benchmarks met'
+      evidence:
+      - AI use-case register
+      - Pilot results
+      - Model registry + eval reports
+      - LLMOps dashboards (latency, accuracy, drift)
+      - Automated retraining/rollback logs
+    - id: d3c8
+      name: Agentic AI & multi-agent orchestration
+      statement: AI agents act goal-driven with graded agency levels and orchestrated multi-agent workflows in defined scopes.
+      levers:
+      - agentic-ai
+      - autonomy
+      anchors:
+      - level: 1
+        text: No agents; chatbots only, prompt-driven
+      - level: 2
+        text: Single agents in sandboxes; human approves every action
+      - level: 3
+        text: Agents deployed in defined workflows with human-in-the-loop; agent registry exists
+      - level: 4
+        text: Multi-agent orchestration in production for selected domains; agency levels defined per use case; transaction-level
+          logging
+      - level: 5
+        text: Agents operate with high autonomy within policy guardrails; self-coordinating multi-agent systems; outcomes
+          exceed human baselines safely
+      evidence:
+      - Agent inventory
+      - Sandbox demos
+      - Agent registry; HITL logs
+      - Orchestration platform; agency-level policy; audit trails
+      - Autonomous run metrics; safety incidents = 0 with kill-switch tests
+    - id: d3c9
+      name: 'AI TRiSM: trust, risk, security & compliance'
+      statement: 'AI TRiSM is operational: model risk scoring, explainability, bias/fairness testing, guardrails, guardian
+        agents, EU AI Act readiness.'
+      levers:
+      - agentic-ai
+      - trust-security-privacy
+      - grc
+      anchors:
+      - level: 1
+        text: No AI governance; no risk assessment
+      - level: 2
+        text: AI policy drafted; no technical enforcement
+      - level: 3
+        text: 'AI TRiSM framework live: inventory, risk-scored models, evals, monitoring, runtime guardrails'
+      - level: 4
+        text: Guardian agents enforce policy at runtime; explainability and bias tests in CI for models; EU AI Act docs
+          per high-risk system
+      - level: 5
+        text: 'Continuous TRiSM: automated enforcement, drift/bias monitoring, audit-ready evidence'
+      evidence:
+      - AI policy
+      - Risk assessments
+      - TRiSM dashboard (inventory, risk scores)
+      - Guardrail/guardian logs; bias/explainability reports
+      - EU AI Act technical files; audit opinions
+  - id: d3s4
+    name: Security, Privacy & Resilience by Design
+    lite_question: Security, privacy, and resilience are designed in, not bolted on.
+    criteria:
+    - id: d3c10
+      name: Zero trust & identity
+      statement: Zero-trust architecture with federated IAM, strong authentication, least privilege, continuous monitoring
+        (ZTNA/SASE).
+      levers:
+      - trust-security-privacy
+      anchors:
+      - level: 1
+        text: Open network; no zero trust; shared credentials
+      - level: 2
+        text: Basic MFA; inconsistent least privilege
+      - level: 3
+        text: Standardized zero trust with federated IDM, MFA, segmentation
+      - level: 4
+        text: ZTNA/SASE enforced; continuous transaction-level monitoring; measurable risk reduction
+      - level: 5
+        text: Adaptive, AI-driven zero trust; passwordless/FIDO widespread; industry benchmarks exceeded
+      evidence:
+      - Network diagrams
+      - IAM policy
+      - IDM/MFA coverage
+      - ZTNA logs; access reviews
+      - Pen-test results; auth metrics
+    - id: d3c11
+      name: AppSec & software supply-chain security
+      statement: 'Application and supply-chain security is automated: vuln management, SBOM/SLSA, provenance, DevSecOps.'
+      levers:
+      - trust-security-privacy
+      anchors:
+      - level: 1
+        text: Ad hoc patching; no SBOM; no provenance
+      - level: 2
+        text: Vuln scans exist; patching inconsistent; no SBOM
+      - level: 3
+        text: Standardized vuln mgmt with timely patching; SBOM generated per release; signed provenance
+      - level: 4
+        text: Automated DevSecOps gates; SLSA level targets; supply-chain risk monitored (deps, vendors)
+      - level: 5
+        text: Predictive, AI-driven AppSec and supply-chain defense; zero-day readiness; benchmarks exceeded
+      evidence:
+      - Vuln scan reports; patch SLAs
+      - SBOM artifacts
+      - SLSA provenance attestations
+      - Pipeline security gates; dep risk alerts
+      - Threat-intel-driven remediation; pen-test/red-team results
+    - id: d3c12
+      name: Privacy, sovereignty & crypto roadmap
+      statement: Privacy by design (GDPR, consent, PETs), data sovereignty/residency, and a post-quantum cryptography roadmap.
+      levers:
+      - trust-security-privacy
+      - grc
+      anchors:
+      - level: 1
+        text: No DPIAs; consent not managed; no residency controls
+      - level: 2
+        text: Privacy policy exists; PETs not used; residency ad hoc
+      - level: 3
+        text: DPIAs for high-risk processing; consent platform; encryption standard; residency per region
+      - level: 4
+        text: PETs in use (anonymization, federated learning, synthetic data); sovereignty controls automated; PQC roadmap
+          approved
+      - level: 5
+        text: Privacy-preserving by default; PQC migration underway for long-lived data; audit-ready sovereignty posture
+      evidence:
+      - DPIA register
+      - Consent logs
+      - Encryption standards; residency reports
+      - PET deployments; PQC roadmap
+      - PQC migration progress; assurance reports
+- id: d4
+  name: Operations & Autonomous Service Delivery
+  weight: 0.15
+  description: How services and the network are orchestrated, assured, and increasingly run autonomously (intent-driven,
+    closed-loop), with digital twins/simulation and quantitative performance, cost, and carbon management.
+  sub_dimensions:
+  - id: d4s1
+    name: Service Orchestration & Assurance
+    lite_question: Services are orchestrated via open APIs with closed-loop assurance and SLOs.
+    criteria:
+    - id: d4c1
+      name: Intent-driven orchestration
+      statement: Services are designed, ordered, and fulfilled through intent-driven orchestration over open APIs (e.g.,
+        TMF Open APIs/ODA).
+      levers:
+      - autonomy
+      - composability
+      anchors:
+      - level: 1
+        text: Manual order handling; siloed BSS/OSS
+      - level: 2
+        text: APIs exist for some systems; orchestration partial
+      - level: 3
+        text: Standard APIs + orchestration layer; intent interfaces for key services
+      - level: 4
+        text: Intent-driven, cross-domain orchestration for most services; NaaS-style exposure
+      - level: 5
+        text: Autonomous, intent-based fulfillment end to end; intent set by customer/partner, system executes
+      evidence:
+      - Order fallout reports
+      - API coverage
+      - Orchestration logs
+      - Intent interface usage; TTM per service
+      - Autonomous fulfillment metrics
+    - id: d4c2
+      name: Closed-loop assurance & SLOs
+      statement: Service assurance is closed-loop with SLOs/error budgets governing release and operations decisions.
+      levers:
+      - autonomy
+      anchors:
+      - level: 1
+        text: Reactive assurance; user-reported incidents
+      - level: 2
+        text: Monitoring exists; no SLOs
+      - level: 3
+        text: Observability stack; SLOs for top services; error budgets enforced
+      - level: 4
+        text: Closed-loop assurance across domains; predictive alerts; auto-remediation for known issues
+      - level: 5
+        text: 'Autonomous assurance: self-healing, self-optimizing; intent-level SLAs met automatically'
+      evidence:
+      - Incident records
+      - Monitoring dashboards
+      - SLO dashboards; error-budget policy
+      - Auto-remediation logs; predictive alert share
+      - SLA attainment; zero-touch incident share
+    - id: d4c3
+      name: Service portfolio management
+      statement: The service portfolio is customer-centric, data-driven, and continuously rationalized.
+      levers:
+      - business-value
+      anchors:
+      - level: 1
+        text: Legacy portfolio; no ownership
+      - level: 2
+        text: Catalog exists; owners assigned for some services
+      - level: 3
+        text: Portfolio governed with lifecycle (build/buy/retire) decisions
+      - level: 4
+        text: Portfolio optimized on usage, margin, and customer value
+      - level: 5
+        text: 'Self-optimizing portfolio: AI recommends rationalization and new services'
+      evidence:
+      - Service catalog
+      - Owner assignments
+      - Portfolio review minutes
+      - Margin/usage dashboards
+      - Rationalization actions; AI recommendations
+  - id: d4s2
+    name: Autonomous Operations (AN Ladder)
+    lite_question: Operations progress along the autonomy ladder (L0-L5) with humans in/on the loop by design.
+    criteria:
+    - id: d4c4
+      name: Autonomy level per domain (AN L0-L5)
+      statement: 'Each operational domain is assessed against the AN ladder: who owns awareness, analysis, decision, execution,
+        intent.'
+      levers:
+      - autonomy
+      - agentic-ai
+      anchors:
+      - level: 1
+        text: 'L0/L1: manual, reactive operations'
+      - level: 2
+        text: 'L2: rule-based automation in some domains'
+      - level: 3
+        text: 'L3: conditional automation + AI monitoring in key domains'
+      - level: 4
+        text: 'L4: closed-loop, intent-driven autonomy in selected domains; system owns awareness-to-execution, intent shared
+          with humans'
+      - level: 5
+        text: 'L5: system sets its own intents within policy across scenarios; cognitive self-adaptation'
+      evidence:
+      - Ops runbooks
+      - Automation coverage
+      - AIOps deployment; AN level assessment per domain
+      - Closed-loop change logs; TMF AN validation/certification
+      - Intent ownership matrix; autonomous change records
+    - id: d4c5
+      name: Zero-touch operations & self-healing
+      statement: 'Routine operations are zero-touch: detect, decide, and remediate automatically.'
+      levers:
+      - autonomy
+      anchors:
+      - level: 1
+        text: All operations manual
+      - level: 2
+        text: Scripts for known issues; human executes
+      - level: 3
+        text: Auto-remediation for known failure modes in key domains
+      - level: 4
+        text: Self-healing/self-optimizing across most domains; MTTD/MTTR low
+      - level: 5
+        text: Fully zero-touch routine ops; predictive prevention before customer impact
+      evidence:
+      - Runbooks
+      - Script inventory
+      - Auto-remediation %; incident logs
+      - Self-healing metrics
+      - Prevented-incident count; customer-impact minutes
+    - id: d4c6
+      name: Agentic operations & human-on-the-loop
+      statement: AI agents run operational workflows (NOC/SOC/service) with defined agency, human-on-the-loop oversight,
+        escalation, and kill-switch.
+      levers:
+      - agentic-ai
+      - human-agent-teaming
+      - autonomy
+      anchors:
+      - level: 1
+        text: No agents in operations
+      - level: 2
+        text: Agent assistants suggest; humans execute
+      - level: 3
+        text: Agents execute defined runbooks under HITL supervision
+      - level: 4
+        text: Agents act autonomously in bounded scopes with logging, rollback, and human-on-the-loop
+      - level: 5
+        text: Agent swarms handle incidents end to end within policy; humans set intent and policy only
+      evidence:
+      - Agent use cases
+      - HITL logs
+      - Runbook automation coverage
+      - Agent action logs with rollback; kill-switch tests
+      - Autonomous incident resolution rate; safety record
+  - id: d4s3
+    name: Digital Twins & Simulation
+    lite_question: We run living digital twins of network, services, and the organization to simulate before we act.
+    criteria:
+    - id: d4c7
+      name: Network & service digital twins
+      statement: Digital twins of network domains and services provide real-time state, prediction, and what-if simulation.
+      levers:
+      - digital-twins
+      - autonomy
+      anchors:
+      - level: 1
+        text: No twins; static inventory only
+      - level: 2
+        text: Partial models of some domains; not real-time
+      - level: 3
+        text: Real-time twins for key domains feeding assurance and planning
+      - level: 4
+        text: Cross-domain twins with predictive simulation (capacity, faults, changes)
+      - level: 5
+        text: 'Closed-loop: twin drives autonomous action and verifies outcome in the live system'
+      evidence:
+      - Inventory/CMDB
+      - Domain models
+      - Twin dashboards; prediction accuracy
+      - What-if simulation records
+      - Closed-loop change verification
+    - id: d4c8
+      name: Digital Twin of the Organization (DTO) & process mining
+      statement: A DTO, fed by process mining and operational data, models how the business actually runs to plan, simulate,
+        and optimize initiatives.
+      levers:
+      - digital-twins
+      - data-intelligence
+      anchors:
+      - level: 1
+        text: No process mining; processes tribal knowledge
+      - level: 2
+        text: Process mining in one function; DTO concept known
+      - level: 3
+        text: DTO live for top value streams; used to plan initiatives
+      - level: 4
+        text: Enterprise DTO with simulation of strategy/operating-model changes
+      - level: 5
+        text: 'DTO as the operating sandbox: changes simulated, agents rehearse, then executed; benchmarks published'
+      evidence:
+      - Event logs
+      - Process models
+      - DTO coverage of value streams
+      - Simulation study reports
+      - DTO-driven decisions; agent sandbox usage
+    - id: d4c9
+      name: Simulation-driven planning
+      statement: Major decisions (capacity, launches, org/operating-model changes) are simulated in twins before commitment.
+      levers:
+      - digital-twins
+      - business-value
+      anchors:
+      - level: 1
+        text: Decisions by gut feel; no simulation
+      - level: 2
+        text: Spreadsheets for some plans
+      - level: 3
+        text: What-if analysis for major initiatives in twins
+      - level: 4
+        text: 'Standard practice: simulate-then-execute for strategy and ops changes'
+      - level: 5
+        text: 'Continuous simulation: twins recommend optimal actions; autonomous execution within policy'
+      evidence:
+      - Planning decks
+      - Model-based business cases
+      - Simulation records attached to decisions
+      - Decision log with simulated vs actual
+      - Autonomous optimization actions
+  - id: d4s4
+    name: Resilience, Performance & Sustainable Ops
+    lite_question: Operations are resilient, tested, and managed for performance, cost, and carbon.
+    criteria:
+    - id: d4c10
+      name: Incident response & resilience testing
+      statement: Incident response is rehearsed and resilience is tested (chaos engineering, game days, TLPT-style tests).
+      levers:
+      - autonomy
+      - grc
+      anchors:
+      - level: 1
+        text: No IR process; recovery in days
+      - level: 2
+        text: Runbook exists; postmortems ad hoc
+      - level: 3
+        text: Incident command; SLOs; postmortems within 7 days; chaos experiments
+      - level: 4
+        text: Predictive detection; auto-remediation over 30% of incidents; regular TLPT/DR tests
+      - level: 5
+        text: Resilience proven continuously; self-healing prevents most incidents; regulatory tests passed
+      evidence:
+      - IR runbooks; MTTR trends
+      - Postmortem records
+      - Chaos/game-day reports
+      - TLPT/DR test results
+      - Incident prevention metrics; regulator reports
+    - id: d4c11
+      name: Performance & flow management
+      statement: 'Operational performance is managed with flow metrics (DORA: deployment frequency, lead time, change failure
+        rate, MTTR) and cost per workload (FinOps).'
+      levers:
+      - business-value
+      - innovation
+      anchors:
+      - level: 1
+        text: No flow/cost metrics
+      - level: 2
+        text: Deploy frequency tracked manually
+      - level: 3
+        text: DORA metrics tracked; cost per workload weekly
+      - level: 4
+        text: Metrics drive release and capacity decisions; FinOps automated
+      - level: 5
+        text: 'Self-optimizing flow: AI balances speed, reliability, and cost continuously'
+      evidence:
+      - Dashboards
+      - Manual reports
+      - DORA dashboard; FinOps reports
+      - Error-budget-driven releases
+      - Optimization actions; cost/reliability trends
+    - id: d4c12
+      name: Carbon-aware operations (GreenOps)
+      statement: 'Operations minimize energy/carbon: efficient infra, carbon-aware scheduling, renewable-powered facilities.'
+      levers:
+      - sustainability-esg
+      anchors:
+      - level: 1
+        text: No energy monitoring in ops
+      - level: 2
+        text: Basic DC energy metrics
+      - level: 3
+        text: Energy per workload tracked; efficiency targets in ops KPIs
+      - level: 4
+        text: Carbon-aware workload placement/scheduling automated
+      - level: 5
+        text: Net-zero operations; AI continuously minimizes emissions; industry leadership
+      evidence:
+      - DC energy reports
+      - Efficiency SOPs
+      - Energy-per-workload dashboards
+      - Carbon-aware scheduler logs
+      - Emissions reductions; green certifications
+- id: d5
+  name: People, Culture & Human-Agent Teaming
+  weight: 0.1
+  description: Leadership and culture for digital business, the digital workforce (skills, DEI, inclusion, EX), the designed
+    working model between humans and AI agents, and innovation ways of working.
+  sub_dimensions:
+  - id: d5s1
+    name: Leadership, Culture & Operating Model
+    lite_question: Leaders sponsor digital business and the operating model is designed for it.
+    criteria:
+    - id: d5c1
+      name: Executive sponsorship & digital values
+      statement: Executives sponsor transformation, model digital values, and are held accountable for outcomes.
+      levers:
+      - innovation
+      anchors:
+      - level: 1
+        text: No exec sponsor; transformation informal
+      - level: 2
+        text: Champion exists; leadership passive
+      - level: 3
+        text: Exec sponsor; digital values in leadership principles; board KPIs
+      - level: 4
+        text: Leaders visibly lead; values drive decisions; accountability in incentives
+      - level: 5
+        text: Culture self-reinforcing; leaders benchmark-set; transformation is how the org works
+      evidence:
+      - Charters; comms
+      - Pulse surveys
+      - Board KPI pack
+      - 360 reviews; incentive schemes
+      - Engagement scores; external recognition
+    - id: d5c2
+      name: Target operating model & org design
+      statement: The target operating model (teams, decision rights, platforms, governance) is explicitly designed and evolved.
+      levers:
+      - innovation
+      anchors:
+      - level: 1
+        text: Org by function/silo; no TOM
+      - level: 2
+        text: TOM documented; adoption partial
+      - level: 3
+        text: TOM implemented for value streams; decision rights clear
+      - level: 4
+        text: Operating model measured and tuned with data (flow, outcomes)
+      - level: 5
+        text: 'Self-adapting org design: structure and roles evolve with strategy automatically'
+      evidence:
+      - Org charts
+      - TOM doc
+      - Value-stream team maps
+      - Flow/outcome metrics per team
+      - Org change log driven by data
+    - id: d5c3
+      name: Change management & adoption
+      statement: 'Change is managed professionally: communication, training, adoption metrics, and feedback loops.'
+      levers:
+      - innovation
+      anchors:
+      - level: 1
+        text: Changes imposed; adoption poor
+      - level: 2
+        text: Comms plans exist; no adoption tracking
+      - level: 3
+        text: Structured change management with adoption metrics per initiative
+      - level: 4
+        text: Adoption predicted and managed proactively; resistance addressed early
+      - level: 5
+        text: 'Change is normal: high adoption by default; org learns continuously'
+      evidence:
+      - Change plans
+      - Comms analytics
+      - Adoption dashboards
+      - Predictive adoption models
+      - Learning loop records
+  - id: d5s2
+    name: Talent, Skills & Inclusive Workforce
+    lite_question: We build digital and AI-fluent talent and an inclusive, accessible workplace.
+    criteria:
+    - id: d5c4
+      name: Digital & AI skills, reskilling, careers
+      statement: 'Workforce digital/AI fluency is systematically built: reskilling, career paths, talent marketplace/gig
+        options.'
+      levers:
+      - innovation
+      - agentic-ai
+      anchors:
+      - level: 1
+        text: No training programs; skills ad hoc
+      - level: 2
+        text: Ad hoc courses; no career paths for digital roles
+      - level: 3
+        text: Skills ontology + reskilling programs; digital career paths defined
+      - level: 4
+        text: Continuous learning embedded; AI fluency expected of leaders; talent marketplace active
+      - level: 5
+        text: Workforce self-upskilling with AI tutors; gig/talent marketplace liquid; skills supply exceeds demand
+      evidence:
+      - Training catalog
+      - Skills assessments
+      - Learning platform analytics
+      - Career path docs; marketplace usage
+      - Skills supply/demand metrics; retention
+    - id: d5c5
+      name: DEI, accessibility & digital inclusion
+      statement: Diversity, equity, inclusion, accessibility (WCAG), and digital inclusion are designed into products, services,
+        and the workplace.
+      levers:
+      - innovation
+      anchors:
+      - level: 1
+        text: No DEI or accessibility program
+      - level: 2
+        text: Awareness; some accommodations
+      - level: 3
+        text: DEI program with metrics; WCAG conformance for customer-facing digital; inclusive hiring
+      - level: 4
+        text: DEI and accessibility KPIs in product/HR reviews; bias audited in AI
+      - level: 5
+        text: Inclusion by design; industry-leading accessibility and DEI; shapes standards
+      evidence:
+      - DEI policy
+      - Accommodation records
+      - DEI metrics; WCAG audit reports
+      - AI bias audit results
+      - Certifications; awards; benchmarks
+    - id: d5c6
+      name: Employee experience & hybrid work
+      statement: Employee experience, collaboration tooling, and hybrid-work models are deliberately designed and measured.
+      levers:
+      - innovation
+      anchors:
+      - level: 1
+        text: No EX focus; tools fragmented
+      - level: 2
+        text: Basic collaboration tools; EX surveyed annually
+      - level: 3
+        text: Digital workplace platform; EX measured continuously; hybrid model defined
+      - level: 4
+        text: EX drives decisions; AI-assisted productivity; wellbeing monitored
+      - level: 5
+        text: 'Self-optimizing workplace: EX, productivity, wellbeing continuously optimized'
+      evidence:
+      - EX survey tooling
+      - Hybrid policy
+      - EX dashboards
+      - Wellbeing metrics; tooling analytics
+      - EX-driven changes; productivity trends
+  - id: d5s3
+    name: Human-Agent Teaming & Oversight
+    lite_question: Humans and AI agents work as a designed team with clear roles, trust, and oversight.
+    criteria:
+    - id: d5c7
+      name: Delegation & task-allocation protocols
+      statement: 'Who delegates what to agents is explicit: task types, autonomy ceilings, and escalation paths are defined.'
+      levers:
+      - human-agent-teaming
+      - agentic-ai
+      anchors:
+      - level: 1
+        text: No guidance; agents used ad hoc
+      - level: 2
+        text: Informal norms; humans approve everything
+      - level: 3
+        text: Delegation matrix per domain; agency levels per task risk
+      - level: 4
+        text: 'Dynamic delegation: autonomy granted by demonstrated agent performance'
+      - level: 5
+        text: 'Trusted autonomy: agents and humans divide work optimally by design'
+      evidence:
+      - Agent usage logs
+      - HITL records
+      - Delegation policy; agency-level matrix
+      - Performance-based autonomy grants
+      - Optimal task-split analytics
+    - id: d5c8
+      name: Trust calibration & shared mental models
+      statement: People understand agent capabilities/limits (shared mental models); trust is calibrated, not assumed.
+      levers:
+      - human-agent-teaming
+      anchors:
+      - level: 1
+        text: Blind trust or blind distrust
+      - level: 2
+        text: Basic training on AI limits
+      - level: 3
+        text: Training + explainability for agent decisions; trust metrics monitored
+      - level: 4
+        text: 'Calibrated trust: oversight matches verified reliability; explanations on demand'
+      - level: 5
+        text: 'Well-calibrated symbiosis: humans and agents anticipate each other; team performance exceeds either alone'
+      evidence:
+      - Training records
+      - Trust surveys
+      - Explainability tooling usage
+      - Trust-vs-reliability analysis
+      - Team performance metrics
+    - id: d5c9
+      name: Human-in/on-the-loop oversight & safety
+      statement: 'Oversight matches autonomy level: human-in-the-loop for high-impact actions; kill-switch, rollback, and
+        incident escalation always available.'
+      levers:
+      - human-agent-teaming
+      - trust-security-privacy
+      anchors:
+      - level: 1
+        text: No oversight; agents (if any) unsupervised
+      - level: 2
+        text: Human approves all agent actions
+      - level: 3
+        text: HITL for high-impact actions; kill-switch and rollback exist and are tested
+      - level: 4
+        text: Human-on-the-loop for bounded autonomy; continuous monitoring with automated escalation
+      - level: 5
+        text: 'Safety engineered in: guardrails + guardian agents; human oversight of the oversight; zero-harm record'
+      evidence:
+      - Oversight policy
+      - Approval logs
+      - Kill-switch test records
+      - Monitoring/escalation logs
+      - Safety audit; incident reviews
+    - id: d5c10
+      name: Agent accountability & identity
+      statement: Agents have identities, owners, and audit trails; accountability for agent actions is unambiguous (RACI
+        incl. agents).
+      levers:
+      - human-agent-teaming
+      - grc
+      anchors:
+      - level: 1
+        text: Agents anonymous; no owner
+      - level: 2
+        text: Agent inventory started; owners assigned
+      - level: 3
+        text: Agent identity + owner + audit log per action; RACI includes agents
+      - level: 4
+        text: 'Automated accountability: every agent action attributable, explainable, reversible'
+      - level: 5
+        text: Agent governance self-improving; audit-ready; contributes standards back
+      evidence:
+      - Agent registry
+      - Owner assignments
+      - Audit logs per action
+      - Attribution reports
+      - Audit opinions; standard contributions
+  - id: d5s4
+    name: Ways of Working & Innovation
+    lite_question: We work in product-centric agile ways and innovate safely at scale.
+    criteria:
+    - id: d5c11
+      name: Product-centric agile at scale
+      statement: Product-centric, cross-functional teams deliver via value streams with flow metrics; agile-at-scale frameworks
+        as needed.
+      levers:
+      - innovation
+      anchors:
+      - level: 1
+        text: Waterfall projects; handoffs between silos
+      - level: 2
+        text: Some agile teams; rest waterfall
+      - level: 3
+        text: Product teams own outcomes; value streams mapped; flow metrics used
+      - level: 4
+        text: Agile at scale operating; flow optimized; dependencies managed
+      - level: 5
+        text: Self-organizing value networks; flow self-optimizing; elite DORA metrics
+      evidence:
+      - Team topologies
+      - Agile ceremonies
+      - Value-stream maps; DORA metrics
+      - Flow efficiency reports
+      - Optimization actions; trends
+    - id: d5c12
+      name: Experimentation & safe-to-fail
+      statement: 'Experimentation is the norm: hypotheses, A/B tests, blameless learning, safe-to-fail culture.'
+      levers:
+      - innovation
+      anchors:
+      - level: 1
+        text: Failure punished; no experiments
+      - level: 2
+        text: Experiments occasional; blame culture
+      - level: 3
+        text: Experiment platform; A/B standard; blameless postmortems
+      - level: 4
+        text: High experiment velocity; learning systematized
+      - level: 5
+        text: 'Innovation engine: continuous experiments self-optimize products and processes'
+      evidence:
+      - Postmortem culture records
+      - Experiment logs
+      - Experiment platform metrics
+      - Learning repository
+      - Innovation ROI; experiment velocity
+    - id: d5c13
+      name: Venturing, open source & standards participation
+      statement: 'The org engages beyond its walls: corporate venturing, open-source strategy, and participation in standards
+        bodies (TM Forum, GSMA/CAMARA, 3GPP, IETF).'
+      levers:
+      - innovation
+      - ecosystem-platforms
+      anchors:
+      - level: 1
+        text: No external engagement
+      - level: 2
+        text: Ad hoc contributions
+      - level: 3
+        text: Open-source strategy; contributions to key projects; standards participation
+      - level: 4
+        text: Strategic standards/OSS investments shaping industry direction; venturing arm active
+      - level: 5
+        text: 'Ecosystem leadership: standards authored, OSS projects led, ventures scaled'
+      evidence:
+      - OSS policy
+      - Contribution logs
+      - Standards body roles
+      - Patent/position papers; venture portfolio
+      - Industry leadership evidence
+- id: d6
+  name: Data & the Intelligent Enterprise
+  weight: 0.15
+  description: 'Data as the foundation of the digital business: modern architecture and data products, governance/trust/sharing,
+    AI- and agent-ready data, and decision intelligence that closes the loop into action.'
+  sub_dimensions:
+  - id: d6s1
+    name: Data Foundation & Architecture
+    lite_question: Our data platform is modern, real-time, and product-oriented.
+    criteria:
+    - id: d6c1
+      name: Modern data architecture & data products
+      statement: Data architecture (lakehouse/mesh/fabric) is modern, and data is managed as products with contracts, owners,
+        and SLAs.
+      levers:
+      - data-intelligence
+      - composability
+      anchors:
+      - level: 1
+        text: Siloed databases; no architecture
+      - level: 2
+        text: Central warehouse; no ownership
+      - level: 3
+        text: Lakehouse/fabric with domain ownership; first data products with contracts/SLAs
+      - level: 4
+        text: 'Data mesh operating: self-serve infrastructure, data products at scale, federated governance'
+      - level: 5
+        text: 'Autonomous data platform: products self-register, quality self-heals, marketplace thriving'
+      evidence:
+      - Data inventory
+      - Warehouse reports
+      - Data product catalog + contracts
+      - Mesh metrics; product SLAs
+      - Marketplace usage; automated quality
+    - id: d6c2
+      name: Real-time & streaming data
+      statement: Critical data is available in real time via streaming/event-driven pipelines.
+      levers:
+      - data-intelligence
+      anchors:
+      - level: 1
+        text: Batch-only; days-old data
+      - level: 2
+        text: Some real-time feeds for key systems
+      - level: 3
+        text: Streaming platform (Kafka-class) for critical events; freshness SLAs
+      - level: 4
+        text: Event-driven architecture enterprise-wide; real-time by default
+      - level: 5
+        text: Real-time fabric powers agents, twins, and decisions autonomously
+      evidence:
+      - ETL batch jobs
+      - Streaming topics inventory
+      - Freshness SLA dashboards
+      - Event-driven service count
+      - Real-time use cases (agents, twins)
+    - id: d6c3
+      name: Data quality & observability
+      statement: 'Data quality is automated and observable: quality SLAs, anomaly detection, lineage, incident response
+        for data.'
+      levers:
+      - data-intelligence
+      - trust-security-privacy
+      anchors:
+      - level: 1
+        text: No quality checks; issues found by users
+      - level: 2
+        text: Manual checks on some datasets
+      - level: 3
+        text: Automated quality tests on critical data products; lineage captured; data SLOs
+      - level: 4
+        text: AI-driven anomaly detection; automated remediation; data observability platform
+      - level: 5
+        text: 'Self-healing data: quality issues prevented/detected/fixed automatically; trust metrics published'
+      evidence:
+      - Quality reports
+      - Data SLAs
+      - Observability dashboards
+      - Anomaly/alert logs
+      - Data incident MTTR; trust scores
+  - id: d6s2
+    name: Data Governance, Trust & Sharing
+    lite_question: Data is governed, trusted, protected, and shared - internally and with the ecosystem.
+    criteria:
+    - id: d6c4
+      name: Data governance, catalog & lineage
+      statement: Data governance with catalog, lineage, policies, and stewardship is systematic.
+      levers:
+      - grc
+      - data-intelligence
+      anchors:
+      - level: 1
+        text: No governance; tribal knowledge
+      - level: 2
+        text: Policy doc; no catalog
+      - level: 3
+        text: Central catalog with owners/stewards; lineage; policies enforced
+      - level: 4
+        text: Federated governance automated; policy-as-code; compliance evidenced
+      - level: 5
+        text: 'Self-governing data: policies self-enforce and self-audit; benchmarks set'
+      evidence:
+      - Governance policy
+      - Stewardship roster
+      - Catalog + lineage coverage
+      - Policy-as-code logs
+      - Audit reports
+    - id: d6c5
+      name: Data protection, privacy & sovereignty
+      statement: Data is protected (encryption, access control, DLP), privacy-compliant, and sovereignty-respecting.
+      levers:
+      - trust-security-privacy
+      - grc
+      anchors:
+      - level: 1
+        text: No access controls beyond basic; no DLP
+      - level: 2
+        text: RBAC in place; encryption partial; no residency controls
+      - level: 3
+        text: Encryption at rest/in transit; DLP; consent-aware access; residency per jurisdiction
+      - level: 4
+        text: Automated classification + protection; PETs for sensitive analytics; sovereignty audits
+      - level: 5
+        text: Zero-trust data fabric; privacy-preserving analytics by default; audit-ready sovereignty
+      evidence:
+      - Access reviews
+      - Encryption standards
+      - DLP reports; classification coverage
+      - PET usage; sovereignty audit results
+      - Zero-trust data access logs
+    - id: d6c6
+      name: Open & collaborative data ecosystems
+      statement: Data is shared securely with partners/ecosystem (data spaces, contracts, marketplaces) and open data where
+        appropriate.
+      levers:
+      - ecosystem-platforms
+      - data-intelligence
+      anchors:
+      - level: 1
+        text: No external data sharing
+      - level: 2
+        text: Ad hoc extracts for partners
+      - level: 3
+        text: Governed data-sharing agreements; data exchange platform
+      - level: 4
+        text: Data marketplace/ecosystem live; API-based data products monetized
+      - level: 5
+        text: 'Trusted data ecosystem at scale: federated sharing, consent-managed, value measured'
+      evidence:
+      - Sharing agreements
+      - Extract logs
+      - Data exchange platform
+      - Marketplace transactions
+      - Ecosystem data value reports
+  - id: d6s3
+    name: AI- & Agent-Ready Data
+    lite_question: 'Data is ready for AI agents and twins: accessible, well-described, and tool-exposed.'
+    criteria:
+    - id: d6c7
+      name: Agent-accessible data & tool interfaces
+      statement: Agents can safely discover and use data/tools via governed interfaces (e.g., MCP-class), with permissions
+        and logging.
+      levers:
+      - agentic-ai
+      - data-intelligence
+      anchors:
+      - level: 1
+        text: Agents have no data access or use scraping
+      - level: 2
+        text: Manual extracts for AI projects
+      - level: 3
+        text: Curated datasets for AI; access-controlled tool APIs
+      - level: 4
+        text: 'Governed agent data fabric: semantic layer + tool registry; per-agent permissions; usage logged'
+      - level: 5
+        text: Agents self-serve governed data/tools; autonomous discovery within policy; audit complete
+      evidence:
+      - AI project data requests
+      - Dataset catalog
+      - Tool/API registry
+      - Agent permission policies + access logs
+      - Discovery analytics; audit reports
+    - id: d6c8
+      name: RAG, vector, feature & synthetic data
+      statement: LLM/agent data stack (vector stores, feature stores, RAG pipelines, synthetic data) is managed and governed.
+      levers:
+      - agentic-ai
+      - data-intelligence
+      anchors:
+      - level: 1
+        text: No vector/feature infra; prompts use raw docs
+      - level: 2
+        text: Ad hoc vector DB; no governance
+      - level: 3
+        text: Managed vector/feature stores; RAG pipelines with evals; synthetic data for privacy
+      - level: 4
+        text: Feature/vector platforms as a service; RAG quality monitored; synthetic data certified
+      - level: 5
+        text: 'AI data platform self-optimizing: retrieval quality, freshness, and privacy automated'
+      evidence:
+      - RAG prototype
+      - Vector DB inventory
+      - Feature store catalog
+      - RAG eval dashboards; synthetic data certs
+      - Automated retrieval quality; privacy proofs
+    - id: d6c9
+      name: Twin & simulation data pipelines
+      statement: Twins/simulations are fed by governed, high-fidelity data pipelines (telemetry, events, context).
+      levers:
+      - digital-twins
+      - data-intelligence
+      anchors:
+      - level: 1
+        text: No twin data pipelines
+      - level: 2
+        text: Manual data pulls for models
+      - level: 3
+        text: Automated pipelines feeding domain twins; data contracts with twin teams
+      - level: 4
+        text: Enterprise twin data fabric; freshness/quality SLAs for simulation data
+      - level: 5
+        text: Twins self-fed and self-validating; simulation data audit-ready
+      evidence:
+      - Model input logs
+      - Pipeline configs
+      - Data contracts with twin teams
+      - Twin data SLA dashboards
+      - Simulation validation reports
+  - id: d6s4
+    name: Decision Intelligence
+    lite_question: Insights become decisions and actions automatically.
+    criteria:
+    - id: d6c10
+      name: Self-service & augmented analytics
+      statement: Business users self-serve governed data with augmented analytics (AutoML, NLQ).
+      levers:
+      - data-intelligence
+      anchors:
+      - level: 1
+        text: Analyst bottleneck; static reports
+      - level: 2
+        text: BI tool for analysts; some self-service
+      - level: 3
+        text: Self-service analytics widely adopted; data products consumed via NLQ
+      - level: 4
+        text: 'Augmented analytics: AutoML, NLQ, auto-insights for all teams'
+      - level: 5
+        text: 'Analytics self-serve and proactive: insights delivered before asked'
+      evidence:
+      - BI usage reports
+      - Self-service adoption metrics
+      - NLQ/AutoML usage
+      - Auto-insight delivery logs
+      - Insight-to-action time
+    - id: d6c11
+      name: Autonomous insights & decision loops
+      statement: 'Insights drive decisions automatically: closed loops from detection to action (ops, pricing, CX).'
+      levers:
+      - agentic-ai
+      - data-intelligence
+      - autonomy
+      anchors:
+      - level: 1
+        text: Insights in slide decks; decisions manual
+      - level: 2
+        text: Dashboards reviewed weekly
+      - level: 3
+        text: Automated alerts with recommended actions; some auto-executed
+      - level: 4
+        text: Closed-loop decision systems in key domains (dynamic pricing, assurance) with guardrails
+      - level: 5
+        text: 'Autonomous decision fabric: insights-to-decisions-to-actions-to-learning, human-on-the-loop'
+      evidence:
+      - Alert fatigue reports
+      - Review cadence
+      - Action logs; guardrail configs
+      - Closed-loop success metrics
+      - Decision latency; human override logs
+    - id: d6c12
+      name: Insight-to-action accountability
+      statement: Every automated insight/decision is attributable, explainable, and auditable; outcomes measured.
+      levers:
+      - data-intelligence
+      - grc
+      anchors:
+      - level: 1
+        text: No tracking of insight outcomes
+      - level: 2
+        text: Some decisions logged
+      - level: 3
+        text: Decision logs with rationale; outcomes tracked for key loops
+      - level: 4
+        text: 'Full audit trail: data-to-model-to-decision-to-action-to-outcome; explainability on demand'
+      - level: 5
+        text: 'Self-auditing intelligence: drift, bias, and value monitored continuously; regulator-ready'
+      evidence:
+      - Decision logs
+      - Outcome reports
+      - Audit trail coverage
+      - Explainability reports
+      - Continuous audit; value-of-insights metrics
+assessment:
+  modes:
+  - 'lite-self-assessment: 24 sub-dimension Likert questions, indicative score, no evidence required'
+  - 'full-assessment: all 72 criteria scored 1-5 with evidence artifacts, conducted or verified by an independent assessor'
+  assessor_rules:
+  - Independent assessor preferred; self-assessment results are labeled as such (self-scoring inflates ~1 level on hard-to-evidence
+    areas).
+  - 'Repeatability per ISO/IEC 33002: a second assessor must reach the same rating from the same artifacts; calibration
+    sessions with exemplars are required.'
+  - Every criterion score must cite at least one evidence artifact from the criterion's evidence list.
+  - 'MECE integrity: each criterion is assessed only in its home sub-dimension; cross-cutting impact is expressed via levers,
+    not duplicate scoring.'
+  evidence_principle: 'Level descriptors are written to be observable by an independent assessor: artifacts, metrics, logs,
+    configurations, and governance records.'
+definitions:
+- concept: Digital transformation / digital business
+  definition: Exploiting digital technologies and supporting capabilities to create a robust new digital business model;
+    digitalization = using digital technologies to change a business model and create new revenue/value opportunities (the
+    move to a digital business); digital business = new business designs blurring the digital and physical worlds.
+  source: Gartner IT Glossary (digital business transformation, digitalization, digital business); WEF Digital Transformation
+    reports (transformation is a business-model reimagining, not an IT initiative; digital enterprises run leaner operating
+    models with customers and employees at the center)
+- concept: Agentic AI / AI agents
+  definition: Autonomous or semi-autonomous software entities that use AI to perceive, make decisions, take actions and
+    achieve goals in digital/physical environments; agentic AI systems act autonomously with minimal human supervision,
+    adapt to context and execute goals, orchestrating one or more agents toward strategic objectives. Governance requires
+    graded levels of agency, guardrails, orchestration and runtime oversight.
+  source: 'Gartner Top Strategic Technology Trends 2025: Agentic AI; Gartner AI agent definitions (2025-2026)'
+- concept: Autonomous AI systems / autonomy ladder
+  definition: 'TM Forum Autonomous Networks L0-L5: per domain, which party owns awareness, analysis, decision, execution
+    and intent. L4 = closed-loop, intent-driven operations where the system owns awareness-to-execution and intent is shared
+    human-machine; L5 = the system sets its own intents across all scenarios.'
+  source: TM Forum Autonomous Networks framework (IG1251/IG1253 intent-driven operation; AN Level 4 blueprint 2025)
+- concept: Digital twins & simulation (incl. DTO)
+  definition: A dynamic software model relying on operational and contextual data to understand how an organization operationalizes
+    its business model, respond to changes, deploy resources, simulate future states and deliver customer value; used to
+    prioritize, guide, plan, monitor, simulate, analyze and scale complex initiatives; process mining is the typical on-ramp.
+  source: Gartner (Digital Twin of an Organization definition; Market Guide/MQ for DTO platforms)
+- concept: Human-agent teaming (HMT/HAIT)
+  definition: One or more people and one or more AI systems collaborating and coordinating to achieve task completion; teammates
+    interact, adapt to the dynamic task and achieve common goals. Requires trust calibration, shared mental models, delegation
+    protocols, adaptive autonomy, and human oversight (human-in/on-the-loop); even at maximum autonomy AI augments human
+    agency under human oversight.
+  source: See et al. (2007); Demir et al. (2021); arXiv 2503.16518 / 2504.05755 (HMT/HAIT reviews 2025)
+- concept: Network APIs / Open Gateway / CAMARA
+  definition: Standardized, federated operator network APIs exposing capabilities (number verification, SIM swap, device
+    location/status, quality-on-demand, edge discovery, carrier billing) so developers can build once and deploy across
+    operators; foundation for NaaS, slicing, and telecom platform monetization.
+  source: GSMA Open Gateway / CAMARA project (2025-2026 state of the market)
+- concept: AI TRiSM
+  definition: 'AI trust, risk and security management: technical capabilities ensuring AI systems are trustworthy, secure
+    and compliant through continuous monitoring, validation and runtime enforcement - model inventory and risk scoring,
+    explainability, bias/fairness, guardrails, guardian agents, EU AI Act readiness.'
+  source: Gartner AI TRiSM framework and Market Guide for AI TRiSM (2025-2026)
+- concept: Evidence-based assessment
+  definition: 'Assessments must be objective, consistent, repeatable and representative; repeatable means a second assessor
+    reaches the same rating from the same artifacts. Maturity levels are cumulative: each level builds on the previous by
+    adding functionality or rigor.'
+  source: ISO/IEC 33002:2015; CMMI v3 staged representation; EDM DCAM (objectives, questions, artifacts of evidence, scoring
+    criteria)
+relationships:
+- source_id: dea:maturity-digital-transformation-operationalized
+  target_id: dea:catalog-maturity-models
+  relationship_type: instance-of
+  description: One of the canonical maturity models in the catalog
+- source_id: dea:maturity-digital-transformation-operationalized
+  target_id: dea:catalog-assessment-tools
+  relationship_type: scored-by
+  description: Assessed via assessment instruments that map results to these levels
+- source_id: dea:maturity-digital-transformation-operationalized
+  target_id: dea:maturity-digital-transformation
+  relationship_type: derived-from
+  description: Re-harvested from the composite Digital Transformation model ecosystem work and from TM Forum DMM v5.0.2
+    (GB997A); supersedes nothing - additive new model
+- source_id: dea:maturity-digital-transformation-operationalized
+  target_id: dea:reference-dera
+  relationship_type: measured-by
+  description: Phase 4 governance health measured by these scores
+tags:
+- digital-transformation
+- digital-business
+- agentic-ai
+- autonomy
+- digital-twins
+- human-agent-teaming
+- network-apis
+- capability-assessment
+- five-level-progression
+- evidence-based
+- mece
