@@ -32,6 +32,23 @@ scoring:
     data: 0.15
     party: 0.15
     culture: 0.1
+  weight_profiles:
+    default:
+      strategy: 0.2
+      operations: 0.2
+      technology: 0.2
+      data: 0.15
+      party: 0.15
+      culture: 0.1
+    comms-provider:
+      strategy: 0.15
+      operations: 0.25
+      technology: 0.2
+      data: 0.15
+      party: 0.15
+      culture: 0.1
+  weight_profile_rule: dimension_weights is the default profile; select a profile in the scope charter (e.g. comms-provider
+    for CSPs, which weights operations higher). Profile choice is recorded in the assessment result for comparability.
   effort_multipliers:
     L1: 1.0
     L2: 1.5
