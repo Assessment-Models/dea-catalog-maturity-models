@@ -1,5 +1,5 @@
 # Digital Transformation Operationalized Maturity & Assessment Model
-# New model lodged via proposal 0002 (see proposals/0002-digital-transformation-operationalized.md).
+# New model lodged via proposal 0003 (see proposals/0003-digital-transformation-operationalized.md).
 # CI contract: id/name/domain/version + exactly 5 levels, each with id/name/score_range/summary/characteristics/exit_criteria/evidence.
 
 id: dea:maturity-digital-transformation-operationalized
@@ -14,7 +14,7 @@ description: 'Digital-business maturity and assessment model. Positions digital 
   across all operating concerns, steered by customer- and ecosystem-centric digital strategy, and run as a deliberate working
   model between humans and software agents. Technology is an enabler, not the subject. Every criterion is MECE-placed, carries
   five evidence-anchored progression levels, and is independently assessable.'
-lineage: 'Derived from TM Forum Digital Maturity Model v5.0.2 (GB997A) via a full structural and gap review (see proposals/0002-digital-transformation-operationalized.md):
+lineage: 'Derived from TM Forum Digital Maturity Model v5.0.2 (GB997A) via a full structural and gap review (see proposals/0003-digital-transformation-operationalized.md):
   6 dimensions / 31 sub-dimensions / 129 criteria re-harvested into a MECE digital-business model of 6 dimensions / 24 sub-dimensions
   / 72 criteria, with evidence-anchored 5-level progression, transversal levers for current industry concepts (agentic AI,
   autonomy ladder, digital twins/DTO, human-agent teaming, network APIs), and an explicit scoring/advancement mechanism.'

@@ -1,4 +1,4 @@
-# Proposal 0002 — Digital Transformation Operationalized Maturity & Assessment Model
+# Proposal 0003 — Digital Transformation Operationalized Maturity & Assessment Model
 
 | Field | Value |
 |-------|-------|

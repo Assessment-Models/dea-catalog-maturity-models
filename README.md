@@ -41,7 +41,7 @@ The catalog is the canonical registry of all maturity models and their versions.
 | Technology | Tech stack fitness, debt, lifecycle | `maturity-models/v1-alpha/technology.yaml` | draft |
 | Operations | Ops, incident response, SRE | `maturity-models/v1-alpha/operations.yaml` | draft |
 | Services Delivery | Time-to-market, outcomes | `maturity-models/v1-alpha/services-delivery.yaml` | draft |
-| Digital Transformation Operationalized | Digital-business maturity & assessment (agentic AI, autonomy, twins, human-agent teaming, network APIs) — proposal 0002 | `maturity-models/v1-alpha/digital-transformation-operationalized.yaml` | draft |
+| Digital Transformation Operationalized | Digital-business maturity & assessment (agentic AI, autonomy, twins, human-agent teaming, network APIs) — proposal 0003 | `maturity-models/v1-alpha/digital-transformation-operationalized.yaml` | draft |
 
 ---
 

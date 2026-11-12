@@ -54,11 +54,11 @@ catalog:
       relationship_type: scored-by
       description: Assessment instruments produce scores mapped to maturity levels
 
-    # Digital Transformation Operationalized model entry (proposal 0002)
+    # Digital Transformation Operationalized model entry (proposal 0003)
     - source_id: dea:maturity-digital-transformation-operationalized
       target_id: dea:catalog-maturity-models
       relationship_type: instance-of
-      description: Digital Transformation Operationalized model is a catalog member (proposal 0002)
+      description: Digital Transformation Operationalized model is a catalog member (proposal 0003)
 
     # Maturity scores feed into DERA Phase 4 governance health
     - source_id: dea:catalog-maturity-models
@@ -84,7 +84,7 @@ catalog:
       description: Services delivery — time-to-market, quality, customer outcomes
     - path: maturity-models/v1-alpha/digital-transformation-operationalized.yaml
       type: MaturityModel
-      description: Digital Transformation Operationalized — digital-business maturity & assessment model (6 dimensions, 23 sub-dimensions, 70 evidence-anchored criteria; agentic AI, autonomy ladder, digital twins, human-agent teaming, network APIs); see proposals/0002
+      description: Digital Transformation Operationalized — digital-business maturity & assessment model (6 dimensions, 23 sub-dimensions, 70 evidence-anchored criteria; agentic AI, autonomy ladder, digital twins, human-agent teaming, network APIs); see proposals/0003
 
   tags:
     - maturity-model
