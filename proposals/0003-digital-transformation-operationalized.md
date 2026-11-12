@@ -172,6 +172,15 @@ D2 2.4.2, S3).
 - CI-equivalent + custom checks pass on the merged file (run 43257210108: "OK — 7 maturity
   models validated").
 
+### 5.3 Hotspot views per transversal lever
+
+The model ships **12 hotspot views** (one per transversal lever) — the equivalent of DMM v5's
+mission-hotspot sheets (CITE / AI&Data / AN&O). Each view lists the criteria that must reach a
+minimum level for that theme (58 entries total; thresholds min_level 2–4, mirroring the
+"Level >= 3 / Level 5" convention), e.g.: agentic-ai → d3c8 ≥ L4, d3c9 ≥ L3, d4c6 ≥ L4, d5c9 ≥ L3,
+d6c7 ≥ L3; autonomy → d4c4 ≥ L4, d4c5 ≥ L4, d4c2 ≥ L3; digital-twins → d4c7/d4c8 ≥ L3, d4c9 ≥ L4.
+Validated: every hotspot entry references an existing criterion and lever, min_level within 1–5.
+
 ## 6. Verification (acceptance criteria)
 
 - CI (`.github/workflows/ci.yml`) passes: all `v1-alpha/*.yaml` have id/name/domain/version + exactly

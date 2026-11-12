@@ -1,4 +1,7 @@
 [Unreleased]
+├── model enhancement: 12 transversal-lever hotspot views (58 entries, min_level thresholds) added to
+│   dea:maturity-digital-transformation-operationalized; proposal 0003 §5.3; validated (refs resolve,
+│   CI + custom checks pass); staged domain-repo register mirrored
 ├── proposal 0003: Digital Transformation Operationalized maturity & assessment model
 │   ├── maturity-models/v1-alpha/digital-transformation-operationalized.yaml (new model: 6 dimensions / 23 sub-dimensions / 70 criteria, 5 evidence-anchored levels each, 12 transversal levers, weighted 0-100 scoring with cumulative advancement gates)
 │   ├── proposals/0003-digital-transformation-operationalized.md (gap review of TM Forum DMM v5.0.2, grounded definitions, design rationale)
