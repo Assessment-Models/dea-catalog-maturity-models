@@ -99,6 +99,11 @@ if len(names) != len(set(names)):
 w = doc["scoring"]["dimension_weights"]
 if abs(sum(w.values()) - 1.0) > 1e-9:
     errors.append("dimension weights do not sum to 1")
+for pname, pw in doc["scoring"].get("weight_profiles", {}).items():
+    if abs(sum(pw.values()) - 1.0) > 1e-9:
+        errors.append("weight profile %s does not sum to 1" % pname)
+    if set(pw) != set(w):
+        errors.append("weight profile %s dimension keys differ from dimension_weights" % pname)
 for l in doc["levels"]:
     p = l.get("progression", {})
     if set(p.get("ooda", {})) != {"Observe", "Orient", "Decide", "Act"}:

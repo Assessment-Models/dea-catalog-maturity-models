@@ -75,8 +75,9 @@ tags:
 - intent-driven
 - human-machine
 decisions:
-  dimension_weights: Kept 20/20/20/15/15/10 (strategy/operations/technology are the execution core of the operating model;
-    data/party/culture are enabling layers; weights sum to 1). Revisit at v1.1.0 with assessment data.
+  dimension_weights: Default kept at 20/20/20/15/15/10 (strategy/operations/technology are the execution core; data/party/culture
+    enabling; sums to 1). A comms-provider profile (15/25/20/15/15/10, operations-weighted) is now available via scoring.weight_profiles
+    and selected in the scope charter; revisit both at v1.1.0 with assessment data.
   weakest_link_gate: Gate applies only to gating criteria (4.1.1-4.1.4) that are IN the assessment scope; criteria excluded
     by the scope charter do not gate. Other Operations flows (4.2/4.3) are scored but not gating, since they may be legitimately
     out of scope for a given assessment.

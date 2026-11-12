@@ -113,9 +113,11 @@ sync with the bundle (`scripts/local_validate.py` checks consistency).
 
 ## 7. Open questions — RESOLVED (decisions recorded in the model's `decisions` block)
 
-1. **Dimension weights** — kept 20/20/20/15/15/10: strategy/operations/technology are the execution
-   core of the operating model; data/party/culture are enabling layers; weights sum to 1.
-   Revisit at v1.1.0 with real assessment data (may add a comms-provider profile).
+1. **Dimension weights** — default kept at 20/20/20/15/15/10 (strategy/operations/technology are the
+   execution core; data/party/culture enabling; sums to 1). A **comms-provider profile**
+   (15/25/20/15/15/10, operations-weighted) ships in `scoring.weight_profiles` and is selected in the
+   scope charter; profile choice is recorded in the assessment result. Revisit both at v1.1.0 with
+   real assessment data.
 2. **Weakest-link gate scope** — gate applies only to gating criteria (4.1.1–4.1.4) that are
    **in the assessment scope**; criteria excluded by the scope charter do not gate. Other
    Operations flows (4.2/4.3) are scored but not gating.
