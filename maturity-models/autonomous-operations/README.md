@@ -23,6 +23,7 @@ lives here and is registered in the catalog at
 | `examples/` | Worked assessment example (`assessment-example.yaml`) + weight-profile benchmark (`benchmark-weight-profiles.yaml`) |
 | `scripts/local_validate.py` | Local validation (schema, 5 levels, unique IDs/names, bands, weights + profile sums, questionnaire coverage) — run before any PR |
 | `GOVERNANCE.md` | How this model stays governed inside the org (catalog, registry, CI, change requests) |
+| `CHANGELOG.md` | Model-level changelog (semver) |
 
 ## Level stages (canonical band → AO stage)
 
