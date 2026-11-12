@@ -1,0 +1,909 @@
+# dimensions.yaml — harvested from industry AO workbook v1.8.0, cleaned, gap-filled
+
+id: dea:dimensions-autonomous-operations-v1
+version: 1.0.0-alpha
+name: AO dimensions / sub-dimensions / criteria (harvested & cleaned)
+counts:
+  dimensions: 6
+  sub_dimensions: 32
+  criteria: 157
+dimensions:
+- id: '1'
+  name: Party
+  definition: The Party dimension evaluates the level of autonomy and associated business benefits in the engaging experience
+    where parties view the organization as their digital partner using their preferred channels of interaction.
+  sub_dimensions:
+  - id: '1.1'
+    name: Customer Engagement
+    definition: The organization effectively orchestrates proactive, personalized, and context-aware interactions with customers
+      as engaged parties, driving desired outcomes with minimal friction or effort required from the customer.
+    criteria:
+    - id: 1.1.1
+      name: Predictive Engagement
+      definition: The organization enables Predictive Engagement by using intelligent automation and customer insights (such
+        as behavioral data and user profiles) to proactively anticipate customer needs and dynamically determine the right
+        target, channel,…
+    - id: 1.1.2
+      name: Hyper-personalized Autonomous Offers
+      definition: The organization delivers hyper-personalized products, services, bundles, and discounts by leveraging intelligent
+        automation and real-time customer insights to dynamically tailor offers across channels.
+    - id: 1.1.3
+      name: Self-guided Autonomous Workflows
+      definition: The organization enables self-customization through guided workflows that use customer preferences and lifestyle
+        inputs to suggest personalized service, notification, and promotional settings via self-service platforms.
+    - id: 1.1.4
+      name: Zero-Effort Service
+      definition: The organization ensures zero-effort usability across all customer-facing services, products, and digital
+        interfaces, minimizing friction and enabling intuitive interaction.
+    - id: 1.1.5
+      name: Real-time Behavior-driven Expectation Management
+      definition: The organization measures and drives customer delight by capturing behavioral and conversational signals
+        during interactions to assess and exceed expectations in real time.
+    - id: 1.1.6
+      name: Autonomous Customer Interaction
+      definition: The organization supports digital engagement through AI-driven autonomous channels, such as intelligent
+        chat agents, that deliver consistent, responsive, and context-aware customer interactions.
+    - id: 1.1.7
+      name: Dynamic Customer Support
+      definition: The organization prioritizes self-support with intelligent automation that provides resolution capabilities
+        equal to or exceeding agent-assisted care.
+    - id: 1.1.8
+      name: Adaptive Loyalty Management
+      definition: The organization personalizes loyalty rewards using intelligent automation and customer profile data to
+        align incentives with individual preferences and behaviors.
+  - id: '1.2'
+    name: Customer Experience
+    definition: The organization delivers consistent, high-quality, and effortless experiences to customers across all touchpoints
+      through autonomous design, measurement, and optimization of end-to-end journeys.
+    criteria:
+    - id: 1.2.1
+      name: Intelligent Experience Modelling
+      definition: The organization uses intelligent automation to model customer experience quantitatively and qualitatively,
+        incorporating contextual factors to predict and shape future interactions.
+    - id: 1.2.2
+      name: Autonomous Customer Experience Improvement
+      definition: The organization continuously captures and monitors customer quality of experience (QoE) through automated
+        measurement systems to inform real-time improvements in service delivery.
+    - id: 1.2.3
+      name: Party behavior Management
+      definition: The organization tracks, analyzes, and acts on party (including customers, partners, AI agents, IoT) behavior
+        and usage patterns, and self-initiated change using intelligent closed-loop automation for proactive engagement.
+    - id: 1.2.4
+      name: Seamless Party Onboarding Experience
+      definition: The organization automates and simplifies party onboarding (from joining to enablement e.g. Activation)
+        ensuring a seamless, fast, and error-free start to service.
+    - id: 1.2.5
+      name: Autonomous Cross-channel Context Management
+      definition: Omnichannel engagement is enabled by intelligent channel context awareness with automated interaction handoff
+        across engagement channels with alignment to Party intent.
+    - id: 1.2.6
+      name: Self-Optimizing Customer Journey
+      definition: Customer journey is self-optimized in real time using automated analysis of user-level experience (QoE)
+        data to improve satisfaction and conversion.
+  - id: '1.3'
+    name: Customer Insight
+    definition: The organization generates actionable understanding of customer needs, behaviors, and intents by analyzing
+      multi-source data throughout the customer journey, and applies these insights to drive closed-loop decision-making.
+    criteria:
+    - id: 1.3.1
+      name: Automated Customer Portrait
+      definition: The organization maintains advanced customer portraits that go beyond segmentation to include dynamic behavioral,
+        contextual, and predictive attributes for operational use.
+    - id: 1.3.2
+      name: Active Customer value Scoring
+      definition: The organization determines and applies customer value scores based on lifetime value, creditworthiness,
+        and engagement, to guide decision-making in customer operations.
+    - id: 1.3.3
+      name: Customer Journey Actionable Insights
+      definition: The organization extracts actionable insights from every customer journey touchpoint to enhance personalization,
+        service quality, and operational responsiveness.
+    - id: 1.3.4
+      name: Real-time Single View
+      definition: The organization provides a unified, real-time view of the customer (integrating account status, service
+        health, device status, and order history) for seamless service delivery.
+    - id: 1.3.5
+      name: Automated Voice OF Customer
+      definition: The organization automatically collects, analyzes, and operationalizes customer feedback, including complaints
+        and sentiment, to improve services and resolve systemic issues.
+    - id: 1.3.6
+      name: Customer Intent Prediction
+      definition: The organization captures and predicts customer intent to enable accurate Next Best Action decisions in
+        real time across customer operations.
+  - id: '1.4'
+    name: Customer Trust
+    definition: The organization establishes and sustains customer trust by ensuring the ethical, secure, reliable, and transparent
+      operation of intelligent automation systems that deliver on promised outcomes.
+    criteria:
+    - id: 1.4.1
+      name: Preemptive Intelligent Care
+      definition: The organization delivers preemptive care by using intelligent automation to detect potential service disruptions
+        and proactively notify or assist customers before issues arise.
+    - id: 1.4.2
+      name: Self-Governed SLAs
+      definition: The organization meets and transparently communicates SLA commitments (such as speed, coverage, and response
+        times) to customers through real-time self-monitoring, remediation and adaptive reporting.
+    - id: 1.4.3
+      name: Ethic Privacy Protection
+      definition: The organization ensures ethical use and privacy protection of customer data through automated governance
+        controls and continuous compliance monitoring.
+  - id: '1.5'
+    name: B2B2X Partner Engagement
+    definition: The organization has the capability to engage and collaborate with parties as partners actively for value-creation
+      within its ecosystem, and is enabling seamless co-delivery of customer-centric services through intelligent orchestration.
+    criteria:
+    - id: 1.5.1
+      name: Automated B2B2X partner onboarding
+      definition: The organization enables seamless onboarding of B2B2X partners through autonomous operations that automate
+        provisioning, configuration, and integration.
+    - id: 1.5.2
+      name: Autonomous Partner Fulfillment
+      definition: The organization delivers consistent, high-quality service experiences to B2B2X partners through automated
+        fulfillment processes and real-time performance tracking.
+    - id: 1.5.3
+      name: Adaptive B2B2X Partner Support
+      definition: The organization provides intent-based support to B2B2X partners using autonomous systems that anticipate
+        needs and resolve issues without manual intervention.
+    - id: 1.5.4
+      name: B2B2X Partner Satisfaction
+      definition: The organization measures and ensures B2B2X partner satisfaction by autonomously collecting feedback and
+        verifying SLA compliance in real time.
+    - id: 1.5.5
+      name: B2B2X Shared Value
+      definition: The organization generates and shares measurable value with B2B2X partners through autonomous insights and
+        monetization capabilities such as revenue sharing and usage analytics.
+    - id: 1.5.6
+      name: Machine Customer & Agent-to-Agent Readiness
+      definition: Products, APIs, and policies support machine customers (software agents that discover, negotiate, purchase,
+        and operate services autonomously).
+      added_in_revamp: true
+      source: 'Gartner: machine customers could drive or influence $18T in purchases by 2030 (autonomous business).'
+  - id: '1.6'
+    name: Employee Engagement
+    definition: The organization assesses the extent to which the organization empowers employees as key stakeholders through
+      automation tools and systems that enhance their experience, agency, productivity, and contribution to shared outcomes.
+    criteria:
+    - id: 1.6.1
+      name: Security Compliance
+      definition: The organization enhances workplace safety and security compliance by automating hazardous tasks and enforcing
+        data privacy and handling rules through autonomous monitoring.
+    - id: 1.6.2
+      name: Skills proficiency Enablement
+      definition: The organization upskills employees through targeted training in data, automation, and system management,
+        preparing them for higher-value roles in an AO-enabled environment.
+    - id: 1.6.3
+      name: Satisfying Engagement
+      definition: The organization increases job satisfaction by using intelligent automation to eliminate repetitive tasks,
+        enabling employees to focus on meaningful, fulfilling work.
+    - id: 1.6.4
+      name: Productive Efficiency Augmented Agency
+      definition: The organization improves employee efficiency and productivity by automating routine tasks and measuring
+        gains in resolution times, uptime, and task capacity.
+    - id: 1.6.5
+      name: Employee Self-Advancement
+      definition: The organization supports role evolution and career growth by empowering self-adaption through autonomous
+        role play.
+    - id: 1.6.6
+      name: Autonomous Systems Adoption
+      definition: The organization ensures employees actively adopt and use intelligent automation tools in daily workflows,
+        enabling data-driven decisions and increasing effectiveness through agent-augmented empowerment.
+    - id: 1.6.7
+      name: Employee Innovation Feedback Loops
+      definition: The organization enables employees to contribute to innovation by identifying improvement opportunities
+        through AO-enabled feedback loops, with structured measurement of idea generation and implementation impact.
+    - id: 1.6.8
+      name: Autonomous Collaboration
+      definition: The organization enhances collaboration by integrating employee feedback into intelligent agents via automated
+        communication platforms that capture intent and enable seamless coordination across teams and systems.
+  - id: '1.7'
+    name: Smart Things Engagement
+    definition: The Smart Things Engagement sub-dimension assesses the extent to which smart and autonomous things (Agents)
+      and Internet of things (IoT) are actively engaged as participating entities within the operational ecosystem, contributing
+      to service delivery, efficiency, and innovation through autonomous i…
+    criteria:
+    - id: 1.7.1
+      name: Autonomous Onboarding (Smart Things)
+      definition: The organization enables autonomous onboarding of Things through machine-to-machine self-installation, self-configuration,
+        and self-training, requiring no human intervention.
+    - id: 1.7.2
+      name: Self-Healing
+      definition: The organization implements self-healing capabilities in Smart Things by using sensors to monitor equipment
+        health, predict failures, and trigger corrective actions automatically to minimize downtime.
+    - id: 1.7.3
+      name: Dynamic adaptation
+      definition: The organization achieves dynamic operational adaptation through intelligent agents that enable real-time,
+        machine-to-machine adjustments to configurations and processes without human input.
+    - id: 1.7.4
+      name: Communication and learning
+      definition: The organization enables autonomous communication and continuous learning between machines through intelligent
+        agents that exchange insights and evolve behavior collaboratively over time.
+    - id: 1.7.5
+      name: Safety
+      definition: The organization ensures safe interactions between machines, humans, and environments by enforcing real-time
+        safety protocols through intelligent agents in both machine-to-machine and machine-to-human operations.
+- id: '2'
+  name: Strategy
+  definition: The Strategy dimension evaluates the presence of a vision, strategic direction, strategic plan, and supporting
+    business capabilities for the development and deployment of autonomous operations initiatives across the organization
+    and assesses the maturity of their implementation and execution.
+  sub_dimensions:
+  - id: '2.1'
+    name: Value Model
+    definition: A structured representation of how the organization creates, delivers, and captures value through its offerings,
+      particularly under Autonomous Operations initiatives, by linking customer needs, business outcomes, and technical enablers
+      in a testable, evolving value operations framework.
+    criteria:
+    - id: 2.1.1
+      name: Strategic Value Alignment
+      definition: Autonomous Operations strategy aligns business intent and objectives with execution activities by linking
+        strategic goals, including organizational vision and desired outcomes, to measurable operational objectives and resource
+        management t…
+    - id: 2.1.2
+      name: Initiatives Definition
+      definition: Autonomous Operations initiatives definition apply a value operations framework modelling approach, that
+        maps value propositions, value streams and value states to operating units of the organization to manage business
+        outcomes, performanc…
+    - id: 2.1.3
+      name: Value Modeling Design
+      definition: The organization enables Value Modeling & Design by mandating visualization, assessment, and quantification
+        of value of operations initiatives through standardized financial and business methods (such as CBA, ROI, TCO, Value
+        Tree Analysis,…
+    - id: 2.1.4
+      name: Business Case
+      definition: Business case are used to justify the pursuit of Autonomous Operations initiatives by clearly outlining
+        the benefits, costs, and risks of alternative options, providing a reasoned foundation for decision-making and investment
+        approval.
+    - id: 2.1.5
+      name: Autonomy Value Realization
+      definition: Value Realization in Autonomous Operations is measured by the consistent delivery of expected business outcomes
+        through the implementation and sustained operation of Autonomous Operations initiatives, with performance tracked
+        against defin…
+    - id: 2.1.6
+      name: Continuous Value Improvement
+      definition: The organization implements a Continuous Value Improvement process to systematically evaluate and enhance
+        the performance of Autonomous Operations strategies by measuring outcomes against economic, operational, and sustainability
+        goals, al…
+  - id: '2.2'
+    name: Business Architecture
+    definition: The organization maintains an enterprise blueprint that defines its business capabilities, value delivery,
+      information, and organizational structure, along with relationships among strategies, products, initiatives, and stakeholders,
+      thereby ensuring integration across strategy, business model, and…
+    criteria:
+    - id: 2.2.1
+      name: Business Architecture Vision
+      definition: The organization establishes and maintains a clear Business Architecture Vision for Autonomous Operations
+        that defines an agreed, actionable outcome to align stakeholder efforts, guide investment and resource allocation,
+        shape architecture…
+    - id: 2.2.2
+      name: Transformation Roadmap
+      definition: The organization develops and actively manages a Transformation Roadmap that clearly defines, sequences,
+        and tracks time-bound work packages and transitional states for Autonomous Operations initiatives, aligning project
+        execution with str…
+    - id: 2.2.3
+      name: Autonomy Operating Model
+      definition: The organization has a well-defined Autonomous Operations (AO) Operating Model that enables efficient, value-driven
+        operations by clearly structuring roles, responsibilities, resources, and capabilities in alignment with its vision
+        and bus…
+    - id: 2.2.4
+      name: Stakeholder Management
+      definition: The organization systematically applies Stakeholder Management to identify, engage, and align all relevant
+        individuals, groups, agents and organizations whose interests or actions impact or are impacted by Autonomous Operations
+        initiatives…
+  - id: '2.3'
+    name: Financial Management
+    definition: The extent to which the organization undertakes Financial Management to outline and refine budgets and investment
+      approach to Autonomous Operations in order to extract maximum value from resources, while overseeing critical elements
+      like profitability, costs, cash flow, credit, and assets to foster…
+    criteria:
+    - id: 2.3.1
+      name: Investment Plan
+      definition: The organization implements a disciplined Investment Management approach, guided by a documented strategy
+        and approved Investment Plan that aligns financial resource allocation with Autonomous Operations objectives and organizational
+        finan…
+    - id: 2.3.2
+      name: Autonomous Operations Funding
+      definition: The organization maintains a formal, cross-functional funding structure and process that secures and allocates
+        financial resources from multiple sources to support Autonomous Operations initiatives from ideation through implementation,
+        ens…
+    - id: 2.3.3
+      name: Investments Evaluation
+      definition: The organization conducts Investment Evaluation by systematically assessing AO-related investments against
+        measurable criteria, including ROI, risk, liquidity, tax benefits, and operational convenience, to align strategic
+        objectives, and o…
+  - id: '2.4'
+    name: Governance Framework
+    definition: The existence and maintenance of a comprehensive governance framework that strategically oversee and manage
+      core enablers like technology, data, AI, and other critical capabilities, which together drive and sustain Autonomous
+      Operations, while ensuring alignment, accountability, and effective contr…
+    criteria:
+    - id: 2.4.1
+      name: Autonomy Performance Measurement
+      definition: The organization implements a structured Autonomy Performance Measurement methodology to continuously monitor
+        and verify that autonomous operations meet end-to-end quality, safety, and efficiency standards in line with design
+        specification…
+    - id: 2.4.2
+      name: AO Program Governance
+      definition: The organization establishes Autonomous Operations Program Governance through a formal, executive-led structure
+        that defines, authorizes, and monitors AO strategy and execution, ensuring strategic alignment, accountability, and
+        oversight i…
+    - id: 2.4.3
+      name: Operational Continuity
+      definition: The organization ensures Operational Continuity by maintaining resilient autonomous systems that withstand
+        or rapidly recover from internal and external disruptions, preserving system functionality and performance without
+        degradation under…
+    - id: 2.4.4
+      name: Regulatory Compliance
+      definition: The organization ensures Regulatory Compliance in Autonomous Operations by embedding a defined compliance
+        strategy within its Governance Framework to consistently adhere to applicable laws and standards governing data protection,
+        privacy,…
+    - id: 2.4.5
+      name: Security Risk Management
+      definition: The organization implements Security & Risk Management by systematically identifying, assessing, and mitigating
+        risks to Autonomous Operations through standardized processes and governance-aligned policies, ensuring threats to
+        strategic an…
+    - id: 2.4.6
+      name: Best Practices
+      definition: The organization demonstrates strategic maturity in Autonomous Operations by actively identifying, evaluating,
+        and applying industry best practices to enhance the effectiveness, scalability, and reliability of AO initiatives.
+    - id: 2.4.7
+      name: Autonomous Action Guardrails, Escalation & Audit
+      definition: Autonomous actions are bounded by policy guardrails with defined delegation and escalation paths; every
+        autonomous decision is logged, explainable, and auditable by an independent assessor.
+      added_in_revamp: true
+      source: Forrester AEGIS framework; ETSI ZSM operation autonomy = delegation + escalation; Cisco policy-governed autonomy
+        with complete audit trails.
+  - id: '2.5'
+    name: Sustainability Management
+    definition: The extent by which the organization applies sustainability targets to planning, orientation, decisioning
+      and execution of its strategy for Autonomous Operations so as to steer its products, services, operations, and investments
+      toward enduring resilience, net zero carbon footprint and ethical grow…
+    criteria:
+    - id: 2.5.1
+      name: Sustainable Value Generation
+      definition: The organization achieves Sustainable Value Generation through Autonomous Operations by integrating environmental,
+        social, and economic considerations into its business model, leveraging AO to develop innovative, accessible products
+        that a…
+    - id: 2.5.2
+      name: Sustainable Investments
+      definition: The organization practices Sustainable Investments by evaluating Autonomous Operations initiatives through
+        an ESG lens (assessing environmental, social, and governance risks and opportunities using AO-driven insights) to
+        inform capital all…
+    - id: 2.5.3
+      name: Sustainability Awareness
+      definition: The organization fosters Sustainability Awareness by actively promoting and integrating ecological and social
+        considerations into its culture, decision-making, and operations, using insights from Autonomous Operations to identify
+        and act o…
+- id: '3'
+  name: Technology
+  definition: The Technology dimension evaluates the technology capabilities of the organization to establish, maintain and
+    continually transform an environment that supports the delivery of business objectives.
+  sub_dimensions:
+  - id: '3.1'
+    name: Autonomy Capabilities
+    definition: The ability of the organization to apply technological attributes and functionalities that enable systems,
+      networks, and infrastructures to autonomously monitor, analyze, and adapt their performance, ensuring continuous optimization,
+      predictive maintenance, and self-healing capabilities through emb…
+    criteria:
+    - id: 3.1.1
+      name: Autonomous Intelligence
+      definition: Systems and network components and solutions are implemented, including data analysis, decision making,
+        and evolving operations behavior with autonomous intelligence that require zero need for human decision making intervention.
+    - id: 3.1.2
+      name: Self-Adaptability
+      definition: Systems, services and resources are deployed, and can self-adapt operational behavior using machine intelligence,
+        managed through standardized training processes, version control, and secure deployment and operations procedures
+        to ensure m…
+    - id: 3.1.3
+      name: Intelligent Closed Loop Orchestration
+      definition: The organization implements and operates technologies that autonomously execute and coordinates tasks, workflows,
+        and remediations by leveraging intelligent closed-loop automation that translates operational goals into continuous
+        feed-forw…
+    - id: 3.1.4
+      name: Intent Management
+      definition: The organization integrates intent-aware technologies natively within its systems to automatically interpret
+        user or agent intents and translate them into executable actions within autonomous operations (AO) workflows, leveraging
+        the captu…
+    - id: 3.1.5
+      name: Autonomous Integration & Interoperability
+      definition: 'The organization integrates systems and processes autonomously and interoperably: automated data exchange,
+        event-driven flows, and standardized APIs, with self-discovering, self-configuring, self-healing connections.'
+    - id: 3.1.6
+      name: Outcome-based Simulation Management
+      definition: Simulation techniques use digital twin technology to model entities, processes, and operational systems
+        to predict outcomes, and optimize performance autonomously across deployment and operations.
+    - id: 3.1.7
+      name: Autonomous TriSM
+      definition: Autonomous technologies are planned, developed, deployed and operate safely, ethically, and transparently
+        by incorporating explainability, auditability, compliance, risk management, trust mechanisms, access controls, policy
+        compliance, wit…
+    - id: 3.1.8
+      name: Agent Lifecycle Management (AgentOps)
+      definition: 'The organization manages AI agents as production assets across their lifecycle: onboarding, versioning,
+        monitoring, rollback, and kill-switch, with every agent action attributable to an owner and a policy.'
+      added_in_revamp: true
+      source: 'Gartner: 40% of enterprise apps carry task-specific agents by end-2026; IBM/Fabrix AgentOps; Cisco AgenticOps
+        (agent-first operating model with oversight).'
+    - id: 3.1.9
+      name: Multi-Agent Orchestration & Loop Coordination
+      definition: 'Multiple agents and closed loops are coordinated so concurrent decisions do not conflict: shared goal hierarchy,
+        conflict resolution, and cross-domain orchestration.'
+      added_in_revamp: true
+      source: ETSI GR ZSM 020 (multi-agent systems); Ericsson intent managers + utility-based conflict resolution.
+  - id: '3.2'
+    name: Technology Architecture
+    definition: The ability of the organization to maintain an integrated framework of technological components, systems,
+      and infrastructures that enable seamless interaction, data exchange, and process integration across the organization,
+      encompassing scalable, secure, and interoperable solutions that support bus…
+    criteria:
+    - id: 3.2.1
+      name: Solution Architecture Alignment
+      definition: The organization defines solution architectures that align application design and functionality with Autonomy
+        targets of Operations, ensuring scalable, maintainable (modular), AI-driven, and behaviorally accurate implementations.
+    - id: 3.2.2
+      name: Standard-based Integration Architecture
+      definition: The organization implements autonomous systems using open, standardized integration architectures with APIs
+        and interoperable protocols that connect internal and external systems seamlessly and securely.
+    - id: 3.2.3
+      name: Intent-based Architecture
+      definition: The organization designs AO infrastructure architectures across development, testing, and production environments
+        to meet defined scalability, cloud strategy, security, and capacity-performance targets of AO.
+    - id: 3.2.4
+      name: Autonomy Embedded Hardening Autonomy-specific Security Embedding
+      definition: Systems and Networks embed autonomy specific resilience and integrity security checks and configuration
+        for autonomously operating systems and network functions (physical or logical) for redundancy, business continuity,
+        and failure-resista…
+  - id: '3.3'
+    name: Technology Resources Management
+    definition: The ability of the organization to systematically orchestrate technological, human, and operational resources
+      through integrated planning, integration/delivery, and optimization frameworks, ensuring efficient utilization, optimal
+      distribution, and continuous availability while maintaining complianc…
+    criteria:
+    - id: 3.3.1
+      name: Autonomous Technology Experts (Human-Machine Fusion)
+      definition: The right expertise with the right technology skills to support autonomous technology management roles are
+        contracted, while fostering effective human-machine collaboration.
+    - id: 3.3.2
+      name: Automated CI/CD
+      definition: AI tools are integrated into platforms to autonomously perform CI/CD actions for applications and platform
+        management, including AI/ML development, data management, model deployment, monitoring, application deployment, testing,
+        and knowled…
+    - id: 3.3.3
+      name: Reliable Connectivity
+      definition: Reliable connectivity is the bedrock of safe and effective autonomous operation, ensuring continuous access
+        to mission-critical data, remote overrides, and environmental updates in order to ensure systems function independently
+        to perceive…
+    - id: 3.3.4
+      name: Virtualization
+      definition: The foundation for autonomous operations relies on the ability to leverage virtualized resources by ensuring
+        that computing, storage, and network allocations can be precisely matched to autonomous workloads, maximizing efficiency
+        and minim…
+    - id: 3.3.5
+      name: Infrastructure Management
+      definition: The organization manages autonomous infrastructure, including data centers, power, cooling (HVACs), and
+        hardware, to deliver consistent computing performance and support long-term service availability and green business
+        targets.
+    - id: 3.3.6
+      name: Resource Optimization
+      definition: Resource optimization is a core, continuously improving business driver where the organization leverages
+        autonomous systems and circular economy principles to create a sustainable competitive advantage and set new industry
+        standards.
+    - id: 3.3.7
+      name: IoT Integration
+      definition: IoT technologies are integrated into platforms to connect IoT devices and smart agents, enabling vertical
+        AO services with real-time data ingestion and control.
+    - id: 3.3.8
+      name: Observability & Event Intelligence
+      definition: End-to-end telemetry (logs, metrics, traces, events) is collected, correlated, and turned into event intelligence
+        that feeds closed loops, rather than siloed dashboards.
+      added_in_revamp: true
+      source: Gartner renamed the AIOps market category to Event Intelligence Solutions (2025); sibling dea:maturity-operations
+        requires an observability stack.
+  - id: '3.4'
+    name: Technology Lifecycle Management
+    definition: The ability of the organization to manage the entire technology lifecycle, encompassing planning, procurement,
+      implementation, optimization, maintenance, and retirement phases, ensuring continuous alignment with organizational
+      objectives, regulatory requirements, and operational needs through syste…
+    criteria:
+    - id: 3.4.1
+      name: Specifications Management
+      definition: The organization systematically translates business requirements into technical AO specifications, defining
+        feasibility, success metrics, risks, and architectural alignment.
+    - id: 3.4.4
+      name: Autonomous Maintenance
+      definition: Systems and processes can detect, diagnose, and resolve maintenance issues, including decommissioning, in
+        an automatic way, using self-monitor, self-diagnose, self-heal, AI/ML, predictive analytics, and embedded intelligence,
+        reducing huma…
+- id: '4'
+  name: Operations
+  definition: The Operations dimension evaluates the organization's ability to provide closed-loop automation for the end-to-end
+    operation flows that span all operations.
+  sub_dimensions:
+  - id: '4.1'
+    name: Anomaly Resolution
+    definition: The operating ability of the organization to perform Anomaly Resolution in its day-to-day operation activities
+      necessary to detect and resolve any operations related anomalies, and ensure healthy operations across the enterprise.
+    criteria:
+    - id: 4.1.1
+      name: Detect Anomaly Event
+      definition: The ability to automate the network operations; for example monitoring network and detecting anomaly based
+        on the pattern behavior.
+      gating: true
+      gating_note: 'Closed-loop spine criterion: org level cannot exceed this criterion''s level (weakest-link rule).'
+    - id: 4.1.2
+      name: Demarcate and locate root-cause
+      definition: The ability to perform anomaly analysis through troubleshooting operations which includes demarcation, root-cause
+        analysis, and problem locating.
+      gating: true
+      gating_note: 'Closed-loop spine criterion: org level cannot exceed this criterion''s level (weakest-link rule).'
+    - id: 4.1.3
+      name: Formulate and decide solution
+      definition: The ability to formulate solution options and decide on the optimized solution for anomaly recovery.
+      gating: true
+      gating_note: 'Closed-loop spine criterion: org level cannot exceed this criterion''s level (weakest-link rule).'
+    - id: 4.1.4
+      name: Execute solution
+      definition: The ability to execute the decided solution or automate the dispatch of an appropriate FME onsite for problem
+        recovery. The execution ability also includes the automation of part of the resolution procedure such as self-configuring.
+      gating: true
+      gating_note: 'Closed-loop spine criterion: org level cannot exceed this criterion''s level (weakest-link rule).'
+    - id: 4.1.5
+      name: Simulation & Digital-Twin Validation Before Act
+      definition: Corrective actions are validated in a digital twin / simulation sandbox before being executed in production.
+      added_in_revamp: true
+      source: ETSI ZSM digital-twin integration; Ericsson digital twin for safe action assessment.
+  - id: '4.2'
+    name: Customer Network Experience Assurance
+    definition: The operating ability of the organization to perform Customer Network Experience Assurance by identifying
+      customer network experience issues with the purpose of resolving them.
+    criteria:
+    - id: 4.2.1
+      name: Detect customer network experience issue.
+      definition: The ability to detect and identify customer network experience issues.
+    - id: 4.2.2
+      name: Determine root-cause
+      definition: The ability to perform anomaly analysis through troubleshooting operations which includes demarcation, root-cause
+        analysis, and problem locating.
+    - id: 4.2.3
+      name: Determine corrective action
+      definition: The ability to formulate, evaluate and determine an optimal corrective action gathered from the analysis
+        stage.
+    - id: 4.2.4
+      name: Implement Corrective Action
+      definition: The ability to implement the corrective action based on the selected solution and validate that the issue
+        is resolved.
+    - id: 4.2.5
+      name: SLO & Error Budget Management
+      definition: Service-level objectives and error budgets are defined, monitored, and enforced for all customer-facing
+        services, and drive release and remediation decisions.
+      added_in_revamp: true
+      source: Google SRE practice; sibling dea:maturity-operations levels 2-3 require SLOs and error budgets.
+  - id: '4.3'
+    name: Customer Network Complaints Resolution
+    definition: The operating ability to perform Customer Network Complaints Resolution by managing network-related customer
+      complaints, identifying root cause, as well as defining and executing corrective action plan(s).
+    criteria:
+    - id: 4.3.1
+      name: Customer complaint pre-handling
+      definition: The ability to be aware and identify the nature of customer complaints as part of the customer complaint
+        pre-handling stage.
+    - id: 4.3.2
+      name: Identify complaint root-cause
+      definition: The ability to analyze the complaint which includes complaint demarcation, root-cause analysis, and problem
+        locating.
+    - id: 4.3.3
+      name: Develop corrective action plan
+      definition: The ability to develop corrective action plan based on the information analyzed to address the customer
+        complaint.
+    - id: 4.3.4
+      name: Execute action plan
+      definition: The ability to implement customer complaint corrective action plan and verify customer network experience
+        problem is resolved
+  - id: '4.4'
+    name: Customer Value Preservation and Uplift
+    definition: The ability of the organization to achieve "Customer Value Preservation and Uplift" through the identification
+      and resolution of market problem and opportunity which includes customer value perception, and the preservation of customer
+      value through market program formulation and execution.
+    criteria:
+    - id: 4.4.1
+      name: Identify market problem and opportunity
+      definition: The ability to identify market problem and opportunity which includes the discovering an issue, challenge
+        or customer value perception related to the organizations exchanges and commercial
+    - id: 4.4.2
+      name: Analyze market information
+      definition: The ability to analyze market information to develop enterprise and business views of the market, based
+        on the analysis of external and internal information sources
+    - id: 4.4.3
+      name: Establish market program
+      definition: The ability to develop and establish marketing program in supporting the market strategy. The capability
+        also include the product design and marketing campaign in achievement of specific objectives.
+    - id: 4.4.4
+      name: Execute market program
+      definition: The ability to execute market program in response to identified market problem.
+  - id: '4.5'
+    name: Net Zero Operations
+    definition: The ability to deliver tangible energy savings and reduce carbon emissions using autonomous technologies,
+      people and platforms solutions. .
+    criteria:
+    - id: 4.5.1
+      name: Efficient Energy Management
+      definition: Net zero goals are embedded in the overall business strategy to drive genuine transformation and unlock
+        new opportunities.
+    - id: 4.5.2
+      name: Energy Utilization Specification
+      definition: The organization uses a Specification Management framework to translate net-zero goals into actionable,
+        measurable requirements for the design, deployment and support of autonomous operation initiatives, and links high-level
+        environmental…
+    - id: 4.5.3
+      name: Formulate and decide energy & carbon solution
+      definition: The business's total carbon footprint in its value chain (Scope 3 emissions) is managed with collaborating
+        parties (suppliers) using AI for optimizations (e.g. route), and with customers (design of products) for longevity.
+    - id: 4.5.4
+      name: Carbon Offsetting
+      definition: An operations plan is execute to support neutralizing the carbon emissions by prioritizing avoidance and
+        emission reduction linked to high-quality offsetting and certified sequestration activities.
+    - id: 4.5.5
+      name: Systems Governance
+      definition: The organization systematically measures and tracks all Scope 1 (direct), Scope 2 (purchased energy), and
+        material Scope 3 emissions using established protocols like the GHG Protocol..
+  - id: '4.6'
+    name: Order Fulfillment
+    definition: The ability to realize order fulfillment from order acceptance, validation, decomposition, and orchestration
+      to activate services in network resources, faster and with better process tracking and reduced/zero order fallout.
+    criteria:
+    - id: 4.6.1
+      name: Catalog Driven Service Realization
+      definition: The organization follows structured design and development practices for AO systems, including AI models,
+        software, and integrations, across environments with built-in testing, risk mitigation, and quality assurance.
+    - id: 4.6.2
+      name: Intelligent Productization
+      definition: The organization operationalizes AO systems through intelligent deployment processes, including configuration,
+        change, incident, and event management, ensuring stable production performance.
+    - id: 4.6.3
+      name: Maintenance Service
+      definition: The ability to conduct maintenance service for autonomous systems, agents, and networks through continuous
+        evals, intent/outcome monitoring, performance tuning, and knowledge-based remediation.
+    - id: 4.6.4
+      name: Automated Real-time Fulfillment
+      definition: The organization automates service activation and ensures real-time synchronization of resource inventory
+        (Information Technology - IT, Communications Technology - CT, Operations Technology - OT), including rollback and
+        cleanup during fail…
+- id: '5'
+  name: Culture
+  definition: The Culture dimension evaluates the ability to facilitate and breed/grow Autonomous Operations by automating
+    capabilities of learning, self-governance, and self-adaptation of its value streams to realize stakeholder value in a
+    closed-loop fashion.
+  sub_dimensions:
+  - id: '5.1'
+    name: Innovation Culture
+    definition: The extent to which the organization is able to drive creativity, demonstrated through freedom to imagine
+      and implement new and useful ideas that are measured through performance indicators such as speed-to-market, customer
+      adoption rates, process efficiency improvements, and the development of nov…
+    criteria:
+    - id: 5.1.1
+      name: Innovation Autonomy
+      definition: The organization actively promotes a culture of innovation by encouraging proactive adoption of autonomous
+        technologies.
+    - id: 5.1.2
+      name: Innovation investment Allocation
+      definition: The organization allocates dedicated resources (people, budget, and tools)to support and sustain innovation
+        for Autonomous Operations.
+    - id: 5.1.3
+      name: Cross-functional Collaboration Autonomy
+      definition: The organization builds and empowers cross-functional teams to collaborate on high-impact use cases that
+        drive transformative business outcomes.
+    - id: 5.1.4
+      name: Operational Transparency
+      definition: The organization fosters transparency by implementing open collaboration frameworks and sharing of autonomous
+        operations progress, decisions, and learnings across all levels.
+  - id: '5.2'
+    name: Quality Culture
+    definition: The ability of the organization to embed set of values, attitudes, and autonomous behaviors that emphasize
+      continuous self-improvement, persistent customer satisfaction, and the delivery of consistent, high-quality products
+      and/or services.
+    criteria:
+    - id: 5.2.1
+      name: Excellence Striving Culture
+      definition: The organization maintains excellence in AO by systematically managing activities and tasks to meet defined
+        standards of operational performance and reliability.
+    - id: 5.2.2
+      name: Smart Risk Management Measures
+      definition: The organization embeds preventive practices into its culture to identify, mitigate, and eliminate defects
+        and failures in its Autonomous Operations initiatives.
+    - id: 5.2.3
+      name: Effective Delivery Execution
+      definition: The organization delivers customer requirements correctly and consistently on the first attempt and every
+        time through disciplined AO execution.
+    - id: 5.2.4
+      name: Skill Development
+      definition: The organization provides role-specific skill development programs to continuously enhance employee capabilities
+        for Autonomous Operations ambitions.
+  - id: '5.3'
+    name: Culture Management
+    definition: The extent to which the organization is systematically developing, maintaining, and improving measurable indicators
+      such as employee engagement scores, cultural alignment metrics, innovation adoption rates, and customer satisfaction
+      levels, through deliberate strategies, processes, and tools that e…
+    criteria:
+    - id: 5.3.1
+      name: Leadership Empowerment
+      definition: Leaders create an enabling environment that empower employees to embrace Autonomous Operations, innovate,
+        and perform at their highest potential.
+    - id: 5.3.2
+      name: Intelligent Automation Mindset
+      definition: The organization cultivates an AO mindset by rethinking processes with AI and automation to improve efficiency,
+        service quality, and business value.
+    - id: 5.3.3
+      name: Operations Autonomy Culture
+      definition: The organization embeds Autonomous Operations as a core strategic priority, shaping culture, behaviors,
+        and decision-making to achieve competitive advantage.
+    - id: 5.3.4
+      name: Human Oversight & Exception Handling Design
+      definition: 'The human-machine working model is designed explicitly: humans set goals and intent, approve exceptions,
+        audit outcomes; oversight load, escalation, and handover paths are engineered, not improvised.'
+      added_in_revamp: true
+      source: 'Ericsson: balance machine autonomy with meaningful human oversight in the OODA loop; Gartner: autonomous business
+        creates more human oversight work, not less.'
+  - id: '5.4'
+    name: Organization Alignment
+    definition: The extent to which the organization manages alignment of culture initiatives to autonomous initiative strategies,
+      including shares goals, fostering collaboration between parties (human-human, human-machine, machine-machine), and defining
+      priorities based on key values.
+    criteria:
+    - id: 5.4.1
+      name: Organization Vision Alignment
+      definition: The organization aligns leadership and workforce actions with its Autonomous Operations vision to drive
+        unified, value-driven results.
+    - id: 5.4.2
+      name: Customer Centricity
+      definition: The organization sustains a customer-centric culture by aligning AO initiatives and Zero-X goals with superior
+        customer experience outcomes.
+    - id: 5.4.3
+      name: Autonomy-driven Performance Rewarding
+      definition: The organization selects and standardizes AO-aligned frameworks, performance reviews, and reward systems
+        to reinforce desired cultural behaviors company-wide.
+  - id: '5.5'
+    name: Workplace Enablement
+    definition: The extent to which the organization's work environment, tools, and established practices enable Autonomous
+      Operations initiatives and foster a positive, productive, and innovative team dynamics.
+    criteria:
+    - id: 5.5.1
+      name: Outcome-orientated Environment
+      definition: The organization provides a supportive working environment that enables staff to innovate, collaborate,
+        and deliver high-quality outputs in AO.
+    - id: 5.5.2
+      name: Digital Tools Availability
+      definition: The organization equips employees with digital tools and systems that enhance creativity, productivity,
+        and quality in Autonomous Operations.
+    - id: 5.5.3
+      name: Enabling Corporate Policies
+      definition: The organization implements HR and operational policies that advance AO adoption, including career development,
+        tool investment, and governance, supported by clear communication and feedback.
+    - id: 5.5.4
+      name: Knowledge Capturing
+      definition: The organization systematically captures institutional knowledge from AO experiences, experiments, and deployments
+        for future use and continuity.
+    - id: 5.5.5
+      name: Active Knowledge Sharing
+      definition: The organization promotes active knowledge sharing by making lessons, skills, and results accessible, measurable,
+        and continuously updated across teams.
+- id: '6'
+  name: Data
+  definition: The Data dimension evaluates the organization's ability to convert data into decision intelligence with minimal
+    manual intervention.
+  sub_dimensions:
+  - id: '6.1'
+    name: Data Life-Cycle Management
+    definition: The ability of the organization to systematically manage the full lifecycle of data used in Autonomous Operations,
+      encompassing data acquisition, processing, storage, retrieval, and disposal, while ensuring data quality, integrity,
+      and security throughout its utilization for decision-making, optimi…
+    criteria:
+    - id: 6.1.1
+      name: Data Creation & Collection
+      definition: The organization systematically gathers and generates data from diverse sources to support reliable and
+        scalable Autonomous Operations initiatives.
+    - id: 6.1.2
+      name: Data Fabric
+      definition: A unified data fabric is available that enables seamless integration, access, and governance of data across
+        domains (commercial, operational etc.), systems, networks, and hybrid platforms, service and resource architectures.
+    - id: 6.1.3
+      name: Real-time Data Transmission
+      definition: The organization ensures high-throughput, low-latency data transmission across sensing, control, and processing
+        points to support real-time AO decision-making and coordination.
+    - id: 6.1.4
+      name: Scalable Secure Data Storage
+      definition: The organization maintains secure, scalable, and high-performance data storage systems that meet volume,
+        velocity, variety, and verifiability requirements for AO workloads.
+    - id: 6.1.5
+      name: Data Consumption
+      definition: Data is readily available for AO consumption and action in real time, enabling transform intents into operational
+        tasks and outcomes.
+    - id: 6.1.6
+      name: Secure Data Exchange
+      definition: The organization facilitates secure and governed data exchange across internal systems, partners, and platforms
+        to enhance collaborative autonomy and operational performance.
+    - id: 6.1.7
+      name: Data Retirement
+      definition: The organization manages the end-of-life lifecycle of autonomy-related data through a governed process for
+        decommissioning, archiving, deleting based on governed policies and compliance needs .
+  - id: '6.2'
+    name: Data Quality
+    definition: The ability of the organization to manage the multidimensional characteristics and attributes of data throughout
+      its lifecycle, encompassing accuracy, completeness, consistency, timeliness, relevance, and structural integrity, which
+      directly impact the reliability, validity, and trustworthiness of…
+    criteria:
+    - id: 6.2.1
+      name: Data Accuracy
+      definition: The organization ensures data accurately reflects real-world conditions, enabling safe, reliable, and trustworthy
+        operation of autonomous systems.
+    - id: 6.2.2
+      name: Data Completeness
+      definition: The organization validates and enriches datasets to ensure all critical data elements are present for effective
+        AO modeling, training, and execution.
+    - id: 6.2.3
+      name: Data De-biasing
+      definition: The organization identifies and mitigates biases in AO training and operational data to ensure fair, ethical,
+        and safe decision-making across diverse scenarios.
+    - id: 6.2.4
+      name: Data Structuring
+      definition: The organization standardizes and organizes data through schemas, taxonomies, metadata tagging, and semantic
+        models (e.g., knowledge graphs) to enable reuse, auditability, and interoperability.
+  - id: '6.3'
+    name: Data Security
+    definition: The extent to which the organization manages the comprehensive set of controls, protocols, and mechanisms
+      designed to protect data assets throughout their lifecycle, ensuring confidentiality, integrity, and availability in
+      the face of evolving threats and risks, while enabling secure data access, s…
+    criteria:
+    - id: 6.3.1
+      name: Data Backup
+      definition: The organization performs regular data backups to ensure rapid recovery and minimal disruption to AO functions
+        following data loss events.
+    - id: 6.3.2
+      name: Data Recovery
+      definition: The organization restores lost or corrupted data efficiently to maintain continuity and reliability of Autonomous
+        Operations.
+    - id: 6.3.3
+      name: Data Protection
+      definition: The organization protects data through zero-trust security principles, ensuring confidentiality, integrity,
+        and resilience across all AO data environments.
+    - id: 6.3.4
+      name: Data Access
+      definition: The organization controls data access based on role and policy, ensuring authorized users can securely retrieve
+        and modify data without compromising system integrity.
+    - id: 6.3.5
+      name: Data Consistency
+      definition: Data is consistent across sources and over time, validated by automated checks.
+      renumbered_from: 6.2.5 (source prefix mismatch)
+  - id: '6.4'
+    name: Data Governance
+    definition: The ability of the organization to implement strategic framework(s) and set unified principles, policies,
+      standards, and procedures that define and control the management, protection, and usage of data assets throughout their
+      lifecycle, ensuring alignment with regulatory requirements, business obje…
+    criteria:
+    - id: 6.4.1
+      name: Data Stewardship
+      definition: The organization assigns accountability for data quality, ownership, and usability, ensuring data remains
+        trusted, accessible, and valuable for AO purposes.
+    - id: 6.4.2
+      name: Data Policy Management
+      definition: The organization defines, enforces, and evolves data policies that govern creation, use, quality, security,
+        and compliance across Autonomous Operations.
+    - id: 6.4.3
+      name: Data Privacy Management
+      definition: The organization manages personal and sensitive data in compliance with privacy regulations and ethical
+        standards throughout the AO data lifecycle.
+  - id: '6.5'
+    name: Data Value Realization
+    definition: The extent to which the organization realizes a strategic approach to transforming data resources into valuable
+      business assets through the systematic extraction, analysis, and application of actionable insights, enabling the creation
+      of economic value, competitive advantage, and operational effici…
+    criteria:
+    - id: 6.5.1
+      name: Data Analytics
+      definition: The organization extracts patterns, trends, and insights from AO data to generate actionable intelligence
+        and improve operational outcomes.
+    - id: 6.5.2
+      name: Data Driven Decision Making
+      definition: The organization uses data, metrics, and advanced structures like knowledge graphs to inform strategic and
+        operational decisions aligned with AO goals.
+    - id: 6.5.3
+      name: Data Monetization
+      definition: The organization transforms AO-generated data into revenue-generating assets through new services, partnerships,
+        and optimized business models.

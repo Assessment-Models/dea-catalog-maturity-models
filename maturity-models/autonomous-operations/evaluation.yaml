@@ -1,0 +1,72 @@
+# evaluation.yaml — AO Autonomy Index scoring + assessment method
+
+id: dea:evaluation-autonomous-operations-v1
+version: 1.0.0-alpha
+name: Autonomous Operations Evaluation Model
+scale:
+  id: dea:scale-autonomous-operations-v1
+  version: 1.0.0-alpha
+scoring:
+  mechanism: weighted
+  domain:
+    kind: numeric-0-100
+    minimum: 0
+    maximum: 100
+  level_points:
+    L0-absent: 0
+    L1: 20
+    L2: 40
+    L3: 60
+    L4: 80
+    L5: 100
+  aggregation_rule: '1. Score each criterion 0-100 by its achieved level (L0 absent=0, L1=20 ... L5=100); a criterion not
+    assessed scores 0 and lowers evidence-confidence, it never inflates the index. 2. Dimension score = unweighted mean of
+    its criteria. 3. AO Autonomy Index = weighted mean of dimension scores (weights below). 4. Band the index through the
+    catalog bands (index.yaml) to get the org level. 5. Weakest-link gate: the org level cannot exceed the lowest level among
+    gating closed-loop criteria (4.1.1-4.1.4) — a loop that cannot act cannot be ''autonomous''. 6. Report evidence-confidence
+    (High/Medium/Low) alongside.'
+  dimension_weights:
+    strategy: 0.2
+    operations: 0.2
+    technology: 0.2
+    data: 0.15
+    party: 0.15
+    culture: 0.1
+  effort_multipliers:
+    L1: 1.0
+    L2: 1.5
+    L3: 2.5
+    L4: 4.0
+    L5: 6.0
+  effort_adjusted_value: value_realised = sum over levels L of points_earned_at(L) / effort_multipliers[L]  (proposal 0001
+    section 4; makes diminishing returns explicit)
+  level_resolution_inputs:
+  - criterion-scores
+  - mandatory-gating-criteria
+  - evidence-confidence
+  - ecosystem-participation
+  notes: Adopts the non-linear band/effort-coefficient design of proposals/0001 as this model's scoring metadata without changing
+    the canonical v1 bands.
+assessment:
+  subject: The organization's operating model across its value streams; assessable per value stream/scenario and rolled up
+    org-wide.
+  inputs_required:
+  - 'Scope charter: value streams, services, domains, and scenarios in scope; exclusions stated'
+  - 'Evidence pack per criterion: artifacts, metrics, logs, audit-trail samples, dashboards, policies, runbooks'
+  - Stakeholder interviews (ops, engineering, product, security, finance, HR) and party feedback
+  - 'Telemetry access: observability platform, agent action logs, CI/CD and deployment metrics, SLO dashboards'
+  - Prior assessments / baseline score and target level; roadmap
+  method:
+  - '1. Scope & plan: define value streams/scenarios; select criteria (all by default; gating criteria mandatory)'
+  - 2. Collect evidence against each criterion; an independent assessor verifies a sample (not self-reported only)
+  - 3. Score each criterion on the 5-level ladder (progression axes in levels[].progression); record confidence per criterion
+  - 4. Aggregate per the scoring block (dimension means → AO Autonomy Index → band → weakest-link gate)
+  - '5. Report: AO Autonomy Index, level, per-dimension profile, effort-adjusted value, gaps, roadmap to next level'
+  - 6. Re-assess on a fixed cadence (quarterly recommended) or after major loop/agent changes
+  assessor_independence: Evidence is sampled and verified by an assessor independent of the team that produced it; self-attestation
+    alone caps confidence at Medium.
+  confidence_levels:
+    High: independently verified evidence for >=80% of criteria in the dimension
+    Medium: verified evidence for 50-79%
+    Low: <50% or self-attested only
+  cadence: quarterly recommended; event-driven after major closed-loop or agent deployments

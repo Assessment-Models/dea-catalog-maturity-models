@@ -5,14 +5,14 @@ catalog:
   name: Enterprise Architecture Maturity Models
   abbreviation: ModAS-MM
   id: dea:catalog-maturity-models
-  version: "1.0.0-alpha"
+  version: "1.1.0-alpha"
   status: draft
   metamodel_version: "^0.1.0"
 
   description: >
     Five-level maturity framework for EA capability, modernisation, technology,
-    operations, and services delivery. Each model defines characteristics and
-    exit criteria per level.
+    operations, services delivery, and autonomous operations. Each model defines
+    characteristics and exit criteria per level.
 
   repository: https://github.com/Assessment-Models/dea-catalog-maturity-models
 
@@ -66,6 +66,16 @@ catalog:
       relationship_type: measured-by
       description: Phase 4 governance health measured by maturity scores across domains
 
+    # Autonomous Operations model: instance of this catalog; assessed by the tools catalog
+    - source_id: dea:maturity-autonomous-operations
+      target_id: dea:catalog-maturity-models
+      relationship_type: instance-of
+      description: Autonomous Operations model is one of the catalog's maturity models
+    - source_id: dea:maturity-autonomous-operations
+      target_id: dea:catalog-assessment-tools
+      relationship_type: scored-by
+      description: AO Autonomy Index (0-100) produced by assessment instruments, banded to levels
+
   content:
     - path: maturity-models/v1-alpha/ea-capability.yaml
       type: MaturityModel
@@ -90,3 +100,6 @@ catalog:
     - maturity-model
     - capability-assessment
     - five-level-progression
+    - autonomous-operations
+    - closed-loop
+    - agentic-ai
