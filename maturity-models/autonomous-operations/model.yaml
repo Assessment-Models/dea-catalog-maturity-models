@@ -1,5 +1,6 @@
 # model.yaml — core registration of dea:maturity-autonomous-operations
-# Slices: scale.yaml (levels), evaluation.yaml (scoring+assessment), dimensions.yaml (6/32/157 criteria)
+# conformance/compatibility blocks are DRAFT skeletons resolved at extraction (EXTRACTION-CHECKLIST NORMALIZE)
+# Slices: scale.yaml (levels), evaluation.yaml (scoring+assessment), dimensions.yaml, assessment-questionnaire.yaml
 
 id: dea:maturity-autonomous-operations
 name: Autonomous Operations Maturity Model
@@ -85,3 +86,23 @@ decisions:
     0001 effort multipliers are used as scoring metadata only.'
   repo_extraction: 'Phase 6 (CR-AM-11 section 26/31), after the CR-AM-01 Release 1 decision; runbook ready in the bundle EXTRACTION-CHECKLIST.md
     (PR #8).'
+conformance:
+  contract:
+    id: maturity-scale-contract
+  source:
+    organization: technehub-labs
+    repository: dea-metamodel
+  version: '1.0'
+  status: draft — resolve contract version against the published suite at extraction (see EXTRACTION-CHECKLIST NORMALIZE)
+compatibility:
+  metamodel:
+    minimum: 0.1.0
+    maximum: <2.0.0
+  contracts:
+  - id: maturity-scale-contract
+    version: ^1.0
+  - id: maturity-model-contract
+    version: ^1.0
+  - id: conformance-contract
+    version: ^1.0
+  status: draft — pending CR-AM-01 Release 1 contract publication
