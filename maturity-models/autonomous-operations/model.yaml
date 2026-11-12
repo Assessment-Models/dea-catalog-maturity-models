@@ -74,3 +74,13 @@ tags:
 - assessment
 - intent-driven
 - human-machine
+decisions:
+  dimension_weights: Kept 20/20/20/15/15/10 (strategy/operations/technology are the execution core of the operating model;
+    data/party/culture are enabling layers; weights sum to 1). Revisit at v1.1.0 with assessment data.
+  weakest_link_gate: Gate applies only to gating criteria (4.1.1-4.1.4) that are IN the assessment scope; criteria excluded
+    by the scope charter do not gate. Other Operations flows (4.2/4.3) are scored but not gating, since they may be legitimately
+    out of scope for a given assessment.
+  v2_bands: 'Deferred to CR-AM-01 Release 1 per the catalog README parking note: this model keeps canonical v1 bands; proposal
+    0001 effort multipliers are used as scoring metadata only.'
+  repo_extraction: 'Phase 6 (CR-AM-11 section 26/31), after the CR-AM-01 Release 1 decision; runbook ready in the bundle EXTRACTION-CHECKLIST.md
+    (PR #8).'

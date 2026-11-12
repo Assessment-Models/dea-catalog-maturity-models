@@ -111,12 +111,19 @@ sync with the bundle (`scripts/local_validate.py` checks consistency).
 - Source level names (Initiating/Emerging/Performing/Advancing/Leading) map to the canonical bands by ordinal; AO stage names are additive metadata, not replacements.
 - Machine-readable source: parsed model JSON/CSV kept with the original workbook.
 
-## 7. Open questions for reviewers
+## 7. Open questions — RESOLVED (decisions recorded in the model's `decisions` block)
 
-1. Dimension weights (20/20/20/15/15/10) — should operations weigh more for comms providers?
-2. Should the weakest-link gate apply to all Operations criteria or only the 4.1.x spine?
-3. Adopt 0001's v2 band boundaries now for this model, or wait for CR-AM-01 Release 1?
-4. Timing of extraction into the dedicated `maturity-model-autonomous-operations` repo.
+1. **Dimension weights** — kept 20/20/20/15/15/10: strategy/operations/technology are the execution
+   core of the operating model; data/party/culture are enabling layers; weights sum to 1.
+   Revisit at v1.1.0 with real assessment data (may add a comms-provider profile).
+2. **Weakest-link gate scope** — gate applies only to gating criteria (4.1.1–4.1.4) that are
+   **in the assessment scope**; criteria excluded by the scope charter do not gate. Other
+   Operations flows (4.2/4.3) are scored but not gating.
+3. **v2 band boundaries** — deferred to CR-AM-01 Release 1 per the catalog README parking note;
+   this model keeps the canonical v1 bands and uses proposal 0001 effort multipliers as scoring
+   metadata only.
+4. **Repo extraction timing** — Phase 6 (CR-AM-11 §26/§31), after the CR-AM-01 Release 1 decision;
+   runbook ready in the bundle's `EXTRACTION-CHECKLIST.md` (PR #8).
 
 ## 8. Verification (acceptance criteria)
 
