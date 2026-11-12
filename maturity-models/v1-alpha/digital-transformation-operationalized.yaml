@@ -1,5 +1,5 @@
 # Digital Transformation Operationalized Maturity & Assessment Model
-# New model lodged via proposal 0003 (see proposals/0003-digital-transformation-operationalized.md).
+# New model lodged via proposal 0002 (see proposals/0002-digital-transformation-operationalized.md).
 # CI contract: id/name/domain/version + exactly 5 levels, each with id/name/score_range/summary/characteristics/exit_criteria/evidence.
 
 id: dea:maturity-digital-transformation-operationalized
@@ -13,25 +13,41 @@ description: 'Digital-business maturity and assessment model. Positions digital 
   agentic AI, autonomous systems, composable cloud-native platforms, digital twins), expressed through novel operating models
   across all operating concerns, steered by customer- and ecosystem-centric digital strategy, and run as a deliberate working
   model between humans and software agents. Technology is an enabler, not the subject. Every criterion is MECE-placed, carries
-  five evidence-anchored progression levels, and is independently assessable.'
-lineage: 'Derived from TM Forum Digital Maturity Model v5.0.2 (GB997A) via a full structural and gap review (see proposals/0003-digital-transformation-operationalized.md):
+  five evidence-anchored progression levels correlated to the org''s canonical L-0..L-4 scale, and is independently assessable.'
+lineage: 'Derived from TM Forum Digital Maturity Model v5.0.2 (GB997A) via a full structural and gap review (see proposals/0002-digital-transformation-operationalized.md):
   6 dimensions / 31 sub-dimensions / 129 criteria re-harvested into a MECE digital-business model of 6 dimensions / 24 sub-dimensions
   / 72 criteria, with evidence-anchored 5-level progression, transversal levers for current industry concepts (agentic AI,
   autonomy ladder, digital twins/DTO, human-agent teaming, network APIs), and an explicit scoring/advancement mechanism.'
 levels:
-- id: level-1-ad-hoc
-  name: Ad Hoc
-  v2_alias: Emergent
-  score_range:
+- id: level-1-emergent
+  name: Emergent
+  legacy_id: level-1-ad-hoc
+  legacy_name: Ad Hoc
+  canonical:
+    scale_level: L-0
+    ordinal: 0
+    canonical_name: Absent
+    v2_band: dea:maturity-band-emergent
+    v2_score_range: &id002
+    - 0
+    - 20
+    effort_multiplier: 1.0
+  score_range: &id001
   - 0
   - 25
-  summary: Digital practices are informal, person-dependent, and siloed
+  summary: Digital activity is informal and person-dependent; transformation value is at risk
+  definition: No coherent digital-business ambition yet. Initiatives are ad hoc pilots driven by individuals; no shared
+    strategy, vocabulary, or governance for AI, data, or platforms.
   characteristics:
   - Digital initiatives are ad hoc pilots driven by individuals; no shared strategy or vocabulary
   - Technology and process choices are reactive; no reference architecture or standards
   - No measurable digital KPIs; customer journeys fragmented across channels
   - AI used informally (e.g., personal copilots) with no governance, inventory, or oversight
   - Data trapped in silos; no governance, quality, or sharing practices
+  unlocks:
+  - Executive attention and a signed digital strategy with named sponsor
+  - First governed pilots with documented results
+  - Baseline inventory of systems, AI use cases, and critical data
   exit_criteria:
   - Digital strategy document with executive sponsor approved
   - Inventory of digital initiatives, systems, and AI use cases exists
@@ -40,19 +56,35 @@ levels:
   - No strategy/charter; initiatives tracked in personal spreadsheets
   - No architecture review board; decisions in chat threads
   - No AI inventory or data catalog
-- id: level-2-defined
-  name: Defined
-  v2_alias: Structured
-  score_range:
+- id: level-2-structured
+  name: Structured
+  legacy_id: level-2-defined
+  legacy_name: Defined
+  canonical:
+    scale_level: L-1
+    ordinal: 1
+    canonical_name: Piloting
+    v2_band: dea:maturity-band-structured
+    v2_score_range: &id004
+    - 21
+    - 45
+    effort_multiplier: 1.5
+  score_range: &id003
   - 26
   - 50
-  summary: Digital strategy and playbooks are documented but enforcement is inconsistent
+  summary: Strategy, playbooks, and reference architecture are documented; adoption is real but uneven
+  definition: The organization has a documented digital strategy, target operating model, and playbooks, but enforcement
+    is inconsistent and value is not yet systematically measured.
   characteristics:
   - Documented digital strategy, target operating model, and reference architecture
   - Standard playbooks (CI/CD, security, data) exist but adoption is partial
   - Customer journeys mapped; some channels integrated; CX metrics collected manually
   - AI use cases inventoried; pilots in selected functions with basic guardrails
   - Data governance framework defined; central catalog started
+  unlocks:
+  - Repeatable delivery in key domains; golden paths available to teams
+  - CX metrics trusted enough to steer; AI pilots governed; data catalog live
+  - First ecosystem/API products with paying partners
   exit_criteria:
   - Playbooks enforced via tooling (golden paths) in key domains
   - CX metrics tracked systematically across all channels
@@ -62,13 +94,25 @@ levels:
   - Strategy doc signed off; architecture decision records (ADRs) in use
   - CI/CD pipelines for most teams; security scans in pipeline for key apps
   - Data catalog live with owners assigned for critical data
-- id: level-3-managed
-  name: Managed
-  v2_alias: Systematic
-  score_range:
+- id: level-3-systematic
+  name: Systematic
+  legacy_id: level-3-managed
+  legacy_name: Managed
+  canonical:
+    scale_level: L-2
+    ordinal: 2
+    canonical_name: Defined
+    v2_band: dea:maturity-band-systematic
+    v2_score_range: &id006
+    - 46
+    - 70
+    effort_multiplier: 2.5
+  score_range: &id005
   - 51
   - 75
   summary: Digital practice is standardized, governed, and tooling-enforced across the organization
+  definition: 'Digital-business capabilities are the default way of working: standards are enforced by CI/conformance tooling,
+    journeys are real-time and orchestrated, and AI agents operate in supervised workflows with AI TRiSM controls.'
   characteristics:
   - Strategy, architecture, and platform standards enforced via CI/conformance tooling
   - Composable, API-first platforms are the default for new services; legacy de-layering underway
@@ -77,6 +121,12 @@ levels:
   - Agentic AI deployed in defined, supervised workflows (human-in-the-loop); AI TRiSM controls active
   - Autonomous operations (AN L3) in key domains; digital twins used for assurance
   - Data products with contracts, quality SLAs, and lineage; self-service analytics widely adopted
+  unlocks:
+  - Conformance CI blocks non-standard change; teams ship faster safely
+  - Customers experience one coherent, real-time brand across channels and partners
+  - Agents handle defined workflows end to end under supervision; humans focus on exceptions
+  - Operations in key domains run closed-loop (AN L3); twins inform assurance and planning
+  - Regulatory posture (DORA/NIS2/EU AI Act) automated and evidenced
   exit_criteria:
   - 'Metrics-driven management: SLOs/error budgets, flow metrics, unit economics tracked per domain'
   - Autonomy at AN L4 in at least one domain (closed-loop, intent-driven)
@@ -88,13 +138,26 @@ levels:
   - SLO dashboards per service; error budgets gate releases
   - AI inventory with risk scores; runtime guardrails and audit logs
   - DTO/process-mining pipeline live for top value streams
-- id: level-4-quantitatively-managed
-  name: Quantitatively Managed
-  v2_alias: Adaptive
-  score_range:
+- id: level-4-adaptive
+  name: Adaptive
+  legacy_id: level-4-quantitatively-managed
+  legacy_name: Quantitatively Managed
+  canonical:
+    scale_level: L-3
+    ordinal: 3
+    canonical_name: Scaled
+    v2_band: dea:maturity-band-adaptive
+    v2_score_range: &id008
+    - 71
+    - 88
+    effort_multiplier: 4.0
+  score_range: &id007
   - 76
   - 90
   summary: The digital business is metrics-driven, predictive, and self-adapting
+  definition: 'The organization senses and responds: predictive closed-loop operations across domains (AN L4+), customer
+    and ecosystem outcomes optimized in real time, twins/simulation drive decisions, and agents act with graded autonomy
+    under human-on-the-loop oversight.'
   characteristics:
   - 'Predictive, closed-loop operations across domains (AN L4+): system owns awareness, analysis, decision, execution; intent
     shared human-machine'
@@ -103,6 +166,12 @@ levels:
   - AI agents operate with graded autonomy per use-case risk; human-on-the-loop; continuous TRiSM monitoring
   - Value streams and flow metrics (DORA) drive portfolio allocation; FinOps/GreenOps cost and carbon per workload
   - Resilience tested (chaos, TLPT); third-party risk and exit strategies managed quantitatively
+  unlocks:
+  - Release and capacity decisions driven by SLOs/error budgets and flow metrics, not meetings
+  - Major strategy and operating-model changes simulated in the DTO before a dollar is committed
+  - Network capabilities monetized as programmable products (Open Gateway/CAMARA-class APIs, NaaS)
+  - Agents act autonomously in bounded, high-trust scopes; humans on the loop, not in it
+  - Risk, cost, and carbon per workload visible and quantitatively managed
   exit_criteria:
   - 'Full autonomy (AN L5) demonstrated in selected scenarios: system sets its own intents within policy'
   - DTO used to simulate strategy and operating-model changes before execution
@@ -113,25 +182,108 @@ levels:
   - Predictive alerts >50% of sev-1; auto-remediation >30% of incidents
   - Agent actions logged, explainable, and reversible; kill-switch tested
   - Cost and carbon per workload tracked weekly
-- id: level-5-optimising
-  name: Optimising
-  v2_alias: Self-Optimising
-  score_range:
+- id: level-5-self-optimising
+  name: Self-Optimising
+  legacy_id: level-5-optimising
+  legacy_name: Optimising
+  canonical:
+    scale_level: L-4
+    ordinal: 4
+    canonical_name: Self-Optimising
+    v2_band: dea:maturity-band-self-optimising
+    v2_score_range: &id010
+    - 89
+    - 100
+    effort_multiplier: 6.0
+  score_range: &id009
   - 91
   - 100
-  summary: The digital business is self-optimizing, intent-driven end to end, and ecosystem-active
+  summary: The digital business is self-optimizing and intent-driven end to end - and sets benchmarks for others
+  definition: Humans set outcomes, intent, and policy; agents and closed loops execute. Telemetry, twins, and benchmarks
+    continuously feed strategy, architecture, and roadmaps. The organization is an active ecosystem citizen (standards,
+    open source, benchmarks, mentoring).
   characteristics:
   - 'Intent-driven, autonomous operating model across domains: humans set outcomes and policy; agents and closed loops execute'
   - 'Continuous self-optimization: telemetry, twins, and benchmarks feed strategy, architecture, and roadmaps automatically'
   - Network/edge capabilities exposed as programmable products (Open Gateway/CAMARA-class APIs, NaaS) at scale
   - 'Human-agent teaming is a designed operating model: roles, trust, oversight, and accountability engineered'
   - Organization benchmarks, mentors peers, and contributes back to standards, open source, and the assessment ecosystem
+  unlocks:
+  - Board-level digital KPIs tied to customer and ecosystem outcomes; transformation is simply how the org works
+  - 'Industry recognition: benchmarks locked, standards authored, peers mentored'
+  - 'Marginal gains compound: every level-4 investment pays for the next'
   exit_criteria:
   - None - continuous improvement is the practice
   evidence:
   - Locked benchmark baselines; published contributions to standards/open source
   - Board-level digital KPIs tied to customer and ecosystem outcomes
   - Post-incident and experiment learnings automatically update playbooks
+level_correlation:
+  note: 'This model''s five levels correlate 1:1 with the org''s canonical L-0..L-4 scale (dea:scale-digital-transformation-v1
+    in maturity-model-digital-transformation; CR-AM-09 v2 bands): model level N maps to canonical ordinal N-1 (L-0..L-4).
+    Primary names use the v2 state-names (Emergent/Structured/Systematic/Adaptive/Self-Optimising, proposal 0001); legacy_id/legacy_name
+    keep v1-alpha catalog names resolvable; score_range keeps the uniform catalog v1-alpha bands; canonical.v2_score_range
+    + effort_multiplier carry the non-linear v2 bands (0-20/21-45/46-70/71-88/89-100, multipliers 1.0/1.5/2.5/4.0/6.0) as
+    the correlation to the canonical scale. Known semantic offset: catalog v1 level-1 ''Ad Hoc'' spans canonical L-0+L-1;
+    this model splits that bottom range via Emergent(L-0) and Structured(L-1). Progression semantics match the canonical
+    scale: linear topology, exponential effort, forward-only with no skipping, exit-criteria + evidence gates, highest-conformant-level
+    resolution.'
+  mapping:
+  - model_level: level-1-emergent
+    model_name: Emergent
+    score_range: *id001
+    legacy_id: level-1-ad-hoc
+    legacy_name: Ad Hoc
+    canonical_scale_level: L-0
+    canonical_ordinal: 0
+    canonical_name: Absent
+    v2_band: dea:maturity-band-emergent
+    v2_score_range: *id002
+    effort_multiplier: 1.0
+  - model_level: level-2-structured
+    model_name: Structured
+    score_range: *id003
+    legacy_id: level-2-defined
+    legacy_name: Defined
+    canonical_scale_level: L-1
+    canonical_ordinal: 1
+    canonical_name: Piloting
+    v2_band: dea:maturity-band-structured
+    v2_score_range: *id004
+    effort_multiplier: 1.5
+  - model_level: level-3-systematic
+    model_name: Systematic
+    score_range: *id005
+    legacy_id: level-3-managed
+    legacy_name: Managed
+    canonical_scale_level: L-2
+    canonical_ordinal: 2
+    canonical_name: Defined
+    v2_band: dea:maturity-band-systematic
+    v2_score_range: *id006
+    effort_multiplier: 2.5
+  - model_level: level-4-adaptive
+    model_name: Adaptive
+    score_range: *id007
+    legacy_id: level-4-quantitatively-managed
+    legacy_name: Quantitatively Managed
+    canonical_scale_level: L-3
+    canonical_ordinal: 3
+    canonical_name: Scaled
+    v2_band: dea:maturity-band-adaptive
+    v2_score_range: *id008
+    effort_multiplier: 4.0
+  - model_level: level-5-self-optimising
+    model_name: Self-Optimising
+    score_range: *id009
+    legacy_id: level-5-optimising
+    legacy_name: Optimising
+    canonical_scale_level: L-4
+    canonical_ordinal: 4
+    canonical_name: Self-Optimising
+    v2_band: dea:maturity-band-self-optimising
+    v2_score_range: *id010
+    effort_multiplier: 6.0
 scoring:
   mechanism: weighted-mean-0-100
   description: Each criterion is scored 1-5 against its level anchors by an assessor using the listed evidence. Criterion
@@ -155,6 +307,8 @@ scoring:
   lite_path: 'Rapid self-assessment: one 5-point Likert question per sub-dimension (lite_question), mapped (1..5) to criterion
     levels for an indicative score; full assessment requires evidence per criterion.'
 advancement:
+  progression_semantics: linear topology, exponential effort, forward-only (no level skipping), exit-criteria + evidence
+    gates, highest-conformant-level resolution - identical to the canonical L-0..L-4 scale (see level_correlation)
   rules:
   - 'Cumulative ladder: claiming level L on any criterion requires evidence for all anchors below L (no skipping).'
   - 'Weakest-link gate: a dimension''s resolved level cannot exceed its lowest mandatory criterion level; the overall level

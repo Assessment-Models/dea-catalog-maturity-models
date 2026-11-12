@@ -68,6 +68,41 @@ Keyword scan: **22 of 54** modern digital-business capability areas are absent f
 **`dea:maturity-digital-transformation-operationalized` v1.0.0-alpha** — "Digital Transformation
 Operationalized Maturity & Assessment Model":
 
+### 5.1 Level ladder — design review and canonical correlation
+
+The ladder semantics (ad hoc → piloted → standardized → measured/predictive → autonomous/intent-driven)
+are kept — they map cleanly onto CMMI's cumulative rule, the TM Forum AN L0–L5 ladder, and the catalog's
+exit-criteria convention. What changed after review is **how the levels are named and sold**, because the
+names are what an organization sees in a radar chart or board pack:
+
+- **Primary names are the org's canonical v2 state-names** (CR-AM-09 v2 bands / proposal 0001 /
+  `dea:scale-digital-transformation-v1`): **Emergent → Structured → Systematic → Adaptive →
+  Self-Optimising**. Per proposal 0001's design rule these are single-word adjectives describing the
+  *organization's state* (ambition-driving), not CMMI-era process-regime names ("Quantitatively Managed").
+- **Explicit correlation to the canonical scale**: model level N ↔ canonical ordinal N−1 (**L-0..L-4**),
+  carried per level as `canonical: {scale_level, ordinal, canonical_name, v2_band, v2_score_range,
+  effort_multiplier}` plus a model-level `level_correlation.mapping` table. `score_range` keeps the uniform
+  catalog v1-alpha bands (0–25/26–50/51–75/76–90/91–100); `legacy_id`/`legacy_name` keep v1-alpha resolvable.
+  Known semantic offset documented: catalog v1 level-1 "Ad Hoc" spans canonical L-0+L-1; this model splits it
+  via Emergent (L-0) and Structured (L-1).
+- **Ambition mechanics**: every level now carries `unlocks` — the business value unlocked at that level
+  (e.g., Adaptive unlocks "major changes simulated in the DTO before a dollar is committed") — and the
+  non-linear v2 bands + effort multipliers (1.0/1.5/2.5/4.0/6.0) make diminishing returns *visible* instead of
+  hiding them in linear bands, so the cost of the next level is honest.
+- **Progression semantics are identical to the canonical scale** (recorded in `advancement.progression_semantics`):
+  linear topology, exponential effort, forward-only with no skipping, exit-criteria + evidence gates,
+  highest-conformant-level resolution.
+
+| Model level (primary name) | Catalog v1 (legacy) | Canonical scale | Ordinal | v1 band | v2 band | Effort mult |
+|---|---|---|---|---|---|---|
+| level-1 Emergent | level-1-ad-hoc Ad Hoc | L-0 Absent | 0 | 0–25 | 0–20 | 1.0 |
+| level-2 Structured | level-2-defined Defined | L-1 Piloting | 1 | 26–50 | 21–45 | 1.5 |
+| level-3 Systematic | level-3-managed Managed | L-2 Defined | 2 | 51–75 | 46–70 | 2.5 |
+| level-4 Adaptive | level-4-quantitatively-managed | L-3 Scaled | 3 | 76–90 | 71–88 | 4.0 |
+| level-5 Self-Optimising | level-5-optimising Optimising | L-4 Self-Optimising | 4 | 91–100 | 89–100 | 6.0 |
+
+### 5.2 Structure and mechanism
+
 - **Positioning**: digital transformation = the operating model of a digitally mature organization —
   advanced tech adoption (AI, agentic AI, autonomous systems, composable platforms, twins) expressed
   through novel operating models across all concerns, customer/ecosystem-centric strategy, and a designed
@@ -80,7 +115,7 @@ Operationalized Maturity & Assessment Model":
   trust-security-privacy incl. AI TRiSM, sustainability-esg, composability, business-value, innovation, grc,
   data-intelligence).
 - **Progression ladder (novel advancement)**: every criterion carries 5 evidence-anchored levels
-  (L1 ad hoc → L2 piloted/defined → L3 standardized/governed → L4 measured/predictive/orchestrated →
+  (Emergent/ad hoc → Structured/piloted-defined → Systematic/standardized-governed → Adaptive/measured-predictive-orchestrated →
   L5 autonomous/intent-driven/self-optimizing). Advancement is cumulative (no skipping), gated by
   weakest-link on mandatory dimensions (d1–d4) and by per-level exit criteria; `delta_to_next_level`
   headroom is reported per dimension. Autonomy criteria reference the AN L0–L5 ladder explicitly.
