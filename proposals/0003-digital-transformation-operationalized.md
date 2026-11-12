@@ -132,6 +132,46 @@ names are what an organization sees in a radar chart or board pack:
   governance records); assessment rules require independent-assessor verification, ISO/IEC 33002-style
   repeatability and calibration.
 
+## 5b. Appendix — complete findings register from the D4/D5/D6 deep review (post-merge)
+
+Same battery as D2/D3 (row layout, ID sequencing, level-ID match, duplicates, progression
+heuristics, focus tags, typos/punctuation, cross-dimension similarity):
+
+**Structural: clean.** D4/D5/D6 sheet layouts are correct — no misplaced header rows, criterion
+IDs contiguous per sub-dimension, every criterion has exactly its 5 level IDs. (Contrast D1's
+1.3.6/1.4.6.x mismatch and D2's row-28 placement.) Minor: trailing ideographic space (`　`) in
+D6 row 9 col I; `\xa0` in the 5.5 sub-dimension name.
+
+**Additional defects found:**
+
+| # | Location | Defect |
+|---|----------|--------|
+| S12 | D4 4.4.1 "Value Network" | L1 text ends mid-sentence ("...Collaboration, trust."); L2/L3/L5 contain " ." artifacts with truncated tails — level descriptors corrupted |
+| S13 | D4 many (4.1.1, 4.1.2, 4.2.1, 4.3.1, 4.3.3, 4.3.4, 4.3.5, 4.4.1, 4.5.3, 4.6.1, 4.6.4, 4.6.6) | "space before period" (" .") artifacts throughout level texts |
+| S14 | D4 4.4.4 criterion text | "The organization implemented  Integrated SOC/NOC operation" — double space + grammar ("implements") |
+| S15 | D5 5.1.6 label | "AI Leadership/ Talent" — stray space after slash |
+| S16 | D5 5.6.3 L5, D6 6.3.3 L4 | Missing final period |
+| S17 | D4 4.6.6 ↔ D5 5.3.2 | Real topical duplication: "Agile-Driven Operations" (D4) vs "Agile Ways of Working" (D5) — agile ways-of-working scored in two dimensions (MECE violation; cf. S4) |
+| S18 | D5 focus tags | 9/25 Culture criteria tagged TRANSFORMATIONAL CHANGE — tag noise; culture criteria should carry people/culture-relevant levers |
+
+Progression heuristics flagged dips in 5.1.6, 4.4.1, 4.1.1, 4.1.3, 4.3.4, 4.4.1, 5.1.5, 5.2.3,
+5.4.1, 5.4.5, 5.5.2, 5.6.1 — reviewed manually: all are keyword-heuristic noise except the S12
+truncation; no semantic L2/L3-style inversion found in D4/D5/D6 (the one real inversion remains
+D2 2.4.2, S3).
+
+## 5c. Self-review of the new model (post-build)
+
+- **MECE**: 0 near-duplicate criterion statements across sub-dimensions (pairwise sim > 0.55);
+  every criterion in exactly one sub-dimension; all 12 transversal levers have ≥4 criteria
+  (coverage: business-value 16, data-intelligence 14, innovation 12, grc 12, composability 10,
+  agentic-ai 10, trust-security-privacy 9, autonomy 9, ecosystem-platforms 8, human-agent-teaming 5,
+  digital-twins 4, sustainability-esg 4).
+- **Progression**: anchor maturity-score heuristic flags 5 criteria (d1c4, d2c6, d3c4, d5c8,
+  d6c11) — manually reviewed; all are keyword noise, anchors are semantically monotonic
+  (L1 negative → L5 autonomous/intent-driven) with evidence per level.
+- CI-equivalent + custom checks pass on the merged file (run 43257210108: "OK — 7 maturity
+  models validated").
+
 ## 6. Verification (acceptance criteria)
 
 - CI (`.github/workflows/ci.yml`) passes: all `v1-alpha/*.yaml` have id/name/domain/version + exactly
