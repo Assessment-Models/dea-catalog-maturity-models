@@ -41,6 +41,9 @@ The catalog is the canonical registry of all maturity models and their versions.
 | Technology | Tech stack fitness, debt, lifecycle | `maturity-models/v1-alpha/technology.yaml` | draft |
 | Operations | Ops, incident response, SRE | `maturity-models/v1-alpha/operations.yaml` | draft |
 | Services Delivery | Time-to-market, outcomes | `maturity-models/v1-alpha/services-delivery.yaml` | draft |
+| Autonomous Operations | Whole-operating-model autonomy — goal-driven OODA closed loops, agentic, human-machine | `maturity-models/v1-alpha/autonomous-operations.yaml` | draft |
+
+> The Autonomous Operations model additionally carries model-owned `dimensions` (6 dims / 32 sub-dims / 158 criteria harvested from an industry AO maturity workbook v1.8.0), a `scoring` block (AO Autonomy Index 0–100, weakest-link gate, effort-adjusted value per [proposal 0001](proposals/0001-nonlinear-maturity-scoring.md)), and an `assessment` block (inputs, method, assessor independence, confidence). See [proposal 0002](proposals/0002-autonomous-operations-maturity-model.md) for the gap register and design rationale.
 
 ---
 
