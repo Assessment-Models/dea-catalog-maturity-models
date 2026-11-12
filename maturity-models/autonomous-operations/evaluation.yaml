@@ -23,8 +23,8 @@ scoring:
     assessed scores 0 and lowers evidence-confidence, it never inflates the index. 2. Dimension score = unweighted mean of
     its criteria. 3. AO Autonomy Index = weighted mean of dimension scores (weights below). 4. Band the index through the
     catalog bands (index.yaml) to get the org level. 5. Weakest-link gate: the org level cannot exceed the lowest level among
-    gating closed-loop criteria (4.1.1-4.1.4) — a loop that cannot act cannot be ''autonomous''. 6. Report evidence-confidence
-    (High/Medium/Low) alongside.'
+    gating gating closed-loop criteria in scope (4.1.1-4.1.4) — a loop that cannot act cannot be ''autonomous''; criteria
+    excluded by the scope charter do not gate. 6. Report evidence-confidence (High/Medium/Low) alongside.'
   dimension_weights:
     strategy: 0.2
     operations: 0.2
