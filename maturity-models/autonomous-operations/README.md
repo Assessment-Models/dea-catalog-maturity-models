@@ -1,5 +1,10 @@
 # Autonomous Operations Maturity Model — asset bundle
 
+> **SUPERSEDED / POINTER** — the canonical home of this model is now
+> `Assessment-Models/maturity-model-autonomous-operations` @ `4c6d865` (v1.0.1, canonical v2 bands,
+> L-0..L-4 scale). This bundle is retained as the frozen v1-alpha lineage and provenance record.
+> Reconciliation report: `docs/RECONCILIATION.md` in the canonical repo.
+
 Self-contained, repo-ready package for **`dea:maturity-autonomous-operations`**
 (Autonomous Operations Maturity & Assessment Model, v1.0.0-alpha).
 
