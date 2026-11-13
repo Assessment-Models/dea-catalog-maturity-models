@@ -1,6 +1,6 @@
-# Autonomous Operations Maturity Model — dea:maturity-autonomous-operations
-# Catalog registration (v1-alpha schema). Self-contained repo-ready asset bundle: maturity-models/autonomous-operations/
-# Levels: canonical org bands + AO stages on OODA closed loops driven by intent/goals. See proposals/0002.
+# Autonomous Operations Maturity Model — dea:maturity-autonomous-operations (v1-alpha, FROZEN)
+# Canonical home: Assessment-Models/maturity-model-autonomous-operations @ 4c6d865 (v1.0.1, v2 bands).
+# This entry + bundle are kept as the frozen v1-alpha lineage; see bundle README banner.
 
 id: dea:maturity-autonomous-operations
 name: Autonomous Operations Maturity Model
@@ -42,6 +42,13 @@ provenance:
     name: Autonomous Integration & Interoperability
   - id: 4.5.3
     name: Formulate and decide energy & carbon solution
+superseded_by:
+  organization: Assessment-Models
+  repository: maturity-model-autonomous-operations
+  version: 1.0.1
+  reference: 4c6d8658defa5974577db697cb5b565a320b4909
+  note: Canonical home of dea:maturity-autonomous-operations (v2 bands, L-0..L-4 scale). This v1-alpha entry is frozen lineage;
+    the bundle below is a pointer.
 levels:
 - id: level-1-ad-hoc
   canonical_band: band-1
